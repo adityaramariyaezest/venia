@@ -1,0 +1,23 @@
+$spacer: 32px;
+
+.visuallyHidden {
+  display: none;
+}
+
+.menu {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: $spacer;
+  }
+
+  &-item {
+    > a {
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+}
