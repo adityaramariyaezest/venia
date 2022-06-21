@@ -1,5 +1,8 @@
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
+import FlexBox from "../Layout/Flexbox";
+import Search from "../Search/Search";
+import LinkWithIcon from "../Links/LinkWithIcon";
 
 import './header.scss';
 import Wrapper from "./Wrapper";
@@ -43,7 +46,10 @@ const Header = () => {
                 </Wrapper>
 
                 <Wrapper>
-                    <Nav classes="menu" links={menu} label="extralinks" labelContent="extra links" />
+                    <FlexBox classes="d-flex">
+                        <Search />
+                        <LinkWithIcon linkText="Sign In" />
+                    </FlexBox>
                 </Wrapper>
             </div>
         </header>

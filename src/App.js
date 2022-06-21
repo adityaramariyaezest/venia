@@ -1,6 +1,5 @@
-import './scss/index.scss';
 import Header from './components/Header/Header';
-
+import './scss/_index.scss';
 function App() {
   return (
     <div className="App">
