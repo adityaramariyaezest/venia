@@ -1,10 +1,9 @@
-import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
 import './scss/_index.scss';
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <Layout>
+    </Layout>
   );
 }
 
