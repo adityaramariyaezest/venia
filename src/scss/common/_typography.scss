@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@400;600&display=swap");
+
+body,
+* {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-default;
+  color: $body-color;
+  font-size: $font-size-large;
+  line-height: 24px;
+}
+
+a {
+  text-decoration: none !important;
+  color: $link;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-semibold;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 20px;
+}
