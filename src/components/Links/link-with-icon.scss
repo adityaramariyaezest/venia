@@ -1,12 +1,7 @@
-.search {
+.link {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 8px;
-
-  .form-control {
-    display: none;
-  }
 
   img {
     width: 24px;

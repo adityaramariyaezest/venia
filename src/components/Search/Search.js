@@ -1,12 +1,15 @@
+import Button from '../Button/Button';
 import Input from '../Input/Input';
-import styles from './search.scss';
+import Image from '../Image/Image';
+import './search.scss';
 
 const Search = () => {
     return (
         <div className="search">
-            <span role="search" aria-label="my search icon"><img src={`${process.env.PUBLIC_URL}/images/icons/search.svg`} />Search</span>
-            <Input type="text" classes="form-control" placeholder="What would you like to find?" />
-            <button type="button">close</button>
+            <Image name="search" />
+            <Input id="search" labelText="Search" type="text" classes="form-control" placeholder="What would you like to find?" />
+            <span className='caret'></span>
+            {/* <Button text="close" /> */}
         </div>
     );
 }
