@@ -1,5 +1,6 @@
 import Header from '../Header/Header';
 import Wrapper from '../Header/Wrapper';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Layout = (props) => {
@@ -8,6 +9,7 @@ const Layout = (props) => {
             <Header />
             <main>
                 <div className="aem-Grid aem-Grid--12">
+                    <Breadcrumb />
                     <Wrapper phone="12" tablet="3" desktop="3">
                         <Sidebar />
                     </Wrapper>
