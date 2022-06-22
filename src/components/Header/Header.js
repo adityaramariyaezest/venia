@@ -37,15 +37,15 @@ const Header = () => {
     return (
         <header>
             <div className="aem-Grid aem-Grid--12">
-                <Wrapper>
+                <Wrapper phone="4" tablet="4" desktop="4">
                     <Logo />
                 </Wrapper>
 
-                <Wrapper>
+                <Wrapper phone="4" tablet="4" desktop="4">
                     <Nav classes="menu" links={menu} label="mainmenulabel" labelContent="main menu" />
                 </Wrapper>
 
-                <Wrapper>
+                <Wrapper phone="4" tablet="4" desktop="4">
                     <FlexBox classes="d-flex d-flex--justify-end">
                         <Search />
                         <LinkWithIcon linkText="Sign In" linkIcon="user" />
