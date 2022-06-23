@@ -9,8 +9,8 @@ const Layout = (props) => {
             <Header />
             <main>
                 <div className="aem-Grid aem-Grid--12">
-                    <Breadcrumb />
                     <Wrapper phone="12" tablet="3" desktop="3">
+                        <Breadcrumb />
                         <Sidebar />
                     </Wrapper>
                     <Wrapper phone="12" tablet="9" desktop="9">

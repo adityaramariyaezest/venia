@@ -48,7 +48,7 @@ const Header = () => {
                 <Wrapper phone="4" tablet="4" desktop="4">
                     <FlexBox classes="d-flex d-flex--justify-end">
                         <Search />
-                        <LinkWithIcon linkText="Sign In" linkIcon="user" />
+                        <LinkWithIcon linkText="Sign In" linkIcon="user.svg" />
                     </FlexBox>
                 </Wrapper>
             </div>
