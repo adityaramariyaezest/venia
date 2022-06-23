@@ -15,7 +15,6 @@ const ProductList = () => {
     return (
         <div className="aem-Grid aem-Grid--12">
             {products.length <= 0 ? <p>loading....</p> : products.map((product, index) => <Product key={index + product.id} title={product.title} description={product.description} image={product.image} price={product.price} />)}
-
         </div>
     );
 }

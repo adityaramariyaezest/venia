@@ -1,6 +1,12 @@
 aside {
-  width: 305px;
-  padding-right: 45px;
+  @media (min-width: 768px) {
+    width: 305px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 
   .form-group {
     margin-bottom: 22px;
