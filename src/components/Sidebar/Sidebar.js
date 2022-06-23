@@ -1,7 +1,9 @@
-const Sidebar = () => {
+import './sidebar.scss';
+
+const Sidebar = (props) => {
     return (
         <aside>
-            this is sidebar
+            {props.children}
         </aside>
     );
 }
