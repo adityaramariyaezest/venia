@@ -5,8 +5,8 @@ import cart from './cart.module.scss';
 const CartList = ({ cartItems }) => {
     console.log(cartItems)
     return (
-        <div>
-            Your Shopping Bag
+        <>
+            <h1 className="heading__speciality">Your Shopping Bag</h1>
             <div className={cart.cartlist}>
                 {
                     cartItems.map((item) => {
@@ -16,7 +16,7 @@ const CartList = ({ cartItems }) => {
                     })
                 }
             </div>
-        </div>
+        </>
     );
 }
 
