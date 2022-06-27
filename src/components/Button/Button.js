@@ -1,9 +1,9 @@
 
 import Image from "../Image/Image";
 
-const Button = ({ text, classes, isIcon, icon }) => {
+const Button = ({ text, classes, isIcon, icon, onPress }) => {
     return (
-        <button className={`btn btn-${classes}`} type="button">
+        <button className={`btn btn-${classes}`} type="button" onClick={onPress}>
             {isIcon ? <Image source={icon} /> : null}
             {text}
         </button >
