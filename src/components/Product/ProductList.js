@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
 import Product from './Product';
-import CartList from './CartList';
+import CartList from '../Cart/CartList';
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const cartItems = useSelector(state => state.cartItems);
