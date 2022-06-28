@@ -1,4 +1,5 @@
 import Image from '../Image/Image';
+import Quantity from '../Quantity/Quantity';
 import cart from './cart.module.scss';
 
 const Cart = ({ cartItem }) => {
@@ -16,10 +17,7 @@ const Cart = ({ cartItem }) => {
                 </div>
             </div>
 
-
-            <div className={cart.cartlist__product__quantity}>
-
-            </div>
+            <Quantity />
 
             <ul className={cart.cartlist__product__controls}>
                 <li><a href='#'><Image name="edit-2.svg" /> Edit</a></li>

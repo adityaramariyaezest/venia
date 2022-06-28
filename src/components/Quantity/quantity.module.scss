@@ -1,0 +1,36 @@
+.quantityWrapper {
+  display: flex;
+  margin-right: 60px;
+  gap: 8px;
+  align-items: center;
+
+  button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b5b7bc;
+    border-radius: 100%;
+    background-color: transparent;
+    color: #b5b7bc;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+
+    &:hover {
+      background-color: #eaebeb;
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+  input {
+    width: 88px;
+    height: 40px;
+    border: 2px solid #b5b7bc;
+    border-radius: 8px;
+  }
+}
