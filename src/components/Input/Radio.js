@@ -1,6 +1,7 @@
 import Input from './Input';
 import radio from './radio.module.scss';
 
+
 const Radio = ({ name }) => {
     return (
         <div className={radio.radio}>
