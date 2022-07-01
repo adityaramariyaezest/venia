@@ -18,6 +18,14 @@
     margin-bottom: 26px;
   }
 
+  &__share {
+    > div {
+      text-align: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
   > button {
     margin-top: 40px;
     background-color: #1f39ff;
