@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
 import Product from './Product';
 import CartList from '../Cart/CartList';
+import Slider from '../Slider/Slider';
+import ProductDetails from './ProductDetails';
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const cartItems = useSelector(state => state.cartItems);
@@ -14,10 +16,18 @@ const ProductList = () => {
     }, [])
 
     return (
-        <div className="aem-Grid aem-Grid--12">
-            <CartList cartItems={cartItems} />
-            {products.length <= 0 ? <p>loading....</p> : products.map((product, index) => <Product Id={product.id} key={index + product.id} title={product.title} description={product.description} image={product.image} price={product.price} />)}
-        </div>
+        <>
+            <div className="aem-Grid aem-Grid--12">
+                <Slider />
+                <ProductDetails />
+            </div>
+
+            <div className="aem-Grid aem-Grid--12">
+                <CartList cartItems={cartItems} />
+                {products.length <= 0 ? <p>loading....</p> : products.map((product, index) => <Product Id={product.id} key={index + product.id} title={product.title} description={product.description} image={product.image} price={product.price} />)}
+            </div>
+        </>
+
     );
 }
 

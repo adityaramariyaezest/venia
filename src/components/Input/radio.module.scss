@@ -1,0 +1,22 @@
+.radio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 24px;
+
+  label {
+    display: none;
+
+    &:before {
+      content: "";
+      width: 64px;
+      height: 40px;
+      border: 1px solid;
+    }
+  }
+
+  // input[type="radio"] {
+  //   position: absolute;
+  //   display: none;
+  // }
+}

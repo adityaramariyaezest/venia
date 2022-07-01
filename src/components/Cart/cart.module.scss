@@ -25,11 +25,12 @@
 
     &__details {
       padding-top: 15px;
+      flex: 1;
     }
 
     &__info {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 16px;
       flex: 1;
 
