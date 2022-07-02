@@ -2,6 +2,8 @@
 import { useSelector } from "react-redux";
 import CartList from '../components/Cart/CartList';
 import AccordionList from "../components/Accordion/AccordionList/AccordionList";
+import Bill from "../components/Cart/Bill/Bill";
+import Wrapper from "../components/Wrapper/Wrapper";
 
 const accordion = [
     {
@@ -27,10 +29,18 @@ const CartPage = () => {
     const cartItems = useSelector(state => state.cartItems);
 
     return (
-        <>
-            <CartList cartItems={cartItems} />
-            <AccordionList accordionItems={accordion} />
-        </>
+        <div className="aem-Grid aem-Grid--12">
+            <h1 className="heading__speciality">Your Shopping Bag</h1>
+
+            <Wrapper phone="12" tablet="12" desktop="8">
+                <CartList cartItems={cartItems} />
+                <AccordionList accordionItems={accordion} />
+            </Wrapper>
+
+            <Wrapper phone="12" tablet="12" desktop="4">
+                <Bill />
+            </Wrapper>
+        </div>
     );
 }
 

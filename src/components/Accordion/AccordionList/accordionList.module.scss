@@ -3,5 +3,9 @@
     border-radius: 2px;
     border: 1px solid #d1d3d6;
     margin: 40px 0;
+
+    @media (min-width: 1200px) {
+      max-width: 810px;
+    }
   }
 }
