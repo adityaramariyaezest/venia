@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import Button from "../Button/Button";
-import Wrapper from "../Header/Wrapper";
+import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
 import './products.scss';
 import { addToCart } from '../../actions/cartActions'

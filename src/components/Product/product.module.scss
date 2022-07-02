@@ -1,3 +1,35 @@
 .product {
   text-align: left;
+  color: #172026;
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__price {
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__description {
+    padding-bottom: 18px;
+    border-bottom: 2px solid #d1d3d6;
+    margin-bottom: 26px;
+  }
+
+  &__share {
+    > div {
+      text-align: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  > button {
+    margin-top: 40px;
+    background-color: #1f39ff;
+    display: block;
+    border-radius: 50px;
+  }
 }

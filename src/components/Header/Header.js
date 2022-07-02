@@ -5,7 +5,8 @@ import Search from "../Search/Search";
 import LinkWithIcon from "../Links/LinkWithIcon";
 
 import './header.scss';
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper/Wrapper";
+import Container from "../Container/Container";
 
 const menu = [
     {
@@ -36,22 +37,24 @@ const menu = [
 const Header = () => {
     return (
         <header>
-            <div className="aem-Grid aem-Grid--12">
-                <Wrapper phone="4" tablet="4" desktop="4">
-                    <Logo />
-                </Wrapper>
+            <Container>
+                <div className="aem-Grid aem-Grid--12">
+                    <Wrapper phone="4" tablet="4" desktop="4">
+                        <Logo />
+                    </Wrapper>
 
-                <Wrapper phone="4" tablet="4" desktop="4">
-                    <Nav classes="menu" links={menu} label="mainmenulabel" labelContent="main menu" />
-                </Wrapper>
+                    <Wrapper phone="4" tablet="4" desktop="4">
+                        <Nav classes="menu" links={menu} label="mainmenulabel" labelContent="main menu" />
+                    </Wrapper>
 
-                <Wrapper phone="4" tablet="4" desktop="4">
-                    <FlexBox classes="d-flex d-flex--justify-end">
-                        <Search />
-                        <LinkWithIcon linkText="Sign In" linkIcon="user.svg" />
-                    </FlexBox>
-                </Wrapper>
-            </div>
+                    <Wrapper phone="4" tablet="4" desktop="4">
+                        <FlexBox classes="d-flex d-flex--justify-end">
+                            <Search />
+                            <LinkWithIcon linkText="Sign In" linkIcon="user.svg" />
+                        </FlexBox>
+                    </Wrapper>
+                </div>
+            </Container>
         </header>
     );
 }

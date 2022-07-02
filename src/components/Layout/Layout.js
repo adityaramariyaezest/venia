@@ -1,8 +1,10 @@
 import Header from '../Header/Header';
-import Wrapper from '../Header/Wrapper';
+import Wrapper from '../Wrapper/Wrapper';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Sidebar from '../Sidebar/Sidebar';
 import Filters from '../Filters/Filters';
+import Footer from '../Footer/Footer';
+import Container from '../Container/Container';
 
 const filters = {
     categories: [
@@ -53,24 +55,27 @@ const filters = {
 
 const Layout = (props) => {
     return (
-        <div className="container">
+        <>
             <Header />
             <main>
-                <div className="aem-Grid aem-Grid--12">
-                    <Wrapper phone="12" tablet="3" desktop="3">
-                        <Sidebar>
-                            <Breadcrumb />
-                            <h4 className='sidebar-title'>Filters</h4>
-                            <Filters filterByTitle="categories" categories={filters.categories} />
-                            <Filters filterByTitle="Brands" categories={filters.brands} />
-                        </Sidebar>
-                    </Wrapper>
-                    <Wrapper phone="12" tablet="9" desktop="9">
-                        {props.children}
-                    </Wrapper>
-                </div>
+                <Container>
+                    <div className="aem-Grid aem-Grid--12">
+                        <Wrapper phone="12" tablet="3" desktop="3">
+                            <Sidebar>
+                                <Breadcrumb />
+                                <h4 className='sidebar-title'>Filters</h4>
+                                <Filters filterByTitle="categories" categories={filters.categories} />
+                                <Filters filterByTitle="Brands" categories={filters.brands} />
+                            </Sidebar>
+                        </Wrapper>
+                        <Wrapper phone="12" tablet="9" desktop="9">
+                            {props.children}
+                        </Wrapper>
+                    </div>
+                </Container>
             </main>
-        </div>
+            <Footer />
+        </>
     );
 }
 

@@ -5,7 +5,6 @@ $spacer: 32px;
 }
 
 .menu {
-  padding-top: 15px;
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +28,10 @@ header {
   align-items: center;
   margin-bottom: 35px;
   border-bottom: 1px solid #e5e5e7;
+
+  .menu {
+    padding-top: 15px;
+  }
 
   * {
     font-weight: 600;
