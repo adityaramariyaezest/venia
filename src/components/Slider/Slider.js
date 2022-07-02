@@ -1,47 +1,47 @@
 import slider from './slider.module.scss';
 
-const Slider = () => {
+const Slider = ({ image }) => {
     return (
         <div className={slider.slider}>
             <div className={slider.slider__thumbnail}>
                 <div className={slider.slider__thumbnail__item}>
-                    <img className={slider.slider__thumbnail__img} src='' />
+                    <img className={slider.slider__thumbnail__img} src={image} />
                 </div>
 
                 <div className={slider.slider__thumbnail__item}>
-                    <img className={slider.slider__thumbnail__img} src='' />
+                    <img className={slider.slider__thumbnail__img} src={image} />
                 </div>
 
                 <div className={slider.slider__thumbnail__item}>
-                    <img className={slider.slider__thumbnail__img} src='' />
+                    <img className={slider.slider__thumbnail__img} src={image} />
                 </div>
 
                 <div className={slider.slider__thumbnail__item}>
-                    <img className={slider.slider__thumbnail__img} src='' />
+                    <img className={slider.slider__thumbnail__img} src={image} />
                 </div>
 
                 <div className={slider.slider__thumbnail__item}>
-                    <img className={slider.slider__thumbnail__img} src='' />
+                    <img className={slider.slider__thumbnail__img} src={image} />
                 </div>
-            </div>   
+            </div>
 
-           <div className={slider.slider__main}>
+            <div className={slider.slider__main}>
                 <div className={slider.slider__main__item}>
-                    <img className={slider.slider__img} src='' />
-                </div> 
-
-                <div className={slider.slider__main__item}>
-                    <img className={slider.slider__img} src='' />
-                </div>   
+                    <img className={slider.slider__img} src={image} />
+                </div>
 
                 <div className={slider.slider__main__item}>
-                    <img className={slider.slider__img} src='' />
-                </div>  
+                    <img className={slider.slider__img} src={image} />
+                </div>
 
                 <div className={slider.slider__main__item}>
-                    <img className={slider.slider__img} src='' />
-                </div>  
-            </div>                   
+                    <img className={slider.slider__img} src={image} />
+                </div>
+
+                <div className={slider.slider__main__item}>
+                    <img className={slider.slider__img} src={image} />
+                </div>
+            </div>
         </div>
     );
 }
