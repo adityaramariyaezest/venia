@@ -1,6 +1,9 @@
 import Image from '../Image/Image';
 import Quantity from '../Quantity/Quantity';
+import { Link } from "react-router-dom";
+
 import cart from './cart.module.scss';
+
 
 const Cart = ({ cartItem }) => {
     return (
@@ -20,9 +23,15 @@ const Cart = ({ cartItem }) => {
             <Quantity />
 
             <ul className={cart.cartlist__product__controls}>
-                <li><a href='#'><Image name="edit-2.svg" /> Edit</a></li>
-                <li><a href='#'><Image name="trash-2.svg" /> Remove</a></li>
-                <li><a href='#'><Image name="heart.svg" /> Save for later</a></li>
+                <li>
+                    <Link to="/"><Image name="edit-2.svg" /> Edit</Link>
+                </li>
+                <li>
+                    <Link to="/"><Image name="trash-2.svg" /> Remove</Link>
+                </li>
+                <li>
+                    <Link to="/"><Image name="heart.svg" /> Save for later</Link>
+                </li>
             </ul>
         </div>
     );

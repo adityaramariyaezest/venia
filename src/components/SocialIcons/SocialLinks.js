@@ -1,23 +1,24 @@
 import Image from "../Image/Image";
 import social from './socialLinks.module.scss';
+import { Link } from "react-router-dom";
 
 const SocialLinks = () => {
     return (
         <ul className={social.social__links}>
             <li>
-                <a className="social__links__item" href=" ">
+                <Link className="social__links__item" to="/">
                     <Image name="instagram.svg" alt="instagram" />
-                </a>
+                </Link>
             </li>
             <li>
-                <a className="social__links__item" href=" ">
+                <Link className="social__links__item" to="/">
                     <Image name="facebook.svg" alt="facebook" />
-                </a>
+                </Link>
             </li>
             <li>
-                <a className="social__links__item" href=" ">
+                <Link className="social__links__item" to="/">
                     <Image name="twitter.svg" alt="twitter" />
-                </a>
+                </Link>
             </li>
         </ul>
     );

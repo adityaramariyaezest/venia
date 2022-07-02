@@ -6,7 +6,6 @@ import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Share from '../Share/Share';
 import FlexBox from '../Layout/Flexbox';
 import LinkWithIcon from "../Links/LinkWithIcon";
-
 import product from './product.module.scss';
 
 const ProductDetails = () => {
