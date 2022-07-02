@@ -8,8 +8,9 @@ import Share from '../Share/Share';
 import FlexBox from '../Layout/Flexbox';
 import LinkWithIcon from "../Links/LinkWithIcon";
 import { addToCart } from '../../actions/cartActions';
-import product from './product.module.scss';
 import Ratings from "../Ratings/Ratings";
+import ProductTitle from "./ProductTitle";
+import product from './product.module.scss';
 
 const ProductDetails = ({ title, price, description, ratings, productID }) => {
     const dispatch = useDispatch();
@@ -21,7 +22,7 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
         <>
             <Breadcrumb />
             <div className={product.product}>
-                <h2 className={product.product__title}>{title}</h2>
+                <ProductTitle title={title} />
                 <p className={product.product__price}>${price}</p>
                 <Ratings ratings={ratings} />
                 <p className={product.product__description}>{description}</p>
