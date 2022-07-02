@@ -17,12 +17,9 @@ const ProductDetails = () => {
                 <h2 className={product.product__title}>Peekaback Hoodie</h2>
                 <p className={product.product__price}>$95.00</p>
                 <p className={product.product__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore et dolore magna. Read more</p>
-
                 <ProducutColors />
                 <ProducutSize />
-
-                <Quantity />
-
+                <Quantity isLabel />
                 <Button classes="block" variant="primary" text="add to cart" />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">
@@ -32,7 +29,6 @@ const ProductDetails = () => {
                 </Share>
             </div>
         </>
-
     );
 }
 
