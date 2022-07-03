@@ -53,25 +53,13 @@ const filters = {
 }
 
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
     return (
         <>
             <Header />
             <main>
                 <Container>
-                    <div className="aem-Grid aem-Grid--12">
-                        <Wrapper phone="12" tablet="3" desktop="3">
-                            <Sidebar>
-                                <Breadcrumb />
-                                <h4 className='sidebar-title'>Filters</h4>
-                                <Filters filterByTitle="categories" categories={filters.categories} />
-                                <Filters filterByTitle="Brands" categories={filters.brands} />
-                            </Sidebar>
-                        </Wrapper>
-                        <Wrapper phone="12" tablet="9" desktop="9">
-                            {props.children}
-                        </Wrapper>
-                    </div>
+                    {children}
                 </Container>
             </main>
             <Footer />

@@ -1,0 +1,13 @@
+.bill {
+  padding: 32px 30px 40px 32px;
+  background: #ffffff;
+  box-shadow: 0px 0px 8px #0000000d;
+  border: 1px solid #d1d3d6;
+  border-radius: 2px;
+
+  &__title {
+    letter-spacing: 0px;
+    color: #172026;
+    margin-bottom: 24px;
+  }
+}

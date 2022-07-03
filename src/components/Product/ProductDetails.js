@@ -1,3 +1,4 @@
+import { useDispatch } from "react-redux";
 import Button from '../Button/Button';
 import Quantity from '../Quantity/Quantity';
 import ProducutColors from './ProductColors';
@@ -6,21 +7,29 @@ import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Share from '../Share/Share';
 import FlexBox from '../Layout/Flexbox';
 import LinkWithIcon from "../Links/LinkWithIcon";
-
+import { addToCart } from '../../actions/cartActions';
+import Ratings from "../Ratings/Ratings";
+import ProductTitle from "./ProductTitle";
 import product from './product.module.scss';
 
-const ProductDetails = () => {
+const ProductDetails = ({ title, price, description, ratings, productID }) => {
+    const dispatch = useDispatch();
+    const handleEvent = (e, productId) => {
+        dispatch(addToCart(productId));
+    };
+
     return (
         <>
             <Breadcrumb />
             <div className={product.product}>
-                <h2 className={product.product__title}>Peekaback Hoodie</h2>
-                <p className={product.product__price}>$95.00</p>
-                <p className={product.product__description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore et dolore magna. Read more</p>
+                <ProductTitle title={title} />
+                <p className={product.product__price}>${price}</p>
+                <Ratings ratings={ratings} />
+                <p className={product.product__description}>{description}</p>
                 <ProducutColors />
                 <ProducutSize />
                 <Quantity isLabel />
-                <Button classes="block" variant="primary" text="add to cart" />
+                <Button classes="block" variant="primary" text="add to cart" onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">
                         <LinkWithIcon linkText="Save" linkIcon="heart.svg" />

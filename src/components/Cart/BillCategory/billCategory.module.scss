@@ -1,0 +1,19 @@
+.bill {
+  &__category {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &:nth-last-child(1) {
+      span {
+        font-weight: bold;
+      }
+    }
+    span {
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+  }
+}

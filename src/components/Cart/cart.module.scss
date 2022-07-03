@@ -3,6 +3,10 @@
   flex-direction: column;
   gap: 34px;
 
+  @media (min-width: 1200px) {
+    max-width: 810px;
+  }
+
   &__product {
     display: flex;
     flex-wrap: wrap;

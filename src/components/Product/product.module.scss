@@ -2,10 +2,6 @@
   text-align: left;
   color: #172026;
 
-  &__title {
-    margin-bottom: 4px;
-  }
-
   &__price {
     margin-bottom: 17px;
     font-size: 20px;
@@ -15,14 +11,20 @@
   &__description {
     padding-bottom: 18px;
     border-bottom: 2px solid #d1d3d6;
-    margin-bottom: 26px;
+    margin-bottom: 15px;
   }
 
   &__share {
     > div {
       text-align: center;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 10px;
+      gap: 40px;
+
+      span {
+        font-weight: 600;
+        font-size: 16px;
+      }
     }
   }
 

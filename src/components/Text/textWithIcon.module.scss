@@ -1,0 +1,12 @@
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  color: #172026;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
