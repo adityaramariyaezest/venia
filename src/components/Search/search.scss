@@ -1,2 +1,15 @@
 .search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  .form-control {
+    display: none;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }

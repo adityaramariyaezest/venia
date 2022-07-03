@@ -1,0 +1,24 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  p {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    color: #545d63;
+    font-size: 16px;
+
+    border: 2px solid #91959c;
+    border-radius: 6px;
+  }
+}

@@ -1,0 +1,9 @@
+.social {
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,51 @@
+.quantityWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 60px;
+  gap: 8px;
+  align-items: center;
+
+  p {
+    flex: 1 1 100%;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #b5b7bc;
+    border-radius: 100%;
+    background-color: transparent;
+    color: #b5b7bc;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+
+    &:hover {
+      background-color: #eaebeb;
+    }
+  }
+
+  label {
+    display: none;
+  }
+
+  input {
+    width: 114px;
+    height: 40px;
+    border: 2px solid #b5b7bc;
+    border-radius: 8px;
+    text-align: center;
+    color: #172026;
+    font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

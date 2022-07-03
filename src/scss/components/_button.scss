@@ -1,0 +1,12 @@
+.btn {
+  padding: 12px 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+}

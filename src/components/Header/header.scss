@@ -21,3 +21,41 @@ $spacer: 32px;
     }
   }
 }
+
+header {
+  height: 80px;
+  display: grid;
+  align-items: center;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #e5e5e7;
+
+  .menu {
+    padding-top: 15px;
+  }
+
+  * {
+    font-weight: 600;
+  }
+
+  .logo {
+    max-width: 200px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    display: block;
+    width: 112px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}

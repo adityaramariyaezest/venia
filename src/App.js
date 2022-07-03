@@ -1,9 +1,8 @@
-import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage';
 import './scss/_index.scss';
 function App() {
   return (
-    <Layout>
-    </Layout>
+    <HomePage />
   );
 }
 
