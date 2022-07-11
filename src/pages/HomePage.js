@@ -4,6 +4,8 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import ProductList from "../components/Product/ProductList";
 import Banner from "../components/Banner/Banner";
+import Filter from "../components/Filter/Filter";
+
 const filters = {
     categories: [
         {
@@ -55,7 +57,6 @@ const Home = () => {
         <div className="aem-Grid aem-Grid--12">
             <Wrapper phone="12" tablet="12" desktop="12">
                 <Banner title="Women's" image={`${process.env.PUBLIC_URL}/banner-image.png`} description="" />
-
             </Wrapper>
             <Wrapper phone="12" tablet="3" desktop="3">
                 <Sidebar>
@@ -66,6 +67,7 @@ const Home = () => {
                 </Sidebar>
             </Wrapper>
             <Wrapper phone="12" tablet="9" desktop="9">
+                <Filter id="sort" />
                 <ProductList />
             </Wrapper>
         </div>
