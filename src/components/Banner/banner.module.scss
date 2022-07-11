@@ -1,0 +1,32 @@
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  height: 352px;
+  margin-bottom: 45px;
+
+  &__title,
+  &__img {
+    flex: 1;
+  }
+
+  &__title {
+    background-color: #1b252c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 555px;
+
+    h1 {
+      color: #fff;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
