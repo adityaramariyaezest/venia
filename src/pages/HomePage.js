@@ -1,10 +1,11 @@
+import React, { useState } from 'react';
 import Wrapper from "../components/Wrapper/Wrapper";
 import Filters from "../components/Filters/Filters";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import ProductList from "../components/Product/ProductList";
 import Banner from "../components/Banner/Banner";
-import Filter from "../components/Filter/Filter";
+import Sorting from "../components/Sorting/Sorting";
 
 const filters = {
     categories: [
@@ -53,6 +54,11 @@ const filters = {
 }
 
 const Home = () => {
+    const [order, setOrder] = useState(0);
+    const sortByPrice = event => {
+        setOrder(parseInt(event.target.value))
+    };
+
     return (
         <div className="aem-Grid aem-Grid--12">
             <Wrapper phone="12" tablet="12" desktop="12">
@@ -67,8 +73,8 @@ const Home = () => {
                 </Sidebar>
             </Wrapper>
             <Wrapper phone="12" tablet="9" desktop="9">
-                <Filter id="sort" />
-                <ProductList />
+                <Sorting id="sort" sortByPrice={sortByPrice} />
+                <ProductList order={order} />
             </Wrapper>
         </div>
     );
