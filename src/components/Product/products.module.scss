@@ -5,29 +5,38 @@
     padding-right: 32px;
   }
 
-  &-image {
-    height: 382px;
+  &__image {
+    height: 196px;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #e5e5e7;
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
       width: 319px;
+      height: 382px;
     }
 
     > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       > img {
         max-width: 75%;
-        height: 75%;
         object-fit: contain;
+        height: 75%;
+        max-height: 200px;
+
+        @media (min-width: 768px) {
+          max-height: 350px;
+        }
       }
     }
   }
 
-  &-name {
+  &__name {
     font-size: 18px;
     line-height: 20px;
     margin-top: 8px;
@@ -38,13 +47,13 @@
     text-overflow: ellipsis;
   }
 
-  &-price {
+  &__price {
     font-weight: 600;
     font-size: 16px;
     margin-top: 5px;
   }
 
-  &-favorite {
+  &__favorite {
     margin-top: 10px;
   }
 }
