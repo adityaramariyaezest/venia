@@ -3,7 +3,8 @@ import Nav from "../Nav/Nav";
 import FlexBox from "../Layout/Flexbox";
 import Search from "../Search/Search";
 import LinkWithIcon from "../Links/LinkWithIcon";
-
+import { Link } from "react-router-dom";
+import Image from "../Image/Image";
 import './header.scss';
 import Wrapper from "../Wrapper/Wrapper";
 import Container from "../Container/Container";
@@ -51,6 +52,7 @@ const Header = () => {
                         <FlexBox classes="d-flex d-flex--justify-end">
                             <Search />
                             <LinkWithIcon linkText="Sign In" linkIcon="user.svg" />
+                            <Link to="/cart"><Image name="shopping-bag.svg" /></Link>
                         </FlexBox>
                     </Wrapper>
                 </div>
