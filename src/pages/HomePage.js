@@ -3,6 +3,7 @@ import Filters from "../components/Filters/Filters";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import ProductList from "../components/Product/ProductList";
+import Banner from "../components/Banner/Banner";
 const filters = {
     categories: [
         {
@@ -52,6 +53,10 @@ const filters = {
 const Home = () => {
     return (
         <div className="aem-Grid aem-Grid--12">
+            <Wrapper phone="12" tablet="12" desktop="12">
+                <Banner title="Women's" image={`${process.env.PUBLIC_URL}/banner-image.png`} description="" />
+
+            </Wrapper>
             <Wrapper phone="12" tablet="3" desktop="3">
                 <Sidebar>
                     <Breadcrumb />
