@@ -4,7 +4,7 @@ import Wrapper from '../components/Wrapper/Wrapper';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProductExtraDetails from "../components/Product/ProductExtraDetails";
-import ProductFeatures from '../components/Product/ProductFeatures/ProductFeatures';
+// import ProductFeatures from '../components/Product/ProductFeatures/ProductFeatures';
 
 
 const ProductDetailsPage = () => {
