@@ -56,7 +56,7 @@ const Home = () => {
     return (
         <div className="aem-Grid aem-Grid--12">
             <Wrapper phone="12" tablet="12" desktop="12">
-                <Banner title="Women's" image={`${process.env.PUBLIC_URL}/banner-image.png`} description="" />
+                <Banner title="Women’s Outerwear" image={`${process.env.PUBLIC_URL}/banner-image.png`} description="" />
             </Wrapper>
             <Wrapper phone="12" tablet="3" desktop="3">
                 <Sidebar>
