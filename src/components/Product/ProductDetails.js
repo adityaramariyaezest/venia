@@ -10,7 +10,7 @@ import LinkWithIcon from "../Links/LinkWithIcon";
 import { addToCart } from '../../actions/cartActions';
 import Ratings from "../Ratings/Ratings";
 import ProductTitle from "./ProductTitle";
-import product from './product.module.scss';
+import product from './productDetails.module.scss';
 
 const ProductDetails = ({ title, price, description, ratings, productID }) => {
     const dispatch = useDispatch();
