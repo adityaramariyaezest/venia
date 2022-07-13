@@ -121,11 +121,9 @@ const Footer = () => {
 
       <div className={footer.footer__bottom}>
         <Container>
-          <div className="aem-Grid aem-Grid--12">
+          <div className="aem-Grid aem-Grid--12 footer__bottom">
             <Wrapper phone="12" tablet="12" desktop="2">
-              <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
-                <Logo />
-              </div>
+              <Logo />
             </Wrapper>
 
             <Wrapper phone="12" tablet="12" desktop="8">
