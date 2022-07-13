@@ -9,7 +9,6 @@ const Search = () => {
             <Image name="search.svg" />
             <Input id="search" labelText="Search" type="text" classes="form-control" placeholder="What would you like to find?" />
             <span className='caret'></span>
-            {/* <Button text="close" /> */}
         </div>
     );
 }

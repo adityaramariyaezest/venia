@@ -143,6 +143,8 @@ const Footer = () => {
                 links={extraLinks}
                 label="helpMenuLabel"
                 labelContent="helpMenu"
+                hideHeading="true"
+                direction="row"
               />
             </Wrapper>
           </div>

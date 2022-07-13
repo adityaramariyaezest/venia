@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import Product from './Product';
 import Wrapper from '../Wrapper/Wrapper';
 import Pagination from '../Pagination/Pagination';
+import Loader from '../Loader/Loader';
 
 let PageSize = 9;
 
@@ -28,8 +29,8 @@ const ProductList = ({ order }) => {
 
     return (
         <>
-            <div className="aem-Grid aem-Grid--12">
-                {currentProductList.length <= 0 ? <p>loading....</p> : currentProductList.map((product, index) =>
+            <div className="aem-Grid aem-Grid--12 wrapper">
+                {currentProductList.length <= 0 ? <Loader /> : currentProductList.map((product, index) =>
                     <Product Id={product.id} key={index} title={product.title} description={product.description} image={product.image} price={product.price} />
                 )}
                 <Wrapper phone="12" tablet="12" desktop="12">

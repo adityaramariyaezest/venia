@@ -3,6 +3,14 @@
   gap: 10px;
   padding-top: 0;
 
+  &__row {
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding-top: 12px;
+    }
+  }
+
   li {
     a {
       color: #545d63;
@@ -14,4 +22,8 @@
   &__heading {
     margin-bottom: 15px;
   }
+}
+
+.menu__heading__hide {
+  display: none;
 }

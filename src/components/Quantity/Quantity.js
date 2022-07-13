@@ -9,7 +9,7 @@ const Quantity = ({ isLabel }) => {
         <InputGroup classes={quantity.quantityWrapper}>
             {isLabel ? <p>Quantity</p> : null}
             <Button text="+" classes="round" />
-            <Input id="quantity__control" labelText="product__quantity" type="number" classes="form__control" />
+            <Input id="quantity__control" labelText="product__quantity" type="number" classes="form__control" value="1" />
             <Button text="-" classes="round" />
         </InputGroup>
     );
