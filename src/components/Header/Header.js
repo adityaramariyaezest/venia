@@ -56,7 +56,7 @@ const Header = () => {
                         <FlexBox classes="d-flex d-flex--justify-end right__nav">
                             <Search />
                             <LinkWithIcon classes="sign__in" linkText="Sign In" linkIcon="user.svg" />
-                            <Link to="/cart"><Image name="shopping-bag.svg" /></Link>
+                            <Link to="/cart"><Image name="shopping-bag.svg" alt="shopping-cart" /></Link>
                         </FlexBox>
                     </Wrapper>
                 </div>

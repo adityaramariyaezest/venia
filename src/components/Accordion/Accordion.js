@@ -7,7 +7,7 @@ const Accordion = ({ accordionItem }) => {
         <div className={acc.accordion}>
             <div className={acc.accordion__left}>{key}</div>
             <div className={acc.accordion__right}>{value}</div>
-            <Image name="chevron-down.svg" />
+            <Image name="chevron-down.svg" alt="accordion-arrow" />
         </div>
     );
 }

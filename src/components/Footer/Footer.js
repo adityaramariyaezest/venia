@@ -1,7 +1,6 @@
 import Logo from "../Logo/Logo";
 import SocialLinks from "../SocialIcons/SocialLinks";
 import Wrapper from "../Wrapper/Wrapper";
-import Nav from "../Nav/Nav";
 import footer from "./footer.module.scss";
 import FooterMenu from "./FooterMenu";
 import Container from "../Container/Container";
@@ -108,7 +107,7 @@ const Footer = () => {
 
             <Wrapper phone="12" tablet="6" desktop="3">
               <div className="menu">
-                <h4 className="menu__heading">Follow Us!</h4>
+                <p className="menu__heading">Follow Us!</p>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore.
@@ -141,8 +140,8 @@ const Footer = () => {
             <Wrapper phone="12" tablet="12" desktop="2">
               <FooterMenu
                 links={extraLinks}
-                label="helpMenuLabel"
-                labelContent="helpMenu"
+                label="termsAndPoliciesLabel"
+                labelContent="termsAndPolicies"
                 hideHeading="true"
                 direction="row"
               />
