@@ -67,7 +67,7 @@ const Home = () => {
             <Wrapper phone="12" tablet="3" desktop="3">
                 <Sidebar>
                     <Breadcrumb />
-                    <h4 className='sidebar-title'>Filters</h4>
+                    <p className='sidebar-title'>Filters</p>
                     <Filters filterByTitle="categories" categories={filters.categories} />
                     <Filters filterByTitle="Brands" categories={filters.brands} />
                 </Sidebar>

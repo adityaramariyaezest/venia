@@ -44,12 +44,12 @@ const Pagination = props => {
                 })}
                 onClick={onPrevious}
             >
-                <Image name="chevron-left.svg" />
+                <Image name="chevron-left.svg" alt="pagination-previous" />
 
             </li>
-            {paginationRange.map(pageNumber => {
+            {paginationRange.map((pageNumber, index) => {
                 if (pageNumber === DOTS) {
-                    return <li className={`${p.pagination__item} ${p.pagination__dots}`}>&#8230;</li>;
+                    return <li key={index} className={`${p.pagination__item} ${p.pagination__dots}`}>&#8230;</li>;
                 }
 
 
@@ -71,7 +71,7 @@ const Pagination = props => {
                 onClick={onNext}
             >
 
-                <Image name="chevron-right.svg" />
+                <Image name="chevron-right.svg" alt="pagination-next" />
 
             </li>
         </ul>

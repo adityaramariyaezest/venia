@@ -3,7 +3,7 @@ import select from './select.module.scss';
 const Select = ({ id, placeholder, sortByPrice }) => {
     return (
         <select className={select.form__control} id={id} onChange={sortByPrice}>
-            <option value="none" selected disabled hidden>
+            <option defaultValue={placeholder}>
                 {placeholder}
             </option>
             <option value='1'>Sort by Low to High</option>

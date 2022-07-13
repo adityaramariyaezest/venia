@@ -24,13 +24,13 @@ const Cart = ({ cartItem }) => {
 
                 <ul className={cart.cartlist__product__controls}>
                     <li>
-                        <Link to="/"><Image name="edit-2.svg" /> Edit</Link>
+                        <Link to="/cart"><Image name="edit-2.svg" alt="edit this product" /> Edit</Link>
                     </li>
                     <li>
-                        <Link to="/"><Image name="trash-2.svg" /> Remove</Link>
+                        <Link to="/cart"><Image name="trash-2.svg" alt="delete this product" /> Remove</Link>
                     </li>
                     <li>
-                        <Link to="/"><Image name="heart.svg" /> Save for later</Link>
+                        <Link to="/cart"><Image name="heart.svg" alt="save for later" /> Save for later</Link>
                     </li>
                 </ul>
             </div>

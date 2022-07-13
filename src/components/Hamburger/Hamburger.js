@@ -11,7 +11,7 @@ const Hamburger = () => {
     return (
         <>
             <input id={h.menu__toggle} type="checkbox" onClick={toggleMenu} />
-            <label className={h.menu__button__container} for="menu-toggle">
+            <label className={h.menu__button__container}>
                 <div className={h.menu__button} ></div>
             </label>
         </>
