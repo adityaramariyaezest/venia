@@ -1,6 +1,7 @@
 .features {
-  margin-left: 50px;
-
+  @media (min-width: 768px) {
+    margin-left: 50px;
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
