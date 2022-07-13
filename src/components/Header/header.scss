@@ -48,6 +48,10 @@ header {
     display: flex;
     align-items: center;
 
+    @media (max-width: 768px) {
+      margin: auto;
+    }
+
     img {
       position: absolute;
       top: 0;
@@ -57,5 +61,15 @@ header {
       bottom: 0;
       margin: auto;
     }
+  }
+
+  .sign__in {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .right__nav {
+    padding-top: 15px;
   }
 }
