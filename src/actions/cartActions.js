@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from '../constants/cartConstants'
+import { CART_ADD_ITEM, CART_INCREASE_QTY, CART_DECREASE_QTY } from '../constants/cartConstants'
 
 export const addToCart = (id) => async (dispatch, getState) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`)
@@ -10,6 +10,26 @@ export const addToCart = (id) => async (dispatch, getState) => {
             name: data.title,
             image: data.image,
             price: data.price,
+            qty: 1,
+        }
+    })
+    localStorage.setItem('cartItems', JSON.stringify(getState().cartItems))
+}
+
+export const incrementQuantity = (id) => (dispatch, getState) => {
+    dispatch({
+        type: CART_INCREASE_QTY,
+        payload: {
+            id: id
+        }
+    })
+}
+
+export const decrementQuantity = (id) => (dispatch, getState) => {
+    dispatch({
+        type: CART_DECREASE_QTY,
+        payload: {
+            id: id
         }
     })
     localStorage.setItem('cartItems', JSON.stringify(getState().cartItems))

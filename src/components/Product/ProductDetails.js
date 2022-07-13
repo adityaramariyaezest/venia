@@ -28,7 +28,7 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
                 <p className={product.product__description}>{description}</p>
                 <ProducutColors />
                 <ProducutSize />
-                <Quantity isLabel />
+                <Quantity isLabel id={productID} />
                 <Button classes="block" variant="primary" text="add to cart" onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">
