@@ -14,7 +14,7 @@ const Bill = () => {
     let estimatedShipping = 0;
 
     const subtotal = cartItems.reduce((accumulator, object) => {
-        return accumulator + object.price;
+        return accumulator + (object.price * object.qty);
     }, 0);
 
     const couponAmount = (coupon * subtotal) / 100;
