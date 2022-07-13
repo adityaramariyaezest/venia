@@ -22,38 +22,36 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
             const item1 = action.payload
             console.log('@@ item', item1.id);
             console.log('@@ state', state);
-
-            const filteredItem = state.cartItems.filter((item) => item.product == item1.id)
-
-            const quan = filteredItem.map(item => {
-                item.qty = item.qty + 1
+            const quan = state.cartItems.map(item => {
+                if (item.product == item1.id)
+                    item.qty = item1.qty
                 return item;
             })
-
-            // const filteredItem = state.cartItems.filter(item => item.product == item1.id).qty = item.qty + 1;
-
-            console.log('@@ filtered', filteredItem);
             console.log('@@ quan', quan);
 
             return {
                 ...state,
-                // cartItems: [...state.cartItems, quan]
-                quan
+                cartItems: quan
+
             }
 
-        // if (existItem) {
-        //     return {
-        //         ...state,
-        //         cartItems: state.cartItems.map(x =>
-        //             x.product === existItem.product ? item : x)
-        //     }
-        // } else {
-        //     return {
-        //         ...state,
-        //         cartItems: [...state.cartItems, item]
-        //     }
-        // }
+
         case CART_DECREASE_QTY:
+            const item2 = action.payload
+            console.log('@@ item', item2.id);
+            console.log('@@ state', state);
+            const decquan = state.cartItems.map(item => {
+                if (item.product == item2.id)
+                    item.qty = item2.qty
+                return item;
+            })
+            console.log('@@ quan', decquan);
+
+            return {
+                ...state,
+                cartItems: decquan
+
+            }
         default:
             return state
     }
