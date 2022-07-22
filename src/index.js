@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import Layout from './components/Layout/Layout';
 
+import './fonts/muli/Muli-Regular.ttf'
+
 
 import CartPage from './pages/CartPage';
 
