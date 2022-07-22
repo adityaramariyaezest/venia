@@ -4,8 +4,9 @@ import Filters from "../components/Filters/Filters";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import ProductList from "../components/Product/ProductList";
-import Banner from "../components/Banner/Banner";
 import Sorting from "../components/Sorting/Sorting";
+import BannerSlider from '../components/BannerSlider/BannerSlider';
+import Container from '../components/Container/Container';
 
 const filters = {
     categories: [
@@ -60,23 +61,32 @@ const Home = () => {
     };
 
     return (
-        <div className="aem-Grid aem-Grid--12">
-            <Wrapper phone="12" tablet="12" desktop="12">
-                <Banner title="Women’s Outerwear" image={`${process.env.PUBLIC_URL}/banner-image2.jpg`} description="" />
-            </Wrapper>
-            <Wrapper phone="12" tablet="3" desktop="3">
-                <Sidebar>
-                    <Breadcrumb />
-                    <p className='sidebar-title'>Filters</p>
-                    <Filters filterByTitle="categories" categories={filters.categories} />
-                    <Filters filterByTitle="Brands" categories={filters.brands} />
-                </Sidebar>
-            </Wrapper>
-            <Wrapper phone="12" tablet="9" desktop="9">
-                <Sorting id="sort" sortByPrice={sortByPrice} />
-                <ProductList order={order} />
-            </Wrapper>
-        </div>
+        <>
+            <div className="aem-Grid aem-Grid--12">
+                <Wrapper phone="12" tablet="12" desktop="12">
+                    <BannerSlider title="Women’s Outerwear" image={`${process.env.PUBLIC_URL}/banner.png`} description="" />
+                </Wrapper>
+            </div>
+            <Container>
+                <div className="aem-Grid aem-Grid--12">
+                    <Wrapper phone="12" tablet="3" desktop="3">
+                        <Sidebar>
+                            <Breadcrumb />
+                            <p className='sidebar-title'>Filters</p>
+                            <Filters filterByTitle="categories" categories={filters.categories} />
+                            <Filters filterByTitle="Brands" categories={filters.brands} />
+                        </Sidebar>
+                    </Wrapper>
+                    <Wrapper phone="12" tablet="9" desktop="9">
+                        <Sorting id="sort" sortByPrice={sortByPrice} />
+                        <ProductList order={order} />
+                    </Wrapper>
+                </div>
+            </Container>
+
+        </>
+
+
     );
 }
 
