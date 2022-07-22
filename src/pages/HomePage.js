@@ -7,6 +7,7 @@ import ProductList from "../components/Product/ProductList";
 import Sorting from "../components/Sorting/Sorting";
 import BannerSlider from '../components/BannerSlider/BannerSlider';
 import Container from '../components/Container/Container';
+import ProductCategoryList from '../components/Product/ProductCategories/ProductCategoryList';
 
 const filters = {
     categories: [
@@ -68,6 +69,10 @@ const Home = () => {
                 </Wrapper>
             </div>
             <Container>
+                <div className="aem-Grid aem-Grid--12">
+                    <ProductCategoryList />
+                </div>
+
                 <div className="aem-Grid aem-Grid--12">
                     <Wrapper phone="12" tablet="3" desktop="3">
                         <Sidebar>
