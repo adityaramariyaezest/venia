@@ -32,6 +32,8 @@ $spacer: 10px;
     @media (min-width: 768px) {
       order: 2;
       min-height: unset;
+      flex: 0 0 50%;
+      width: 50%;
     }
 
     img {
@@ -50,10 +52,11 @@ $spacer: 10px;
     text-align: center;
 
     @media (min-width: 768px) {
-      max-width: 595px;
+      max-width: 660px;
       position: unset;
       text-align: left;
       padding-left: 150px;
+      padding-right: 50px;
     }
 
     button {
