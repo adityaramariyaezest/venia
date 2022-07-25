@@ -6,7 +6,7 @@ import bs from './bannerSlider.module.scss';
 const BannerSlider = ({ image, description }) => {
     return (
         <div className={bs.banner}>
-            <FlexBox classes="d-flex__cover">
+            <FlexBox classes="d-flex__cover d-flex--align-center">
                 <div className={bs.banner__image}>
                     <img src={image} alt={description} height="150" />
                 </div>

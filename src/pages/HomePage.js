@@ -9,6 +9,7 @@ import BannerSlider from '../components/BannerSlider/BannerSlider';
 import Container from '../components/Container/Container';
 import ProductCategoryList from '../components/Product/ProductCategories/ProductCategoryList';
 import Teaser from '../components/Teaser/Teaser';
+import TeaserWithLocation from '../components/TeaserWithLocation/TeaserWithLocation';
 
 const filters = {
     categories: [
@@ -75,8 +76,22 @@ const Home = () => {
                 </div>
 
                 <div className="aem-Grid aem-Grid--12">
-                    <Teaser image={`${process.env.PUBLIC_URL}/teaser-image.png`} description="teaser-image" />
+                    <Teaser
+                        title="Take off in the new Signature Legging"
+                        secondaryTitle="Lorem Ipsum Dolor Tempor"
+                        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna."
+                        image={`${process.env.PUBLIC_URL}/teaser-image.png`}
+                        description="teaser-image" />
                 </div>
+
+                <div className="aem-Grid aem-Grid--12">
+                    <TeaserWithLocation
+                        title="Conquer your next adventure"
+                        secondaryTitle="Lorem Ipsum Dolor Tempor"
+                        image={`${process.env.PUBLIC_URL}/teaser-image2.png`}
+                        description="teaser-image" />
+                </div>
+
 
                 <div className="aem-Grid aem-Grid--12">
                     <Wrapper phone="12" tablet="3" desktop="3">

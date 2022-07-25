@@ -3,16 +3,14 @@
   flex-direction: column;
   padding: 47px 24px 56px 117px;
   flex: 1;
+  position: relative;
 
   h1 {
     margin-bottom: 0;
+    margin-top: 0;
   }
-}
-
-.lead {
-  color: #172026;
-  font-size: 20px;
-  margin-bottom: 16px;
-  margin-top: 8px;
-  font-weight: 600;
+  p,
+  h1 {
+    color: inherit;
+  }
 }

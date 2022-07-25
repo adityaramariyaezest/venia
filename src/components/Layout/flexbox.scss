@@ -1,9 +1,12 @@
 .d-flex {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 24px;
   // padding-top: 15px;
+
+  &--align-center {
+    align-items: center;
+  }
 
   &--justify-end {
     justify-content: flex-end;
@@ -15,5 +18,9 @@
 
   &__cover {
     height: 100%;
+  }
+
+  &--no-gap {
+    gap: 0;
   }
 }
