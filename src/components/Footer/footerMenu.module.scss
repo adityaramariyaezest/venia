@@ -3,6 +3,19 @@
   gap: 10px;
   padding-top: 0;
 
+  &__row {
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding-top: 12px;
+
+      @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
   li {
     a {
       color: #545d63;
@@ -13,5 +26,11 @@
 
   &__heading {
     margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
   }
+}
+
+.menu__heading__hide {
+  display: none;
 }

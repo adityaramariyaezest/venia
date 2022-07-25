@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
 import Button from "../../Button/Button";
 import BillCategory from "../BillCategory/BillCategory";
+import ButtonGroup from "../../ButtonGroup/ButtonGroup";
+
 import bill from './bill.module.scss';
 
 const Bill = () => {
@@ -12,7 +14,7 @@ const Bill = () => {
     let estimatedShipping = 0;
 
     const subtotal = cartItems.reduce((accumulator, object) => {
-        return accumulator + object.price;
+        return accumulator + (object.price * object.qty);
     }, 0);
 
     const couponAmount = (coupon * subtotal) / 100;
@@ -30,9 +32,10 @@ const Bill = () => {
             <BillCategory category="estimated tax" amount={`${estimatedTax} %`} />
             <BillCategory category="estimated shipping" amount="Free" />
             <BillCategory category="estimated total" amount={estimatedTotal.toFixed(2)} />
-
-            <Button text="checkout" classes="block" variant="primary" icon="lock.svg" isIcon />
-            <Button text="paypal" classes="block" variant="primary" icon="heart.svg" isIcon />
+            <ButtonGroup classes="d-flex">
+                <Button text="checkout" classes="primary" icon="lock.svg" isIcon imageDescription="checkout-button-icon" />
+                <Button text="paypal" classes="checkout" icon="heart.svg" />
+            </ButtonGroup>
         </div>
     );
 }

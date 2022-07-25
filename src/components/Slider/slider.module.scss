@@ -3,10 +3,15 @@
   flex-wrap: nowrap;
   gap: 17px;
 
+  margin-bottom: 40px;
+
   &__thumbnail {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    @media (max-width: 768px) {
+      display: none;
+    }
     &__item {
       width: 100px;
       height: 120px;
@@ -16,6 +21,7 @@
   &__main {
     flex: 1;
     position: relative;
+    min-height: 400px;
 
     &__item {
       flex: 1;

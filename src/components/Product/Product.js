@@ -1,4 +1,3 @@
-import Button from "../Button/Button";
 import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
 import { Link } from 'react-router-dom';
@@ -13,7 +12,7 @@ const Product = ({ Id, image, title, price, description }) => {
                 <div className={product.product__name}>{title}</div>
                 <div className={product.product__price}>${price}</div>
                 <div className={product.product__favorite}>
-                    <Image name="heart.svg" />
+                    <Image name="heart.svg" alt="favorite-product" />
                 </div>
             </div>
         </Wrapper>

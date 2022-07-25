@@ -6,8 +6,11 @@ import { Provider } from "react-redux";
 import store from './stores';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import HomePage from './pages/HomePage';
+import ProductListPage from './pages/ProductListPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import Layout from './components/Layout/Layout';
+
+import './fonts/muli/Muli-Regular.ttf'
 
 
 import CartPage from './pages/CartPage';
@@ -22,6 +25,7 @@ root.render(
             <Route path="/" element={<HomePage />} exact />
             <Route path="/product-details" element={<ProductDetailsPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/products" element={<ProductListPage />} />
           </Routes>
         </Layout>
 

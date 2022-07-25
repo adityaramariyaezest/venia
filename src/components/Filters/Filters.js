@@ -4,8 +4,8 @@ import './filters.scss';
 const Filters = ({ filterByTitle, categories }) => {
     return (
         <article>
-            <h6>{filterByTitle}</h6>
-            {categories && categories.map(category => <Checkbox filterCheckbox={category} />)}
+            <p>{filterByTitle}</p>
+            {categories && categories.map((category, index) => <Checkbox key={index} id={`category__${index}`} filterCheckbox={category} />)}
         </article>
     );
 }

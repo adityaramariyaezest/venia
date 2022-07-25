@@ -8,6 +8,7 @@ import Image from "../Image/Image";
 import './header.scss';
 import Wrapper from "../Wrapper/Wrapper";
 import Container from "../Container/Container";
+import Hamburger from '../Hamburger/Hamburger';
 
 const menu = [
     {
@@ -40,19 +41,22 @@ const Header = () => {
         <header>
             <Container>
                 <div className="aem-Grid aem-Grid--12">
-                    <Wrapper phone="4" tablet="4" desktop="4">
-                        <Logo />
+                    <Wrapper phone="8" tablet="4" desktop="4">
+                        <FlexBox classes="d-flex">
+                            <Hamburger />
+                            <Logo />
+                        </FlexBox>
                     </Wrapper>
 
-                    <Wrapper phone="4" tablet="4" desktop="4">
+                    <Wrapper phone="hide" tablet="4" desktop="4">
                         <Nav classes="menu" links={menu} label="mainmenulabel" labelContent="main menu" />
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="4" desktop="4">
-                        <FlexBox classes="d-flex d-flex--justify-end">
+                        <FlexBox classes="d-flex d-flex--justify-end right__nav">
                             <Search />
-                            <LinkWithIcon linkText="Sign In" linkIcon="user.svg" />
-                            <Link to="/cart"><Image name="shopping-bag.svg" /></Link>
+                            <LinkWithIcon classes="sign__in" linkText="Sign In" linkIcon="user.svg" />
+                            <Link to="/cart"><Image name="shopping-bag.svg" alt="shopping-cart" /></Link>
                         </FlexBox>
                     </Wrapper>
                 </div>

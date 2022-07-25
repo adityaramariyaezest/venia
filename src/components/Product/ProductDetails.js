@@ -10,12 +10,21 @@ import LinkWithIcon from "../Links/LinkWithIcon";
 import { addToCart } from '../../actions/cartActions';
 import Ratings from "../Ratings/Ratings";
 import ProductTitle from "./ProductTitle";
+
 import product from './productDetails.module.scss';
+import { useState } from "react";
 
 const ProductDetails = ({ title, price, description, ratings, productID }) => {
+
+    const [qty, setQty] = useState(1)
+
+    const getQuantity = (q) => {
+        setQty(q);
+    }
+
     const dispatch = useDispatch();
     const handleEvent = (e, productId) => {
-        dispatch(addToCart(productId));
+        dispatch(addToCart(productId, qty));
     };
 
     return (
@@ -28,7 +37,7 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
                 <p className={product.product__description}>{description}</p>
                 <ProducutColors />
                 <ProducutSize />
-                <Quantity isLabel />
+                <Quantity isLabel id={productID} getQuantity={getQuantity} />
                 <Button classes="block" variant="primary" text="add to cart" onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">

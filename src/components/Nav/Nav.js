@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Nav = ({ links, label, labelContent, classes }) => {
     const GenerateList = ({ lists }) => {
-        return lists && lists.map(listItem => {
+        return lists && lists.map((listItem, index) => {
             return (
-                <li className={`${classes}-item`}>
+                <li key={index} className={`${classes}-item`}>
                     <Link to={listItem.to}>{listItem.link}</Link>
                 </li>
             )

@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 47px 24px 56px 117px;
+  flex: 1;
+  position: relative;
+
+  h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  p,
+  h1 {
+    color: inherit;
+  }
+}
