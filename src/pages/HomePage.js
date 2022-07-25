@@ -8,6 +8,7 @@ import Sorting from "../components/Sorting/Sorting";
 import BannerSlider from '../components/BannerSlider/BannerSlider';
 import Container from '../components/Container/Container';
 import ProductCategoryList from '../components/Product/ProductCategories/ProductCategoryList';
+import Teaser from '../components/Teaser/Teaser';
 
 const filters = {
     categories: [
@@ -71,6 +72,10 @@ const Home = () => {
             <Container>
                 <div className="aem-Grid aem-Grid--12">
                     <ProductCategoryList />
+                </div>
+
+                <div className="aem-Grid aem-Grid--12">
+                    <Teaser image={`${process.env.PUBLIC_URL}/teaser-image.png`} description="teaser-image" />
                 </div>
 
                 <div className="aem-Grid aem-Grid--12">
