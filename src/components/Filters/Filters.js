@@ -5,7 +5,7 @@ const Filters = ({ filterByTitle, categories }) => {
     return (
         <article>
             <p>{filterByTitle}</p>
-            {categories && categories.map((category, index) => <Checkbox key={index} filterCheckbox={category} />)}
+            {categories && categories.map((category, index) => <Checkbox key={index} id={`category__${index}`} filterCheckbox={category} />)}
         </article>
     );
 }

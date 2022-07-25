@@ -5,7 +5,7 @@ const ProductCategory = ({ Id, title, description }) => {
     return (
         <Wrapper phone="12" tablet="6" desktop="3">
             <div className={product.product}>
-                <Link to="/product-details" state={{ productID: Id }}>
+                <Link to="/products" state={{ productID: Id }}>
                     <div className={product.product__image}>
                         <img src='https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg' alt={description} height="150" />
                     </div>

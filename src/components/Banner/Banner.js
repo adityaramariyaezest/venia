@@ -9,7 +9,7 @@ const Banner = ({ title, image, description }) => {
       </div>
 
       <div className={banner.banner__title}>
-        <Title title={title} />
+        <Title title={title} isSpecial />
       </div>
     </div>
   );

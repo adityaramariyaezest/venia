@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import ProductCategory from "./ProductCategory";
 import Loader from '../../Loader/Loader';
 
-const ProductCategoryList = ({ image, title, description }) => {
+const ProductCategoryList = ({ image, description }) => {
 
     const [category, setCategory] = useState([]);
 
