@@ -50,7 +50,7 @@ const Header = () => {
                     </Wrapper>
 
                     <Wrapper phone="hide" tablet="4" desktop="4">
-                        <Nav classes={header.menu} links={menu} label="mainmenulabel" labelContent="main menu" />
+                        <Nav classes={header.menu} direction="row" center="align-center" gap="32" links={menu} label="mainmenulabel" labelContent="main menu" />
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="4" desktop="4">

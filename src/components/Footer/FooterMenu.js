@@ -6,7 +6,7 @@ const FooterMenu = ({ heading, links, label, labelContent, hideHeading, directio
         <div className="menu">
             <p className={`${footerMenu.menu__heading} ${hideHeading ? footerMenu.menu__heading__hide : null}`}>{heading}</p>
             <Nav
-                classes={`${footerMenu.menu} ${direction ? footerMenu.menu__row : null}`}
+                direction={direction}
                 links={links}
                 label={label}
                 labelContent={labelContent}
