@@ -20,7 +20,7 @@ const TeaserWithLocation = ({ title, secondaryTitle, desc, image, description })
                 <Description content={desc} />
 
                 <ButtonGroup>
-                    <Button text="shop devices" classes="primary" />
+                    <Button text="shop devices" type="outline" variant="light" />
                 </ButtonGroup>
                 <Location />
             </TeaserContent>

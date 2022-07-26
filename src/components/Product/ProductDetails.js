@@ -11,9 +11,9 @@ import { addToCart } from '../../actions/cartActions';
 import Ratings from "../Ratings/Ratings";
 import ProductTitle from "./ProductTitle";
 import { ShareIcon, HeartIcon } from "../Icons/Icons";
+import { useState } from "react";
 
 import product from './productDetails.module.scss';
-import { useState } from "react";
 
 const ProductDetails = ({ title, price, description, ratings, productID }) => {
 
@@ -39,7 +39,7 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
                 <ProducutColors />
                 <ProducutSize />
                 <Quantity isLabel id={productID} getQuantity={getQuantity} />
-                <Button classes="block" variant="primary" text="add to cart" onPress={e => handleEvent(e, productID)} />
+                <Button type="solid" variant="primary" text="add to cart" isBlock onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">
                         <LinkWithIcon linkText="Save" linkIcon={HeartIcon} />

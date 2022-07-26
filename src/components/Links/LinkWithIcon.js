@@ -5,7 +5,7 @@ const LinkWithIcon = ({ classes, linkText, linkIcon }) => {
     const Icon = linkIcon;
     return (
         <Link to="/login" className={`link ${classes}`}>
-            <Icon mode="light" />
+            <Icon mode="dark" />
             <span>{linkText}</span>
         </Link>
     );

@@ -1,12 +1,121 @@
 .btn {
-  padding: 8px 15px;
+  height: 40px;
+  padding: 12px 45px;
   color: #fff;
   text-transform: uppercase;
-  font-size: 14px;
   font-weight: bold;
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  svg {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
 
   &-block {
-    width: 100%;
     display: block;
+    width: 100%;
+  }
+
+  &-circle {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: transparent;
+    color: #b5b7bc;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 0;
+    border: 2px solid transparent;
+
+    &--default {
+      border-color: #b5b7bc;
+    }
+
+    &:hover {
+      background-color: #eaebeb;
+    }
+  }
+
+  &-solid {
+    background-color: #b5b7bc;
+    &--primary {
+      background-color: #1363df;
+    }
+
+    &:hover:not([disabled]),
+    &:active:not([disabled]) {
+      background-color: #47b5ff;
+    }
+
+    &:focus {
+      background-color: #1363df;
+    }
+
+    &:disabled {
+      background-color: #b5b7bc;
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    &--primary {
+      border-color: #2a65d7;
+      color: #1363df;
+    }
+
+    &--light {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    &--danger {
+      border-color: #d7373f;
+      color: #d7373f;
+    }
+
+    &--default {
+      border-color: #535965;
+      color: #535965;
+    }
+
+    &:disabled {
+      border-color: #b5b7bc;
+      color: #b5b7bc;
+    }
+
+    &:hover:not([disabled]),
+    &:active:not([disabled]) {
+      border-color: #47b5ff;
+      color: #47b5ff;
+    }
+
+    &:focus {
+      border-color: #2a65d7;
+      color: #2a65d7;
+    }
+  }
+
+  &-link {
+    background-color: transparent;
+    color: #181c24;
+    &--primary {
+      color: #1363df;
+    }
   }
 }
