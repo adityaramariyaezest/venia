@@ -10,6 +10,7 @@ import LinkWithIcon from "../Links/LinkWithIcon";
 import { addToCart } from '../../actions/cartActions';
 import Ratings from "../Ratings/Ratings";
 import ProductTitle from "./ProductTitle";
+import { ShareIcon, HeartIcon } from "../Icons/Icons";
 
 import product from './productDetails.module.scss';
 import { useState } from "react";
@@ -41,8 +42,8 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
                 <Button classes="block" variant="primary" text="add to cart" onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>
                     <FlexBox classes="d-flex">
-                        <LinkWithIcon linkText="Save" linkIcon="heart.svg" />
-                        <LinkWithIcon linkText="Share" linkIcon="edit.svg" />
+                        <LinkWithIcon linkText="Save" linkIcon={HeartIcon} />
+                        <LinkWithIcon linkText="Share" linkIcon={ShareIcon} />
                     </FlexBox>
                 </Share>
             </div>

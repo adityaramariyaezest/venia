@@ -8,7 +8,7 @@ const ProductFeatures = ({ features }) => {
     <div className={pf.features}>
       <Lead text="details" />
       <div className={pf.features__list}>
-        {features && features.map(feature => <TextWithIcon text={feature.text} icon={`${feature.icon}.svg`} />)}
+        {features && features.map(feature => <TextWithIcon text={feature.text} icon={`${feature.icon}`} />)}
       </div>
     </div>
   );

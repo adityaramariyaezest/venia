@@ -4,11 +4,12 @@ import FlexBox from "../Layout/Flexbox";
 import Search from "../Search/Search";
 import LinkWithIcon from "../Links/LinkWithIcon";
 import { Link } from "react-router-dom";
-import Image from "../Image/Image";
-import './header.scss';
 import Wrapper from "../Wrapper/Wrapper";
 import Container from "../Container/Container";
 import Hamburger from '../Hamburger/Hamburger';
+import { UserIcon, ShoppingCartIcon } from '../Icons/Icons';
+
+import './header.scss';
 
 const menu = [
     {
@@ -55,8 +56,8 @@ const Header = () => {
                     <Wrapper phone="4" tablet="4" desktop="4">
                         <FlexBox classes="d-flex d-flex--justify-end right__nav">
                             <Search />
-                            <LinkWithIcon classes="sign__in" linkText="Sign In" linkIcon="user.svg" />
-                            <Link to="/cart"><Image name="shopping-bag.svg" alt="shopping-cart" /></Link>
+                            <LinkWithIcon classes="sign__in" linkText="Sign In" linkIcon={UserIcon} />
+                            <Link to="/cart"><ShoppingCartIcon /></Link>
                         </FlexBox>
                     </Wrapper>
                 </div>

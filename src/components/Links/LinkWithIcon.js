@@ -1,11 +1,11 @@
-import Image from "../Image/Image";
 import { Link } from "react-router-dom";
 import './link-with-icon.scss';
 
 const LinkWithIcon = ({ classes, linkText, linkIcon }) => {
+    const Icon = linkIcon;
     return (
         <Link to="/login" className={`link ${classes}`}>
-            <Image name={linkIcon} alt={linkText} />
+            <Icon />
             <span>{linkText}</span>
         </Link>
     );

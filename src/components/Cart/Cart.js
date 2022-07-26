@@ -1,6 +1,7 @@
-import Image from '../Image/Image';
+// import Image from '../Image/Image';
 import CartQuantity from '../CartQuantity/CartQuantity';
 import { Link } from "react-router-dom";
+import { EditIcon2, HeartIcon, TrashIcon } from '../Icons/Icons';
 
 import cart from './cart.module.scss';
 
@@ -24,13 +25,13 @@ const Cart = ({ cartItem }) => {
 
                 <ul className={cart.cartlist__product__controls}>
                     <li>
-                        <Link to="/cart"><Image name="edit-2.svg" alt="edit this product" /> Edit</Link>
+                        <Link to="/cart"><EditIcon2 /> Edit</Link>
                     </li>
                     <li>
-                        <Link to="/cart"><Image name="trash-2.svg" alt="delete this product" /> Remove</Link>
+                        <Link to="/cart"><TrashIcon /> Remove</Link>
                     </li>
                     <li>
-                        <Link to="/cart"><Image name="heart.svg" alt="save for later" /> Save for later</Link>
+                        <Link to="/cart"><HeartIcon /> Save for later</Link>
                     </li>
                 </ul>
             </div>
