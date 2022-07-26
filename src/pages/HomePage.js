@@ -27,7 +27,7 @@ const Home = () => {
                         description="teaser-image" />
                 </div>
 
-                <div className="aem-Grid aem-Grid--12">
+                <div className="aem-Grid aem-Grid--12 mt-50 mb-100">
                     <TeaserWithLocation
                         title="Conquer your next adventure"
                         secondaryTitle="Lorem Ipsum Dolor Tempor"

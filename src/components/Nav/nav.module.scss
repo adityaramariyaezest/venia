@@ -27,6 +27,13 @@
     &--align-center {
       align-items: center;
     }
+
+    &--underlined {
+      li > a {
+        text-decoration: underline !important;
+        font-weight: 600;
+      }
+    }
   }
 
   &__item {
