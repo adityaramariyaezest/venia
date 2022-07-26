@@ -28,7 +28,7 @@ const Home = () => {
         <>
             <div className="aem-Grid aem-Grid--12">
                 <Wrapper phone="12" tablet="12" desktop="12">
-                    <Banner title="Men's Outerwear" image={`${process.env.PUBLIC_URL}/banner-inner.PNG`} description="men's outerwear image" />
+                    <Banner title="Men's Outerwear" image={`${process.env.PUBLIC_URL}/banner-inner.png`} description="men's outerwear image" />
                 </Wrapper>
             </div>
             <Container>
