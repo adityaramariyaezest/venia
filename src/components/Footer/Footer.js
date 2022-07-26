@@ -123,7 +123,7 @@ const Footer = () => {
         <Container>
           <div className="aem-Grid aem-Grid--12 footer__bottom">
             <Wrapper phone="12" tablet="12" desktop="2">
-              <Logo />
+              <Logo name="logo-light-2.PNG" />
             </Wrapper>
 
             <Wrapper phone="12" tablet="12" desktop="8">

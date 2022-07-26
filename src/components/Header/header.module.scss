@@ -1,0 +1,27 @@
+.header {
+  height: 80px;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e7;
+  background-color: #1363df;
+
+  * {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  svg * {
+    stroke: #fff;
+  }
+
+  .sign__in {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

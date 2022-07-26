@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Nav = ({ links, label, labelContent, classes }) => {
+import nav from './nav.module.scss';
+
+const Nav = ({ links, label, labelContent }) => {
     const GenerateList = ({ lists }) => {
         return lists && lists.map((listItem, index) => {
             return (
-                <li key={index} className={`${classes}-item`}>
+                <li key={index} className={nav.menu__item}>
                     <Link to={listItem.to}>{listItem.link}</Link>
                 </li>
             )
@@ -12,10 +14,10 @@ const Nav = ({ links, label, labelContent, classes }) => {
     }
 
     return (
-        <nav aria-labelledby={label} className={classes}>
-            <h2 id={label} className="visuallyHidden">{labelContent}</h2>
-            <ul className={`${classes}-list`}>
-                <GenerateList lists={links} classes={classes} />
+        <nav aria-labelledby={label} className={nav.menu}>
+            <h2 id={label} className={nav.visuallyHidden}>{labelContent}</h2>
+            <ul className={nav.menu__list}>
+                <GenerateList lists={links} />
             </ul>
         </nav>
     );
