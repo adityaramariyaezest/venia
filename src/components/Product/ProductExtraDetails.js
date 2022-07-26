@@ -1,28 +1,30 @@
 import Wrapper from "../Wrapper/Wrapper";
 import ProductTitle from "./ProductTitle";
 import ProductFeatures from "./ProductFeatures/ProductFeatures";
+
+
 import Lead from "../Lead/Lead";
 
 const productFeatures = [
   {
     id: 'feature__101',
     text: 'Sweat-wicking',
-    icon: 'scissors'
+    icon: 'ScissorsIcon'
   },
   {
     id: 'feature__102',
     text: 'Breathable',
-    icon: 'refresh-cw'
+    icon: 'RefreshCwIcon'
   },
   {
     id: 'feature__103',
     text: 'Lightweight fabric',
-    icon: 'play'
+    icon: 'PlayIcon'
   },
   {
     id: 'feature__104',
     text: '69% nylon, 31% lycra',
-    icon: 'pie-chart'
+    icon: 'PieChartIcon'
   },
 ]
 

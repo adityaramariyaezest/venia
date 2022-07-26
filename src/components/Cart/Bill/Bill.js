@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Button from "../../Button/Button";
 import BillCategory from "../BillCategory/BillCategory";
 import ButtonGroup from "../../ButtonGroup/ButtonGroup";
+import { LockIcon } from "../../Icons/Icons";
 
 import bill from './bill.module.scss';
 
@@ -33,8 +34,8 @@ const Bill = () => {
             <BillCategory category="estimated shipping" amount="Free" />
             <BillCategory category="estimated total" amount={estimatedTotal.toFixed(2)} />
             <ButtonGroup classes="d-flex">
-                <Button text="checkout" classes="primary" icon="lock.svg" isIcon imageDescription="checkout-button-icon" />
-                <Button text="paypal" classes="checkout" icon="heart.svg" />
+                <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" />
+                <Button text="paypal" type="solid" variant="primary" isBlock="true" />
             </ButtonGroup>
         </div>
     );

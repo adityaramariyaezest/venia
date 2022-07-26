@@ -1,0 +1,13 @@
+.svg {
+  &__light {
+    * {
+      stroke: #fff;
+    }
+  }
+
+  &__dark {
+    * {
+      stroke: #172026;
+    }
+  }
+}

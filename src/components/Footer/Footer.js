@@ -84,6 +84,7 @@ const Footer = () => {
                 links={accountLinks}
                 label="accountMenuLabel"
                 labelContent="accountMenu"
+                direction="column"
               />
             </Wrapper>
 
@@ -93,6 +94,7 @@ const Footer = () => {
                 links={aboutUsLinks}
                 label="aboutMenuLabel"
                 labelContent="aboutMenu"
+                direction="column"
               />
             </Wrapper>
 
@@ -102,6 +104,7 @@ const Footer = () => {
                 links={helpLinks}
                 label="helpMenuLabel"
                 labelContent="helpMenu"
+                direction="column"
               />
             </Wrapper>
 
@@ -123,7 +126,7 @@ const Footer = () => {
         <Container>
           <div className="aem-Grid aem-Grid--12 footer__bottom">
             <Wrapper phone="12" tablet="12" desktop="2">
-              <Logo />
+              <Logo name="logo-light-2.PNG" />
             </Wrapper>
 
             <Wrapper phone="12" tablet="12" desktop="8">
@@ -142,6 +145,7 @@ const Footer = () => {
                 labelContent="termsAndPolicies"
                 hideHeading="true"
                 direction="row"
+                underlined="underlined"
               />
             </Wrapper>
           </div>

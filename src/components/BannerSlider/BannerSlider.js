@@ -1,7 +1,7 @@
 import Button from '../Button/Button';
-import Container from '../Container/Container';
 import FlexBox from '../Layout/Flexbox';
 import bs from './bannerSlider.module.scss';
+import { HeartIcon } from '../Icons/Icons';
 
 const BannerSlider = ({ image, description }) => {
     return (
@@ -13,7 +13,7 @@ const BannerSlider = ({ image, description }) => {
                 <div className={bs.banner__content}>
                     <h1>Shop the new Signature Collection</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lobortis mattis aliquam faucibus purus.</p>
-                    <Button text="shop now" classes="primary" />
+                    <Button text="shop now" type="solid" variant="primary" />
                 </div>
             </FlexBox>
         </div>

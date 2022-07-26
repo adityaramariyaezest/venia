@@ -1,10 +1,13 @@
+import cn from 'classnames';
+import button from './button.module.scss';
 
-import Image from "../Image/Image";
 
-const Button = ({ text, classes, isIcon, icon, onPress, round, imageDescription }) => {
+const Button = ({ text, type, isIcon, icon, onPress, svgIconMode, variant, isBlock, disabled }) => {
+    const Icon = icon;
+
     return (
-        <button className={round ? `btn btn-${round} btn-${classes} ` : `btn btn-${classes}`} type="button" onClick={onPress}>
-            {isIcon ? <Image name={icon} alt={imageDescription} /> : null}
+        <button className={cn(button.btn, type ? { [button[`btn-${type}`]]: type } : '', variant ? { [button[`btn-${type}--${variant}`]]: variant } : '', isBlock ? { [button[`btn-block`]]: isBlock } : '')} disabled={disabled ? "disabled" : ''} type="button" onClick={onPress}>
+            {isIcon ? <Icon mode={svgIconMode} /> : null}
             {text}
         </button >
     );

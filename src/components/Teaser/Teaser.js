@@ -15,8 +15,8 @@ const Teaser = ({ title, secondaryTitle, desc, image, description }) => {
                 <Lead text={secondaryTitle} />
                 <Description content={desc} />
                 <ButtonGroup>
-                    <Button text="shop collection" classes="primary" />
-                    <Button text="shop now" classes="primary" />
+                    <Button text="shop collection" type="outline" variant="primary" />
+                    <Button text="shop now" type="solid" variant="primary" />
                 </ButtonGroup>
             </TeaserContent>
             <TeaserImage image={image} description={description} />

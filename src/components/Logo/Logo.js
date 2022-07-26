@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import logo from './logo.module.scss';
 
-const Logo = () => {
+const Logo = ({ name }) => {
     return (
-        <Link to="/" className="logo">
-            <img src={`${process.env.PUBLIC_URL}/logo.jpg`} alt="logo" />
+        <Link to="/" className={logo.logo}>
+            <img src={`${process.env.PUBLIC_URL}/${name}`} alt="logo" />
         </Link>
     );
 }

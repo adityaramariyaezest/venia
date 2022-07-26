@@ -1,23 +1,25 @@
-import Image from "../Image/Image";
-import social from './socialLinks.module.scss';
 import { Link } from "react-router-dom";
+import { InstagramIcon, FacebookIcon, TwitterIcon } from "../Icons/Icons";
+
+import social from './socialLinks.module.scss';
+
 
 const SocialLinks = () => {
     return (
         <ul className={social.social__links}>
             <li>
                 <Link className="social__links__item" to="/">
-                    <Image name="instagram.svg" alt="instagram" />
+                    <InstagramIcon classes={social.svg__light} />
                 </Link>
             </li>
             <li>
                 <Link className="social__links__item" to="/">
-                    <Image name="facebook.svg" alt="facebook" />
+                    <FacebookIcon />
                 </Link>
             </li>
             <li>
                 <Link className="social__links__item" to="/">
-                    <Image name="twitter.svg" alt="twitter" />
+                    <TwitterIcon />
                 </Link>
             </li>
         </ul>

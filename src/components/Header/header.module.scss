@@ -1,0 +1,22 @@
+.header {
+  height: 80px;
+  display: grid;
+  align-items: center;
+  background-color: #1363df;
+
+  * {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  .sign__in {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

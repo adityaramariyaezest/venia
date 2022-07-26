@@ -4,6 +4,9 @@ import CartList from '../components/Cart/CartList';
 import AccordionList from "../components/Accordion/AccordionList/AccordionList";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
+import Container from "../components/Container/Container";
+import Title from "../components/Headings/Title/Title";
+
 
 const accordion = [
     {
@@ -29,18 +32,19 @@ const CartPage = () => {
     const cartItems = useSelector(state => state.cartItems);
 
     return (
-        <div className="aem-Grid aem-Grid--12">
-            <h1 className="heading__speciality">Your Shopping Bag</h1>
+        <Container>
+            <div className="aem-Grid aem-Grid--12">
+                <Title title="Your Shopping Bag" isSpecial />
+                <Wrapper phone="12" tablet="12" desktop="8">
+                    <CartList cartItems={cartItems} />
+                    <AccordionList accordionItems={accordion} />
+                </Wrapper>
 
-            <Wrapper phone="12" tablet="12" desktop="8">
-                <CartList cartItems={cartItems} />
-                <AccordionList accordionItems={accordion} />
-            </Wrapper>
-
-            <Wrapper phone="12" tablet="12" desktop="4">
-                <Bill />
-            </Wrapper>
-        </div>
+                <Wrapper phone="12" tablet="12" desktop="4">
+                    <Bill />
+                </Wrapper>
+            </div>
+        </Container>
     );
 }
 

@@ -12,25 +12,6 @@
     font-weight: 600;
   }
 
-  button {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #b5b7bc;
-    border-radius: 100%;
-    background-color: transparent;
-    color: #b5b7bc;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 20px;
-
-    &:hover {
-      background-color: #eaebeb;
-    }
-  }
-
   label {
     display: none;
   }
@@ -43,6 +24,7 @@
     text-align: center;
     color: #172026;
     font-weight: 600;
+    margin: 0 10px;
 
     &:focus {
       outline: none;

@@ -1,0 +1,45 @@
+.visuallyHidden {
+  display: none;
+}
+
+.menu {
+  padding-top: 10px;
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+
+    &--column {
+      flex-direction: column;
+    }
+
+    &--row {
+      flex-direction: row;
+    }
+
+    &--32 {
+      gap: 32px;
+    }
+
+    &--align-center {
+      align-items: center;
+    }
+
+    &--underlined {
+      li > a {
+        text-decoration: underline !important;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__item {
+    > a {
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+}

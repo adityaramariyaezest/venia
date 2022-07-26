@@ -23,14 +23,14 @@ const Quantity = ({ isLabel, id, qty }) => {
     return (
         <InputGroup classes={quantity.quantityWrapper}>
             {isLabel ? <p>Quantity</p> : null}
-            <Button text="+" classes="round" onPress={() => {
+            <Button text="+" type="circle" variant="default" onPress={() => {
                 setQuatntity(quatntity + 1);
                 dispatch(incrementQuantity(id, qty + 1));
             }} />
 
 
             <Input id="quantity__control" labelText="product__quantity" type="number" classes="form__control" value={quatntity} />
-            <Button text="-" classes="round" onPress={() => {
+            <Button text="-" type="circle" variant="default" onPress={() => {
                 setQuatntity(quatntity - 1);
                 dispatch(decrementQuantity(id, qty - 1));
             }} />
