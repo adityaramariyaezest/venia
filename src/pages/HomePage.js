@@ -10,7 +10,7 @@ const Home = () => {
         <>
             <div className="aem-Grid aem-Grid--12">
                 <Wrapper phone="12" tablet="12" desktop="12">
-                    <BannerSlider title="Women’s Outerwear" image={`${process.env.PUBLIC_URL}/banner.png`} description="" />
+                    <BannerSlider title="Women’s Outerwear" image={`${process.env.PUBLIC_URL}/banner.PNG`} description="" />
                 </Wrapper>
             </div>
             <Container>
@@ -23,7 +23,7 @@ const Home = () => {
                         title="Take off in the new Signature Legging"
                         secondaryTitle="Lorem Ipsum Dolor Tempor"
                         desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna."
-                        image={`${process.env.PUBLIC_URL}/teaser-image.png`}
+                        image={`${process.env.PUBLIC_URL}/teaser-image.PNG`}
                         description="teaser-image" />
                 </div>
 
@@ -31,7 +31,7 @@ const Home = () => {
                     <TeaserWithLocation
                         title="Conquer your next adventure"
                         secondaryTitle="Lorem Ipsum Dolor Tempor"
-                        image={`${process.env.PUBLIC_URL}/teaser-image2.png`}
+                        image={`${process.env.PUBLIC_URL}/teaser-image2.PNG`}
                         description="teaser-image" />
                 </div>
             </Container>

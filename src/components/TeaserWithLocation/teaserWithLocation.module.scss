@@ -1,10 +1,15 @@
 .content {
   background-color: black;
   flex: 0 0 554px;
-  padding: 82px 108px 108px 108px;
+  padding: 87px 108px 115px 108px;
   color: #fff;
 
   &:after {
     display: none;
   }
+}
+
+.image {
+  height: 400px;
+  overflow: hidden;
 }

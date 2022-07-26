@@ -13,7 +13,7 @@ import twl from './teaserWithLocation.module.scss';
 const TeaserWithLocation = ({ title, secondaryTitle, desc, image, description }) => {
     return (
         <FlexBox classes="d-flex d-flex--align-center d-flex--no-gap">
-            <TeaserImage image={image} description={description} />
+            <TeaserImage classes={twl.image} image={image} description={description} />
             <TeaserContent classes={twl.content}>
                 <Title title={title} />
                 <Lead text={secondaryTitle} />
