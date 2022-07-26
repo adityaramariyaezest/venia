@@ -4,7 +4,7 @@ import Wrapper from '../components/Wrapper/Wrapper';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ProductExtraDetails from "../components/Product/ProductExtraDetails";
-import ProductFeatures from '../components/Product/ProductFeatures/ProductFeatures';
+import Container from '../components/Container/Container';
 
 
 const ProductDetailsPage = () => {
@@ -44,30 +44,32 @@ const ProductDetailsPage = () => {
 
     const { image, title, price, description } = product;
     return (
-        <div className="pl-100">
-            <div className="aem-Grid aem-Grid--10">
-                <Wrapper phone="10" tablet="5" desktop="5">
-                    <Slider image={image} />
-                </Wrapper>
-                <Wrapper phone="10" tablet="3" desktop="3">
-                    <ProductDetails
-                        image={image}
-                        title={title}
-                        price={price}
-                        description={description}
-                        ratings={ratings}
-                        productID={productID}
-                    />
-                </Wrapper>
+        <Container>
+            <div className="pl-100">
+                <div className="aem-Grid aem-Grid--10">
+                    <Wrapper phone="10" tablet="5" desktop="5">
+                        <Slider image={image} />
+                    </Wrapper>
+                    <Wrapper phone="10" tablet="3" desktop="3">
+                        <ProductDetails
+                            image={image}
+                            title={title}
+                            price={price}
+                            description={description}
+                            ratings={ratings}
+                            productID={productID}
+                        />
+                    </Wrapper>
 
-                <Wrapper phone="10" tablet="6" desktop="12">
-                    <ProductExtraDetails
-                        title={title}
-                        description={description}
-                    />
-                </Wrapper>
+                    <Wrapper phone="10" tablet="6" desktop="12">
+                        <ProductExtraDetails
+                            title={title}
+                            description={description}
+                        />
+                    </Wrapper>
+                </div>
             </div>
-        </div>
+        </Container>
     );
 }
 
