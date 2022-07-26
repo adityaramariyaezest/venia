@@ -56,7 +56,7 @@ const Header = () => {
                     <Wrapper phone="4" tablet="4" desktop="4">
                         <FlexBox classes="d-flex d-flex--justify-end pt__10">
                             <Search />
-                            <LinkWithIcon classes="sign__in" linkText="Sign In" linkIcon={UserIcon} />
+                            <LinkWithIcon svgMode="light" classes="sign__in" linkText="Sign In" linkIcon={UserIcon} />
                             <Link to="/cart"><ShoppingCartIcon mode="light" /></Link>
                         </FlexBox>
                     </Wrapper>
