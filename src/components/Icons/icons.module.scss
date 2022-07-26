@@ -1,7 +1,13 @@
-.svg__dark * {
-  stroke: #172026;
-}
+.svg {
+  &__light {
+    * {
+      stroke: #fff;
+    }
+  }
 
-.svg__light * {
-  stroke: #ffffff;
+  &__dark {
+    * {
+      stroke: #172026;
+    }
+  }
 }

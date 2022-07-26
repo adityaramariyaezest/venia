@@ -4,7 +4,7 @@ import l from './location.module.scss';
 export const Location = () => {
     return (
         <div className={l.wrapper}>
-            <MapPinIcon />
+            <MapPinIcon mode="light" />
         </div>
     )
 }

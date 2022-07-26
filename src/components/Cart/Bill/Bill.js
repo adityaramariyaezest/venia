@@ -34,7 +34,7 @@ const Bill = () => {
             <BillCategory category="estimated shipping" amount="Free" />
             <BillCategory category="estimated total" amount={estimatedTotal.toFixed(2)} />
             <ButtonGroup classes="d-flex">
-                <Button text="checkout" classes="primary" icon={LockIcon} isIcon imageDescription="checkout-button-icon" />
+                <Button text="checkout" classes="primary" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" />
                 <Button text="paypal" classes="checkout" />
             </ButtonGroup>
         </div>

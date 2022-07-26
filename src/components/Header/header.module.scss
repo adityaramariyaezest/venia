@@ -14,10 +14,6 @@
     align-items: center;
   }
 
-  svg * {
-    stroke: #fff;
-  }
-
   .sign__in {
     @media (max-width: 768px) {
       display: none;
