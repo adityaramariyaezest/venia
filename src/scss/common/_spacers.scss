@@ -8,12 +8,27 @@
   padding-top: 15px;
 }
 
+.mb-8 {
+  margin-bottom: var(--spacer-regular);
+}
+
+.mt-16 {
+  margin-top: calc(var(--spacer-regular) * 2);
+}
 .mt-50 {
   margin-top: 50px;
 }
 
+.mb-25 {
+  margin-bottom: 25px;
+}
+
 .mb-100 {
   margin-bottom: 100px;
+}
+
+.pr-32 {
+  padding-right: calc(var(--spacer-regular) * 4);
 }
 
 body {
