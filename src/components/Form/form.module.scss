@@ -1,0 +1,7 @@
+$border-color: var(--color-border);
+
+.form {
+  &--border {
+    border-top: 1px solid $border-color;
+  }
+}

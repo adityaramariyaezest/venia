@@ -1,25 +1,10 @@
 .radio {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 24px;
-  margin-left: 10px;
+  // margin-bottom: 24px;
+  // margin-left: 10px;
 
-  &:nth-child(2) {
-    margin-left: 0;
-  }
-
-  label {
-    display: none;
-  }
-
-  span {
-    width: 64px;
-    height: 35px;
-    border: 1px solid;
-  }
-
-  input[type="radio"] {
-    position: absolute;
-    display: none;
-  }
+  // &:nth-child(2) {
+  //   margin-left: 0;
+  // }
 }

@@ -1,6 +1,6 @@
-const Description = ({ content }) => {
+const Description = ({ content, classes }) => {
     return (
-        <p>{content}</p>
+        <p className={classes ? classes : ''}>{content}</p>
     );
 }
 
