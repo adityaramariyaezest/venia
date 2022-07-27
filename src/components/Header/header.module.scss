@@ -1,8 +1,10 @@
+@use "../../scss/common/colors" as *;
+
 .header {
   height: 80px;
   display: grid;
   align-items: center;
-  background-color: #1363df;
+  background-color: var(--color-primary);
 
   * {
     font-weight: 600;

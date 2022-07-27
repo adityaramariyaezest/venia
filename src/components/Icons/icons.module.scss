@@ -1,13 +1,13 @@
 .svg {
   &__light {
     * {
-      stroke: #fff;
+      stroke: var(--color-white);
     }
   }
 
   &__dark {
     * {
-      stroke: #172026;
+      stroke: var(--color-gray-d2);
     }
   }
 }
