@@ -13,16 +13,30 @@ import Select from "../components/Select/Select";
 import Radio from "../components/Input/Radio";
 import Checkbox from "../components/Checkbox/Checkbox";
 import Form from "../components/Form/Form";
+import { Table } from "../components/Table/Table";
 
 const CheckoutPage = () => {
     return (
         <Container>
+
             <div className="aem-Grid aem-Grid--12">
                 <Title title="Checkout" isSpecial />
+
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <SecondaryTitle title="guest checkout" />
                     <Lead text="Contact information" classes="mb-8" />
                     <Description classes="mb-16" content="We’ll use these details to keep you informed on your delivery." />
+                    <FlexBox classes="d-flex--column mb-50" >
+                        <FlexItem>
+                            <Table heading="shipping information" email="q_farhan@gmail.com" phone="+1 (555) 229-3367" name="Qadim Farhan" address="098 Wapello Street" city="Altadena, California 91001" country="United States" />
+                        </FlexItem>
+                        <FlexItem>
+                            <Table heading="shipping method" />
+                        </FlexItem>
+                        <FlexItem>
+                            <Table heading="payment information" city="Altadena, California 91001" country="United States" />
+                        </FlexItem>
+                    </FlexBox>
 
                     {/* <div className="aem-Grid aem-Grid--12">
                         <Wrapper phone="12" tablet="12" desktop="6">
@@ -135,13 +149,14 @@ const CheckoutPage = () => {
                                 <Checkbox id={`checkout__billing`} filterCheckbox="Billing address same as shipping address" direction="row-reverse" />
                             </Wrapper>
                         </div>
-
                         <Radio name="payment" id="paypal_payment" type="radio" labelText="paypal" direction="row-reverse" />
-
                     </Form>
                 </Wrapper>
 
                 <Wrapper phone="12" tablet="12" desktop="4">
+                    <div className="mb-16">
+                        <Table heading="Sign in for Express Checkout" />
+                    </div>
                     <Bill />
                 </Wrapper>
             </div>

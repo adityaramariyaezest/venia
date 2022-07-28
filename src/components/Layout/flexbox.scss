@@ -27,4 +27,8 @@
   &--no-gap {
     gap: 0;
   }
+
+  &--column {
+    flex-direction: column;
+  }
 }
