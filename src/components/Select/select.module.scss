@@ -1,8 +1,38 @@
+$gray: var(--color-gray-m1);
+$spacer: var(--spacer-regular);
+$border-color: var(--color-gray-l2);
+$white: var(--color-white);
+$border-rdius: var(--border-radius);
+
 .form__control {
-  height: 40px;
-  width: 254px;
-  background-color: #fff;
-  border: 2px solid #b5b7bc;
-  border-radius: 8px;
-  padding: 2px 12px;
+  height: 44px;
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid $border-color;
+  background: $white;
+  border-radius: calc(#{$border-rdius} * 4);
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select {
+  &__wrapper {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: 0 auto;
+      right: $spacer;
+      height: 100%;
+
+      * {
+        stroke: $gray;
+      }
+    }
+  }
 }

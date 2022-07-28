@@ -1,3 +1,40 @@
-.hide {
+.hideLabel {
   display: none;
+}
+
+.form-group {
+  margin-bottom: calc(var(--spacer-regular) * 2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-regular);
+
+  &--row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--checkbox {
+    justify-content: flex-end;
+    gap: var(--spacer-regular);
+  }
+
+  &--true {
+    label {
+      display: none;
+    }
+
+    + span {
+      width: 64px;
+      height: 35px;
+      border: 1px solid;
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      display: none;
+    }
+  }
 }

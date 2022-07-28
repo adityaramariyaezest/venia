@@ -10,7 +10,6 @@ import FlexBox from "../components/Layout/Flexbox";
 import FlexItem from "../components/Layout/FlexItem/FLexItem";
 import Button from "../components/Button/Button";
 import Select from "../components/Select/Select";
-import FormGroup from "../components/FormGroup/FormGroup";
 import Radio from "../components/Input/Radio";
 import Checkbox from "../components/Checkbox/Checkbox";
 import Form from "../components/Form/Form";
@@ -48,9 +47,7 @@ const CheckoutPage = () => {
 
                         <FlexBox classes="d-flex--no-gap">
                             <FlexItem size="6">
-                                <FormGroup labelText="sort" id="country">
-                                    <Select id="country" placeholder="United States" />
-                                </FormGroup>
+                                <Select labelText="country" id="country" placeholder="United States" direction="column" />
                             </FlexItem>
                         </FlexBox>
 
