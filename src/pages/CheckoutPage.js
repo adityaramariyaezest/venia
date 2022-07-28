@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Container from "../components/Container/Container";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
@@ -14,8 +15,12 @@ import Radio from "../components/Input/Radio";
 import Checkbox from "../components/Checkbox/Checkbox";
 import Form from "../components/Form/Form";
 import { Table } from "../components/Table/Table";
+import TextContent from "../components/TextContent/TextContent";
+import Media from "../components/Media/Media";
 
 const CheckoutPage = () => {
+    const cartItems = useSelector(state => state.cartItems);
+    console.log('items', cartItems);
     return (
         <Container>
 
@@ -29,14 +34,64 @@ const CheckoutPage = () => {
 
                     <FlexBox classes="d-flex--column mb-50" >
                         <FlexItem>
-                            <Table heading="shipping information" email="q_farhan@gmail.com" phone="+1 (555) 229-3367" name="Qadim Farhan" address="098 Wapello Street" city="Altadena, California 91001" country="United States" />
+                            <Table heading="shipping information">
+                                <FlexBox>
+                                    <FlexItem>
+                                        <TextContent content="q_farhan@gmail.com" />
+                                        <TextContent content="+1 (555) 229-3367" />
+                                    </FlexItem>
+                                    <FlexItem>
+                                        <TextContent content="Qadim Farhan" />
+                                        <TextContent content="098 Wapello Street" />
+                                        <TextContent content="Altadena, California 91001" />
+                                        <TextContent content="United States" />
+                                    </FlexItem>
+                                </FlexBox>
+                            </Table>
                         </FlexItem>
+
                         <FlexItem>
-                            <Table heading="shipping method" />
+                            <Table heading="shipping method">
+                                <FlexBox>
+                                    <FlexItem>
+                                        <TextContent content="standard shipping" />
+                                        <TextContent content="Est. delivery in 4 - 8 business days" />
+                                        <TextContent content="FREE" />
+                                    </FlexItem>
+                                </FlexBox>
+                            </Table>
                         </FlexItem>
+
                         <FlexItem>
-                            <Table heading="payment information" city="Altadena, California 91001" country="United States" />
+                            <Table heading="payment information">
+                                <FlexBox>
+                                    <FlexItem>
+                                        <TextContent content="Credit Card" />
+                                        <TextContent content=" Visa ending in 4567" />
+                                    </FlexItem>
+                                </FlexBox>
+                            </Table>
                         </FlexItem>
+
+                        <FlexItem>
+                            <Table controls="false" heading={`${cartItems.length} items in your order`}>
+                                <FlexBox classes="d-flex--no-gap">
+                                    {cartItems && cartItems.map(item => {
+                                        return (
+                                            <FlexItem size="6">
+                                                <Media img={item.image} imgDesc={item.name} imgHeight="150" title={item.name}>
+                                                    <TextContent content="Size: Medium" />
+                                                    <TextContent content="Color: Storm" />
+                                                    <TextContent content={`Quantity: ${item.qty}`} />
+                                                </Media>
+                                            </FlexItem>
+                                        )
+                                    })}
+                                </FlexBox>
+
+                            </Table>
+                        </FlexItem>
+
                     </FlexBox>
 
                     <Form>

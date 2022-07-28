@@ -7,48 +7,41 @@ import FancyBorder from '../FancyBorder/FancyBorder';
 import TextContent from '../TextContent/TextContent';
 import th from './table.module.scss';
 
-export const TableHeader = ({ heading }) => {
+export const TableHeader = ({ heading, controls }) => {
     return (
         <div className={th.table__header}>
             <FlexBox classes="d-flex d-flex__justify__content__between">
                 <FlexItem>
                     <Description content={heading} />
                 </FlexItem>
-                <FlexItem>
+                {!controls ? <FlexItem>
                     <LinkWithIcon linkIcon={EditIcon2} linkText="Edit" svgMode="dark" />
-                </FlexItem>
+                </FlexItem> : null}
             </FlexBox>
         </div>
     );
 }
 
 
-export const TableBody = ({ email, phone, country, name, address, city, state, pin }) => {
-    return (
-        <div className={th.table__body}>
-            <FlexBox>
-                <FlexItem>
-                    <TextContent content={email} />
-                    <TextContent content={phone} />
-                </FlexItem>
-                <FlexItem>
-                    <TextContent content={name} />
-                    <TextContent content={address} />
-                    <TextContent content={city} />
-                    <TextContent content={country} />
-                </FlexItem>
-            </FlexBox>
-        </div>
-    );
-}
+// export const TableBody = ({ children }) => {
+//     return (
+//         <div className={th.table__body}>
+//             {children}
+//         </div>
+//     );
+// }
 
 
 
-export const Table = ({ heading, email, phone, country, name, address, city, state, pin }) => {
+export const Table = ({ heading, controls, children }) => {
     return (
         <FancyBorder>
-            <TableHeader heading={heading} />
-            <TableBody email={email} phone={phone} name={name} address={address} city={city} country={country} />
+            <TableHeader heading={heading} controls={controls} />
+            {/* <TableBody children={children} /> */}
+
+            <div className={th.table__body}>
+                {children}
+            </div>
         </FancyBorder>
     );
 }
