@@ -6,6 +6,9 @@ import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
 import Container from "../components/Container/Container";
 import Title from "../components/Headings/Title/Title";
+import Lead from '../components/Lead/Lead';
+import Button from "../components/Button/Button";
+import { ShoppingCartIcon } from "../components/Icons/Icons";
 
 
 const accordion = [
@@ -28,13 +31,14 @@ const accordion = [
     }
 ]
 
+
+
 const CartPage = () => {
     const cartItems = useSelector(state => state.cartItems);
 
-    return (
-        <Container>
+    const CartContent = () => {
+        return (
             <div className="aem-Grid aem-Grid--12">
-                <Title title="Your Shopping Bag" isSpecial />
                 <Wrapper phone="12" tablet="12" desktop="8">
                     <CartList cartItems={cartItems} />
                     <AccordionList accordionItems={accordion} />
@@ -44,6 +48,24 @@ const CartPage = () => {
                     <Bill />
                 </Wrapper>
             </div>
+        )
+    }
+
+    const HappyShopping = () => {
+        return (
+            <div className="aem-Grid aem-Grid--12">
+                <ShoppingCartIcon />
+                <Lead text="There is nothing in your bag. Let's add some items." />
+                <Button text="shop now" type="outline" variant="primary" />
+            </div>
+        )
+    }
+
+    return (
+        <Container>
+            <Title title="Your Shopping Bag" isSpecial />
+
+            {cartItems.length > 0 ? <CartContent /> : <HappyShopping />}
         </Container>
     );
 }
