@@ -37,7 +37,7 @@ export const Table = ({ heading, controls, children }) => {
     return (
         <FancyBorder>
             <TableHeader heading={heading} controls={controls} />
-            <TableBody children={children} />
+            {children ? <TableBody children={children} /> : null}
         </FancyBorder>
     );
 }

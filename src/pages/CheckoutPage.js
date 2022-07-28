@@ -18,6 +18,7 @@ import Form from "../components/Form/Form";
 import { Table } from "../components/Table/Table";
 import TextContent from "../components/TextContent/TextContent";
 import Media from "../components/Media/Media";
+import ExpressSignIn from "../components/ExpressSignIn/ExpressSignIn";
 
 const CheckoutPage = () => {
     const cartItems = useSelector(state => state.cartItems);
@@ -30,10 +31,8 @@ const CheckoutPage = () => {
 
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <SecondaryTitle title="guest checkout" />
-                    <Lead text="Contact information" classes="mb-8" />
-                    <Description classes="mb-16" content="We’ll use these details to keep you informed on your delivery." />
 
-                    <FlexBox classes="d-flex--column mb-50" >
+                    <FlexBox classes="d-flex--column mb-50 mt-16" >
                         <FlexItem>
                             <Table heading="shipping information">
                                 <FlexBox>
@@ -107,6 +106,10 @@ const CheckoutPage = () => {
                             Terms and Conditions
                         </Link>
                     </FlexBox>
+
+                    <Lead text="Contact information" classes="mb-8" />
+                    <Description classes="mb-16" content="We’ll use these details to keep you informed on your delivery." />
+
 
                     <Form>
                         <FlexBox classes="d-flex--no-gap">
@@ -222,7 +225,7 @@ const CheckoutPage = () => {
 
                 <Wrapper phone="12" tablet="12" desktop="4">
                     <div className="mb-16">
-                        <Table heading="Sign in for Express Checkout" />
+                        <ExpressSignIn />
                     </div>
                     <Bill isButton="false" />
                 </Wrapper>
