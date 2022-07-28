@@ -1,0 +1,13 @@
+$semibold: var(--font-weight-semibold);
+
+.table {
+  &__header {
+    p {
+      font-weight: $semibold;
+      text-transform: capitalize;
+    }
+  }
+  &__body {
+    margin-top: 16px;
+  }
+}

@@ -1,13 +1,12 @@
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import FlexBox from "../Layout/Flexbox";
-import Search from "../Search/Search";
-import LinkWithIcon from "../Links/LinkWithIcon";
-import { Link } from "react-router-dom";
+import FlexItem from "../Layout/FlexItem/FLexItem";
 import Wrapper from "../Wrapper/Wrapper";
 import Container from "../Container/Container";
 import Hamburger from '../Hamburger/Hamburger';
-import { UserIcon, ShoppingCartIcon } from '../Icons/Icons';
+import { ShoppingCartIcon } from '../Icons/Icons';
+import { CartCount } from "../CartCount/CartCount";
 
 import header from './header.module.scss';
 
@@ -54,10 +53,18 @@ const Header = () => {
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="4" desktop="4">
-                        <FlexBox classes="d-flex d-flex--justify-end pt__10">
-                            <Search />
-                            <LinkWithIcon svgMode="light" classes="sign__in" linkText="Sign In" linkIcon={UserIcon} />
-                            <Link to="/cart"><ShoppingCartIcon mode="light" /></Link>
+                        <FlexBox classes="d-flex d-flex--justify-end pt__10 d-flex--no-gap">
+                            {/* <FlexItem>
+                                <Search />
+                            </FlexItem> */}
+
+                            {/* <FlexItem>
+                                <LinkWithIcon svgMode="light" classes="sign__in" linkText="Sign In" linkIcon={UserIcon} />
+                            </FlexItem> */}
+
+                            <FlexItem>
+                                <CartCount icon={ShoppingCartIcon} iconColor="light" linkTo="/cart" />
+                            </FlexItem>
                         </FlexBox>
                     </Wrapper>
                 </div>

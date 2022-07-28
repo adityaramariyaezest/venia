@@ -1,0 +1,7 @@
+$spacer: var(--spacer-regular);
+$border-color: var(--color-border);
+
+.fancy-border {
+  border: 1px solid $border-color;
+  padding: calc(#{$spacer} * 3);
+}

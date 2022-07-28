@@ -14,6 +14,7 @@ import './fonts/muli/Muli-Regular.ttf'
 
 
 import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
             <Route path="/product-details" element={<ProductDetailsPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/products" element={<ProductListPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
         </Layout>
 

@@ -16,6 +16,10 @@
     align-items: center;
   }
 
+  svg + div {
+    margin-bottom: 0;
+  }
+
   .sign__in {
     @media (max-width: 768px) {
       display: none;

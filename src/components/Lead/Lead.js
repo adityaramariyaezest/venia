@@ -1,5 +1,5 @@
 import l from './lead.module.scss';
 
-const Lead = ({ text }) => <p className={l.lead}>{text}</p>
+const Lead = ({ text, classes }) => <p className={`${l.lead} ${classes ? classes : ''}`}>{text}</p>
 
 export default Lead;

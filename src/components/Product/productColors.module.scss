@@ -1,13 +1,20 @@
+$spacer: var(--spacer-regular);
+$semibold: var(--font-weight-semibold);
+$border-color: var(--color-gray-m1);
+$font-size-medium: var(--font-size-medium);
+
 .product {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: calc(#{$spacer} * 3);
+  gap: 0 $spacer;
 
   p {
     flex: 1 1 100%;
-    margin-bottom: 10px;
+    margin-bottom: $spacer;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: $semibold;
   }
   span {
     display: flex;
@@ -16,8 +23,8 @@
     text-transform: uppercase;
     text-align: center;
     color: #545d63;
-    font-size: 16px;
-    border: 2px solid #91959c;
+    font-size: $font-size-medium;
+    border: 2px solid $border-color;
     border-radius: 6px;
   }
 }

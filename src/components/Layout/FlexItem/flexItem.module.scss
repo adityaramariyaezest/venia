@@ -1,0 +1,11 @@
+.flex-item {
+  padding: 0 calc(var(--spacer-regular) * 2);
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      width: 100%;
+      @media (min-width: 768px) {
+        width: calc(100% / (12 / #{$i}));
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  // padding-top: 15px;
+  margin: 0 calc(-1 * var(--spacer-regular) * 2);
 
   &--align-center {
     align-items: center;
@@ -16,11 +16,19 @@
     justify-content: space-between;
   }
 
+  &__justify-center {
+    justify-content: center;
+  }
+
   &__cover {
     height: 100%;
   }
 
   &--no-gap {
     gap: 0;
+  }
+
+  &--column {
+    flex-direction: column;
   }
 }

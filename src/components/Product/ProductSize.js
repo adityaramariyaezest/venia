@@ -5,11 +5,11 @@ const ProductSize = () => {
     return (
         <div className={size.product}>
             <p>Size</p>
-            <Radio size="xs" name="size" id="product__colors1" type="radio" labelText="xs" />
-            <Radio size="s" name="size" id="product__colors1" type="radio" labelText="s" />
-            <Radio size="m" name="size" id="product__colors1" type="radio" labelText="m" />
-            <Radio size="l" name="size" id="product__colors1" type="radio" labelText="l" />
-            <Radio size="xl" name="size" id="product__colors1" type="radio" labelText="xl" />
+            <Radio custom="true" size="xs" name="size" id="product__colors1" type="radio" labelText="xs" />
+            <Radio custom="true" size="s" name="size" id="product__colors1" type="radio" labelText="s" />
+            <Radio custom="true" size="m" name="size" id="product__colors1" type="radio" labelText="m" />
+            <Radio custom="true" size="l" name="size" id="product__colors1" type="radio" labelText="l" />
+            <Radio custom="true" size="xl" name="size" id="product__colors1" type="radio" labelText="xl" />
         </div>
     );
 }
