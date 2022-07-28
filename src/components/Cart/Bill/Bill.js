@@ -6,7 +6,7 @@ import { LockIcon } from "../../Icons/Icons";
 
 import bill from './bill.module.scss';
 
-const Bill = () => {
+const Bill = ({ isButton }) => {
     const cartItems = useSelector(state => state.cartItems);
 
     let coupon = 5;
@@ -33,10 +33,12 @@ const Bill = () => {
             <BillCategory category="estimated tax" amount={`${estimatedTax} %`} />
             <BillCategory category="estimated shipping" amount="Free" />
             <BillCategory category="estimated total" amount={estimatedTotal.toFixed(2)} />
-            <ButtonGroup classes="d-flex">
-                <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" />
-                <Button text="paypal" type="solid" variant="primary" isBlock="true" />
-            </ButtonGroup>
+            {!isButton ?
+                <ButtonGroup classes="d-flex">
+                    <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" />
+                    <Button text="paypal" type="solid" variant="primary" isBlock="true" />
+                </ButtonGroup>
+                : null}
         </div>
     );
 }

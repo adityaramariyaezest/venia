@@ -210,7 +210,7 @@ const CheckoutPage = () => {
                     <div className="mb-16">
                         <Table heading="Sign in for Express Checkout" />
                     </div>
-                    <Bill />
+                    <Bill isButton="false" />
                 </Wrapper>
             </div>
         </Container>
