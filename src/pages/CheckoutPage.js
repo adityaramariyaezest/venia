@@ -78,7 +78,7 @@ const CheckoutPage = () => {
                                 <FlexBox classes="d-flex--no-gap">
                                     {cartItems && cartItems.map(item => {
                                         return (
-                                            <FlexItem size="6">
+                                            <FlexItem size="6" classes="mt-16">
                                                 <Media img={item.image} imgDesc={item.name} imgHeight="150" title={item.name}>
                                                     <TextContent content="Size: Medium" />
                                                     <TextContent content="Color: Storm" />
