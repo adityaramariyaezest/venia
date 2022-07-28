@@ -26,6 +26,7 @@ const CheckoutPage = () => {
                     <SecondaryTitle title="guest checkout" />
                     <Lead text="Contact information" classes="mb-8" />
                     <Description classes="mb-16" content="We’ll use these details to keep you informed on your delivery." />
+
                     <FlexBox classes="d-flex--column mb-50" >
                         <FlexItem>
                             <Table heading="shipping information" email="q_farhan@gmail.com" phone="+1 (555) 229-3367" name="Qadim Farhan" address="098 Wapello Street" city="Altadena, California 91001" country="United States" />
@@ -37,15 +38,6 @@ const CheckoutPage = () => {
                             <Table heading="payment information" city="Altadena, California 91001" country="United States" />
                         </FlexItem>
                     </FlexBox>
-
-                    {/* <div className="aem-Grid aem-Grid--12">
-                        <Wrapper phone="12" tablet="12" desktop="6">
-                            <Input id="email" labelText="Email" type="text" placeholder="abc@xyz.com" name="email" classes="form__control" direction="column" />
-                        </Wrapper>
-                        <Wrapper phone="12" tablet="12" desktop="6">
-                            <Input id="phone" labelText="phone number" type="text" placeholder="(222) 222-2222" name="phone" classes="form__control" direction="column" />
-                        </Wrapper>
-                    </div> */}
 
                     <Form>
                         <FlexBox classes="d-flex--no-gap">
@@ -100,7 +92,7 @@ const CheckoutPage = () => {
                         </FlexBox>
 
                         <FlexBox classes="d-flex__justify-center mt-50 mb-25">
-                            <FlexItem size="6">
+                            <FlexItem>
                                 <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" />
                             </FlexItem>
                         </FlexBox>
@@ -113,7 +105,7 @@ const CheckoutPage = () => {
                         <Radio name="shipping__method" id="slow__shipping" type="radio" labelText="Next Day Delivery (Next business days via FedEx) $53.61" direction="row-reverse" />
 
                         <FlexBox classes="d-flex__justify-center mt-50 mb-25">
-                            <FlexItem size="4">
+                            <FlexItem>
                                 <Button text="continue to payment" type="outline" variant="primary" isBlock="true" />
                             </FlexItem>
                         </FlexBox>
@@ -150,6 +142,12 @@ const CheckoutPage = () => {
                             </Wrapper>
                         </div>
                         <Radio name="payment" id="paypal_payment" type="radio" labelText="paypal" direction="row-reverse" />
+
+                        <FlexBox classes="d-flex__justify-center mt-50 mb-25">
+                            <FlexItem>
+                                <Button text="Continue to review order" type="outline" variant="primary" isBlock="true" />
+                            </FlexItem>
+                        </FlexBox>
                     </Form>
                 </Wrapper>
 
