@@ -8,6 +8,10 @@
   padding-top: 15px;
 }
 
+.mr-8 {
+  margin-right: var(--spacer-regular);
+}
+
 .mb-8 {
   margin-bottom: var(--spacer-regular);
 }
@@ -19,6 +23,11 @@
 .mb-16 {
   margin-bottom: calc(var(--spacer-regular) * 2);
 }
+
+.mb-24 {
+  margin-bottom: calc(var(--spacer-regular) * 3);
+}
+
 .mt-50 {
   margin-top: 50px;
 }

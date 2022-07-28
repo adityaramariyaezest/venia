@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import Container from "../components/Container/Container";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
@@ -88,10 +89,23 @@ const CheckoutPage = () => {
                                         )
                                     })}
                                 </FlexBox>
-
                             </Table>
+
                         </FlexItem>
 
+                    </FlexBox>
+
+                    <FlexBox classes="d-flex__justify-center mt-50 mb-24">
+                        <FlexItem>
+                            <Button text="place order" type="solid" variant="primary" />
+                        </FlexItem>
+                    </FlexBox>
+
+                    <FlexBox classes="d-flex__justify-center mb-25 d-flex--no-gap">
+                        <span className="mr-8">By clicking confirm order you agree to our</span>
+                        <Link to="/terms">
+                            Terms and Conditions
+                        </Link>
                     </FlexBox>
 
                     <Form>

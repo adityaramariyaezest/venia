@@ -4,7 +4,7 @@ import Description from '../Description/Description';
 import FlexBox from '../Layout/Flexbox';
 import FlexItem from '../Layout/FlexItem/FLexItem';
 import FancyBorder from '../FancyBorder/FancyBorder';
-import TextContent from '../TextContent/TextContent';
+
 import th from './table.module.scss';
 
 export const TableHeader = ({ heading, controls }) => {
@@ -23,13 +23,13 @@ export const TableHeader = ({ heading, controls }) => {
 }
 
 
-// export const TableBody = ({ children }) => {
-//     return (
-//         <div className={th.table__body}>
-//             {children}
-//         </div>
-//     );
-// }
+export const TableBody = ({ children }) => {
+    return (
+        <div className={th.table__body}>
+            {children}
+        </div>
+    );
+}
 
 
 
@@ -37,11 +37,7 @@ export const Table = ({ heading, controls, children }) => {
     return (
         <FancyBorder>
             <TableHeader heading={heading} controls={controls} />
-            {/* <TableBody children={children} /> */}
-
-            <div className={th.table__body}>
-                {children}
-            </div>
+            <TableBody children={children} />
         </FancyBorder>
     );
 }
