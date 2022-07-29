@@ -10,19 +10,25 @@ import Container from '../components/Container/Container';
 
 const Home = () => {
     const [order, setOrder] = useState(0);
-    const [category, setCategory] = useState([]);
+    const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([])
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/categories')
-            .then(data => data.json())
-            .then(data => {
-                setCategory(data);
+        fetch('https://fakestoreapi.com/products')
+            .then((data) => data.json())
+            .then((data) => {
+                setProducts(data);
             })
     }, [])
 
-    const sortByPrice = event => {
-        setOrder(parseInt(event.target.value))
-    };
+    const sortByPrice = event => setOrder(parseInt(event.target.value));
+    const getFilteredProducts = category => products.filter(product => product.category == category)
+
+    const handleCategoryFilter = event => {
+        const categoryName = event.target.name;
+        const allFilteredProducts = getFilteredProducts(categoryName);
+        setFilteredProducts([...allFilteredProducts, ...filteredProducts]);
+    }
 
     return (
         <>
@@ -37,12 +43,12 @@ const Home = () => {
                         <Sidebar>
                             <Breadcrumb />
                             <p className='sidebar-title'>Filters</p>
-                            <Filters filterByTitle="categories" categories={category} />
+                            <Filters filterByTitle="categories" onFilter={handleCategoryFilter} />
                         </Sidebar>
                     </Wrapper>
                     <Wrapper phone="12" tablet="9" desktop="9">
-                        <Sorting id="sort" sortByPrice={sortByPrice} />
-                        <ProductList order={order} />
+                        <Sorting id="sort" sortByPrice={sortByPrice} totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length} />
+                        <ProductList order={order} products={filteredProducts.length > 0 ? filteredProducts : products} />
                     </Wrapper>
                 </div>
             </Container>

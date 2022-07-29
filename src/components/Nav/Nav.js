@@ -3,7 +3,6 @@ import cn from 'classnames';
 import nav from './nav.module.scss';
 
 const Nav = ({ links, label, labelContent, direction, gap, center, underlined }) => {
-    console.log('diretion', gap);
     const GenerateList = ({ lists }) => {
         return lists && lists.map((listItem, index) => {
             return (
