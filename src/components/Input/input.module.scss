@@ -15,6 +15,48 @@
   &--checkbox {
     justify-content: flex-end;
     gap: var(--spacer-regular);
+
+    [type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      height: 24px;
+      width: 24px;
+      z-index: 1;
+
+      &:checked + .custom-checkbox svg {
+        * {
+          stroke: var(--color-primary-m1);
+        }
+
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 28px;
+
+      svg {
+        position: absolute;
+        stroke: var(--color-gray-m1);
+        width: var(#{--spacer-regular} * 3);
+        height: var(#{--spacer-regular} * 3);
+
+        &:nth-child(2) {
+          display: none;
+          position: absolute;
+          left: 8px;
+          top: 0px;
+          background: var(--color-white);
+          width: 18px;
+          height: 15px;
+        }
+      }
+    }
   }
 
   &--true {
