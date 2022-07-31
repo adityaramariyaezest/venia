@@ -258,6 +258,23 @@ export const LockIcon = ({ mode }) => {
     )
 }
 
+export const SquareIcon = ({ mode }) => {
+    return (
+        <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <rect id="square" width="18" height="18" rx="2" transform="translate(1 1)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+
+    )
+}
+
+export const CheckIcon = ({ mode }) => {
+    return (
+        <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="18.828" height="13.414" viewBox="0 0 18.828 13.414">
+            <path id="check" d="M20,6,9,17,4,12" transform="translate(-2.586 -4.586)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+        </svg>
+    )
+}
+
 
 
 

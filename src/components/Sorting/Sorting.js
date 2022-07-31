@@ -1,10 +1,11 @@
 import FlexBox from "../Layout/Flexbox";
 import Select from "../Select/Select";
 
-const Filter = ({ id, sortByPrice }) => {
+const Filter = ({ id, sortByPrice, totalProducts }) => {
+
     return (
         <FlexBox classes="d-flex d-flex__justify__content__between">
-            <p>20 Results</p>
+            <p>{totalProducts} Results</p>
             <Select labelText="sort" id={id} placeholder="Sort by Latest" sortByPrice={sortByPrice} hideLabel="true" />
         </FlexBox>
     );
