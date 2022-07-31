@@ -11,7 +11,10 @@ import Container from '../components/Container/Container';
 const Home = () => {
     const [order, setOrder] = useState(0);
     const [products, setProducts] = useState([]);
-    const [filteredProducts, setFilteredProducts] = useState([])
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [checkedProducts, setCheckedProducts] = useState([]);
+
+    const getFilteredProducts = () => products.filter(product => checkedProducts.includes(product.category));
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -19,15 +22,18 @@ const Home = () => {
             .then((data) => {
                 setProducts(data);
             })
-    }, [])
+        setFilteredProducts(getFilteredProducts());
+    }, [checkedProducts])
 
     const sortByPrice = event => setOrder(parseInt(event.target.value));
-    const getFilteredProducts = category => products.filter(product => product.category == category)
-
     const handleCategoryFilter = event => {
-        const categoryName = event.target.name;
-        const allFilteredProducts = getFilteredProducts(categoryName);
-        setFilteredProducts([...allFilteredProducts, ...filteredProducts]);
+        const categoryName = event.target.value;
+
+        setCheckedProducts((prev) =>
+            checkedProducts.includes(categoryName)
+                ? prev.filter((cur) => cur !== categoryName)
+                : [...prev, event.target.value]
+        );
     }
 
     return (
@@ -43,7 +49,7 @@ const Home = () => {
                         <Sidebar>
                             <Breadcrumb />
                             <p className='sidebar-title'>Filters</p>
-                            <Filters filterByTitle="categories" onFilter={handleCategoryFilter} />
+                            <Filters filterByTitle="categories" onFilter={handleCategoryFilter} checkedProducts={checkedProducts} />
                         </Sidebar>
                     </Wrapper>
                     <Wrapper phone="12" tablet="9" desktop="9">
