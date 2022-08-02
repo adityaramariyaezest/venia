@@ -14,7 +14,7 @@ const CustomCheckBox = () => {
     )
 }
 
-const Input = ({ id, labelText, classes, type, placeholder, name, value, direction, custom, onChange }) => {
+const Input = ({ id, labelText, classes, type, placeholder, name, value, direction, custom, onChange, handleChecked }) => {
     return (
         <div className={cn(input['form-group'], custom ? { [input[`form-group--${custom}`]]: custom } : '', type ? { [input[`form-group--${type}`]]: type } : '', direction ? { [input[`form-group--${direction}`]]: direction } : '')}>
             <label className={input.label} for={id}>{labelText}</label>

@@ -12,23 +12,34 @@ import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
 import { getFromLocalStorage } from '../../common/common';
 
-const ShippingMethod = ({ page }) => {
-    console.log('page', page);
-    if (page > 1)
-        return (
-            <FlexItem>
-                <Table heading="shipping method">
-                    <FlexBox>
-                        <FlexItem>
-                            <TextContent content="standard shipping" />
-                            <TextContent content="Est. delivery in 4 - 8 business days" />
-                            <TextContent content="FREE" />
-                        </FlexItem>
-                    </FlexBox>
-                </Table>
-            </FlexItem>
-        )
+const ShippingMethod = ({ page, shippingMethodformValues }) => {
+    const [shippingMethod, setShippingMethod] = useState(shippingMethodformValues);
 
+
+    useEffect(() => {
+        setShippingMethod(shippingMethodformValues);
+    }, [shippingMethodformValues])
+
+    {
+        console.log('@@ shippingArray', shippingMethod);
+
+        page > 1 &&
+            shippingMethod && shippingMethod.map(({ mode, estimatedTime, fare }) => {
+                return (
+                    <FlexItem>
+                        <Table heading="shipping method">
+                            <FlexBox>
+                                <FlexItem>
+                                    <TextContent content={mode} />
+                                    <TextContent content={estimatedTime} />
+                                    <TextContent content={fare} />
+                                </FlexItem>
+                            </FlexBox>
+                        </Table>
+                    </FlexItem>
+                )
+            })
+    }
 }
 
 
@@ -49,8 +60,6 @@ const PaymentInformation = ({ page }) => {
         )
     }
 }
-
-
 
 const CartListItem = ({ page }) => {
     const cartItems = useSelector(state => state.cartItems);
@@ -90,10 +99,8 @@ const CartListItem = ({ page }) => {
     }
 }
 
-const ShowCheckoutData = ({ page, formValues }) => {
-    console.log('@@ formValues from show', formValues)
+const ShowCheckoutData = ({ page, formValues, shippingMethodformValues }) => {
     const [userInformation, setUserInformation] = useState(formValues);
-    console.log('@@ userinformation', userInformation);
 
     useEffect(() => {
         setUserInformation(formValues);
@@ -122,7 +129,7 @@ const ShowCheckoutData = ({ page, formValues }) => {
                                         </FlexBox>
                                     </Table>
                                 </FlexItem>
-                                <ShippingMethod page={page} />
+                                <ShippingMethod page={page} shippingMethodformValues={shippingMethodformValues} />
                                 <PaymentInformation page={page} />
                                 <CartListItem page={page} />
                             </>

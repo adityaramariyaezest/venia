@@ -28,14 +28,25 @@ const CheckoutPage = () => {
         state: '',
         zip: '',
     });
-
+    const [shippingMethodIntialValues, setShippingMethodIntialValues] = useState({
+        mode: '',
+        estimatedTime: '',
+        fare: ''
+    });
     const [formValues, setFormValues] = useState([]);
+    const [shippingMethodformValues, setShippingMethodformValues] = useState([]);
+    const [shippingMethod, setShippingMethod] = useState('');
 
 
     function handleNextStep() {
         setFormValues((prevFormValues) => [...prevFormValues, initialValues]);
-        console.log("## formvalues", formValues);
         setToLocalStorage('user', formValues)
+        setPage(page + 1);
+    }
+
+    function handleShippingMethodNextButton() {
+        setShippingMethodformValues((prevShippingValues) => [...prevShippingValues, shippingMethodIntialValues]);
+        setToLocalStorage('shippingMethod', shippingMethodformValues)
         setPage(page + 1);
     }
 
@@ -43,9 +54,15 @@ const CheckoutPage = () => {
         setInitialValues({ ...initialValues, [e.target.name]: e.target.value })
     }
 
+    function handleShippingMethodControls(e) {
+        setShippingMethodIntialValues({ ...shippingMethodIntialValues, [e.target.id]: e.target.value })
+    }
+
     useEffect(() => {
-        setToLocalStorage('user', formValues)
-    }, [formValues])
+        setToLocalStorage('user', formValues);
+        setToLocalStorage('shippingMethod', shippingMethodformValues)
+
+    }, [formValues, shippingMethodformValues])
 
 
     function handleFormSteps() {
@@ -55,9 +72,22 @@ const CheckoutPage = () => {
     const MultiStepForm = () => {
         switch (page) {
             case 0:
-                return <UserInfo initialValues={initialValues} formValues={formValues} handleFormSteps={handleFormSteps} handleNextStep={handleNextStep} handleInputChange={handleInputChange} />;
+                return <UserInfo
+                    initialValues={initialValues}
+                    formValues={formValues}
+                    handleFormSteps={handleFormSteps}
+                    handleNextStep={handleNextStep}
+                    handleInputChange={handleInputChange} />;
             case 1:
-                return <ShippingInfo handleFormSteps={handleFormSteps} />;
+                return <ShippingInfo
+                    shippingMethod={shippingMethod}
+                    setShippingMethod={setShippingMethod}
+                    shippingMethodIntialValues={shippingMethodIntialValues}
+                    shippingMethodformValues={shippingMethodformValues}
+                    handleFormSteps={handleFormSteps}
+                    handleShippingMethodNextButton={handleShippingMethodNextButton}
+                    handleShippingMethodControls={handleShippingMethodControls}
+                />;
             case 2:
                 return <PaymentInfo handleFormSteps={handleFormSteps} />;
             default:
@@ -72,7 +102,7 @@ const CheckoutPage = () => {
 
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <SecondaryTitle title="guest checkout" />
-                    <ShowCheckoutData page={page} formValues={formValues} />
+                    <ShowCheckoutData page={page} formValues={formValues} shippingMethodformValues={shippingMethodformValues} />
                     <Form>
                         <MultiStepForm />
                     </Form>
