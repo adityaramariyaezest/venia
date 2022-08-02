@@ -4,13 +4,18 @@
   position: relative;
   padding: 0 15px;
   text-align: center;
-  order: 2;
+
+  @media (max-width: 768px) {
+    order: 2;
+  }
 
   @media (min-width: 768px) {
-    padding: 47px 24px 56px 117px;
     flex: 1;
     text-align: unset;
-    order: 1;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 47px 24px 56px 117px;
   }
 
   @media (max-width: 768px) {

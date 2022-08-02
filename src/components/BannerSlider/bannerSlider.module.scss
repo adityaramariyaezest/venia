@@ -1,8 +1,10 @@
 $spacer: var(--spacer-regular);
 $font-normal: var(--font-weight-regular);
+$semibold: var(--font-weight-semibold);
 $gray: var(--color-gray-d3);
 $border-color: var(--color-gray-l1);
 $font-base: var(--font-size-base);
+$font-medium: var(--font-size-medium);
 
 .banner {
   display: flex;
@@ -75,8 +77,9 @@ $font-base: var(--font-size-base);
     }
 
     p {
+      font-weight: $semibold;
       @media (min-width: 768px) {
-        font-size: $font-base;
+        font-size: $font-medium;
       }
     }
 

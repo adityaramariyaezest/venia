@@ -1,11 +1,9 @@
+$spacer: var(--spacer-regular);
+
 .d-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-
-  @media (min-width: 768px) {
-    margin: 0 calc(-1 * var(--spacer-regular) * 2);
-  }
 
   &--align-center {
     align-items: center;
@@ -33,5 +31,15 @@
 
   &--column {
     flex-direction: column;
+  }
+
+  &--minus-margin {
+    margin: 0 calc(#{$spacer} * -2);
+    @media (min-width: 320px) {
+      gap: $spacer;
+    }
+    @media (min-width: 768px) {
+      gap: 0;
+    }
   }
 }

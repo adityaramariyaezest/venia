@@ -53,7 +53,7 @@ const Header = () => {
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="4" desktop="4">
-                        <FlexBox classes="d-flex d-flex--justify-end pt__10 d-flex--no-gap">
+                        <FlexBox classes="d-flex d-flex--justify-end d-flex--no-gap">
                             {/* <FlexItem>
                                 <Search />
                             </FlexItem> */}

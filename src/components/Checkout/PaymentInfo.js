@@ -16,19 +16,19 @@ const PaymentInfo = ({ handleFormSteps }) => {
                 <Radio name="payment" id="credit__card__payment" type="radio" labelText="Credit Card" direction="row-reverse" />
                 <div className="aem-Grid aem-Grid--12">
                     <Wrapper phone="12" tablet="12" desktop="6">
-                        <FlexBox classes="d-flex--no-gap">
+                        <FlexBox classes="d-flex--minus-margin">
                             <FlexItem size="12">
                                 <Input id="name__on__card" labelText="Name on Card" type="text" name="name__on__card" classes="form__control" direction="column" />
                             </FlexItem>
                         </FlexBox>
 
-                        <FlexBox classes="d-flex--no-gap">
+                        <FlexBox classes="d-flex--minus-margin">
                             <FlexItem size="12">
                                 <Input id="credit__card__number" labelText="Credit Card Numberr" type="text" name="credit__card__number" classes="form__control" direction="column" />
                             </FlexItem>
                         </FlexBox>
 
-                        <FlexBox classes="d-flex--no-gap">
+                        <FlexBox classes="d-flex--minus-margin">
                             <FlexItem size="8">
                                 <Input id="expiration__date" labelText="Expiration Date" type="text" name="expiration__date" classes="form__control" direction="column" />
                             </FlexItem>

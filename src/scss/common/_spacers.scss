@@ -49,7 +49,9 @@
 }
 
 .pr-32 {
-  padding-right: calc(var(--spacer-regular) * 4);
+  @media (min-width: 768px) {
+    padding-right: calc(var(--spacer-regular) * 4);
+  }
 }
 
 body {

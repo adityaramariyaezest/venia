@@ -7,13 +7,13 @@ import Lead from "../Lead/Lead";
 const ExpressSignIn = () => {
     return (
         <FancyBorder>
-            <FlexBox classes="d-flex--no-gap d-flex--align-center d-flex__justify__content__between">
+            <FlexBox classes="d-flex--minus-margin d-flex--align-center d-flex__justify__content__between">
                 <FlexItem size="6">
                     <Lead text="Sign in for Express Checkout" classes="m-0" />
                 </FlexItem>
 
                 <FlexItem>
-                    <Button text="Sign in" type="outline" variant="primary" />
+                    <Button text="Sign in" type="outline" isBlock="true" variant="primary" />
                 </FlexItem>
             </FlexBox>
         </FancyBorder>

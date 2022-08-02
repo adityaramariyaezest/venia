@@ -1,9 +1,16 @@
 .image {
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
-  flex: 1;
-  max-height: 450px;
+
+  @media (max-width: 768px) {
+    max-height: 312px;
+  }
+
+  @media (min-width: 768px) {
+    width: 600px;
+    flex: 1;
+    max-height: 450px;
+  }
 
   img {
     width: 100%;

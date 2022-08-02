@@ -108,7 +108,7 @@ const ShowCheckoutData = ({ page, formValues, shippingMethodformValues }) => {
 
     return (
         <Form>
-            <FlexBox classes="d-flex--column mb-50 mt-16" >
+            <FlexBox classes="d-flex--column d-flex--minus-margin mb-50 mt-16" >
                 {page > 0 &&
                     userInformation && userInformation.map(({ email, phone, firstName, lastName, country, city, state, zip, streetAddress1 }) => {
                         return (

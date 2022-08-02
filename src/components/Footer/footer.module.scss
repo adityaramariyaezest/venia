@@ -41,6 +41,9 @@ $font-base: var(--font-size-base);
     img {
       padding-top: $spacer;
       max-width: calc(#{$spacer} * 12);
+      transform: unset;
+      height: auto;
+      position: unset;
     }
   }
 
