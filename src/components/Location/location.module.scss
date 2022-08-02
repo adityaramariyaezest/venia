@@ -8,7 +8,14 @@
   align-items: center;
   justify-content: center;
   bottom: 40px;
-  border-bottom: 8px solid #1363df;
+  border-bottom: 8px solid var(--color-primary-m1);
+
+  @media (max-width: 768px) {
+    left: 0;
+    margin: auto;
+    top: -281px;
+    left: 32px;
+  }
 
   svg {
     transform: scale(1.5);

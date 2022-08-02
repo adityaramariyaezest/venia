@@ -1,33 +1,54 @@
+$spacer: var(--spacer-regular);
+$font-normal: var(--font-weight-regular);
+$gray: var(--color-gray-d3);
+$border-color: var(--color-gray-l1);
+$font-base: var(--font-size-base);
+
 .footer {
   display: flex;
   flex-direction: column;
-  border-top: 4px solid #e5e5e7;
-  margin-top: 40px;
+  border-top: 4px solid $border-color;
+  margin-top: calc(#{$spacer} * 5);
 
   h4 {
-    margin-top: 30px;
-    margin-bottom: 16px;
+    margin-top: calc(#{$spacer} * 4);
+    margin-bottom: calc(#{$spacer} * 2);
   }
 
   &__top {
     padding: 45px 0;
+
+    @media (max-width: 768px) {
+      padding-top: calc(#{$spacer} * 7);
+      padding-bottom: calc(#{$spacer} * 10);
+    }
   }
 
   &__bottom {
-    padding: 10px 0;
-    border-top: 2px solid #e5e5e7;
+    padding: $spacer 0;
+    border-top: 2px solid $border-color;
+
+    ul {
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: calc(#{$spacer} * 4) calc(#{$spacer} * 2);
+    }
 
     img {
-      padding-top: 9px;
-      max-width: 100px;
+      padding-top: $spacer;
+      max-width: calc(#{$spacer} * 12);
     }
   }
 
   address {
     text-align: center;
-    padding-top: 14px;
-    color: #545d63;
-    font-size: 14px;
-    font-style: normal;
+    padding-top: calc(#{$spacer} * 2);
+    color: $gray;
+    font-size: font-base;
+    font-style: $font-normal;
   }
 }
