@@ -42,14 +42,14 @@ const Header = () => {
             <Container>
                 <div className="aem-Grid aem-Grid--12">
                     <Wrapper phone="8" tablet="4" desktop="4">
-                        <FlexBox classes="d-flex">
+                        <FlexBox classes="d-flex d-flex--align-center">
                             <Hamburger />
                             <Logo name="logo-dark.PNG" />
                         </FlexBox>
                     </Wrapper>
 
-                    <Wrapper phone="hide" tablet="4" desktop="4">
-                        <Nav classes={header.menu} direction="row" center="align-center" gap="32" links={menu} label="mainmenulabel" labelContent="main menu" />
+                    <Wrapper phone="4" tablet="4" desktop="4">
+                        <Nav classes={header.menu} mainMenu='main-menu' direction="row" center="align-center" gap="32" links={menu} label="mainmenulabel" labelContent="main menu" />
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="4" desktop="4">

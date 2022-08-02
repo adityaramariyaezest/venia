@@ -1,5 +1,7 @@
 @use "../../scss/common/colors" as *;
 
+$white: var(--color-white);
+
 .header {
   height: 80px;
   display: grid;

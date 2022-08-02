@@ -1,9 +1,24 @@
+$white: var(--color-white);
+
 .visuallyHidden {
   display: none;
 }
 
 .menu {
   padding-top: 10px;
+
+  @media (max-width: 768px) {
+    &-main-menu {
+      position: fixed;
+      width: 100vw;
+      height: calc(100vh - 80px);
+      top: 80px;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: $white;
+    }
+  }
 
   &__list {
     display: flex;
