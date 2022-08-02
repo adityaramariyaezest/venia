@@ -1,3 +1,6 @@
+
+import { useState, useEffect } from "react";
+
 import Form from "../Form/Form";
 import FlexBox from "../Layout/Flexbox";
 import FlexItem from "../Layout/FlexItem/FLexItem";
@@ -7,8 +10,9 @@ import Lead from "../Lead/Lead";
 import Description from "../Description/Description";
 import Select from "../Select/Select";
 
-const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
-    console.log('@@ formData', formData);
+const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues }) => {
+    console.log('@@ formValues from UserInfo', formValues)
+
     return (
         <>
             <Lead text="Contact information" classes="mb-8" />
@@ -24,13 +28,8 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         name="email"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                [e.target.name]: e.target.value,
-                            });
-                        }}
-                        value={formData.email}
+                        onChange={handleInputChange}
+                        value={initialValues.email}
                     />
                 </FlexItem>
                 <FlexItem size="6">
@@ -41,13 +40,8 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         placeholder="(222) 222-2222"
                         name="phone" classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                [e.target.name]: e.target.value,
-                            });
-                        }}
-                        value={formData.phone}
+                        onChange={handleInputChange}
+                        value={initialValues.phone}
                     />
                 </FlexItem>
             </FlexBox>
@@ -66,16 +60,11 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         id="first_name"
                         labelText="first name"
                         type="text"
-                        name="first_name"
+                        name="firstName"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                firstName: e.target.value,
-                            });
-                        }}
-                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        value={initialValues.firstName}
 
                     />
                 </FlexItem>
@@ -85,16 +74,11 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         id="last_name"
                         labelText="last name"
                         type="text"
-                        name="last_name"
+                        name="lastName"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                lastName: e.target.value,
-                            });
-                        }}
-                        value={formData.lastName} />
+                        onChange={handleInputChange}
+                        value={initialValues.lastName} />
                 </FlexItem>
 
                 <FlexItem size="6">
@@ -102,16 +86,11 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         id="street_address"
                         labelText="street address"
                         type="text"
-                        name="street_address"
+                        name="streetAddress1"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                streetAddress1: e.target.value,
-                            });
-                        }}
-                        value={formData.streetAddress1} />
+                        onChange={handleInputChange}
+                        value={initialValues.streetAddress1} />
                 </FlexItem>
 
                 <FlexItem size="6">
@@ -119,16 +98,11 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         id="street_address2"
                         labelText="street address 2"
                         type="text"
-                        name="street_address2"
+                        name="streetAddress2"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                streetAddress2: e.target.value,
-                            });
-                        }}
-                        value={formData.streetAddress2} />
+                        onChange={handleInputChange}
+                        value={initialValues.streetAddress2} />
                 </FlexItem>
 
                 <FlexItem size="6">
@@ -139,13 +113,8 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                         name="city"
                         classes="form__control"
                         direction="column"
-                        onChange={(e) => {
-                            setFormData({
-                                ...formData,
-                                city: e.target.value,
-                            });
-                        }}
-                        value={formData.city} />
+                        onChange={handleInputChange}
+                        value={initialValues.city} />
                 </FlexItem>
 
                 <FlexItem size="6">
@@ -159,29 +128,20 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
                                 classes="form__control"
                                 direction="column"
 
-                                onChange={(e) => {
-                                    setFormData({
-                                        ...formData,
-                                        state: e.target.value,
-                                    });
-                                }}
-                                value={formData.state} />
+                                onChange={handleInputChange}
+                                value={initialValues.state} />
                         </FlexItem>
 
                         <FlexItem size="3">
                             <Input
                                 id="zip"
                                 labelText="zip"
-                                type="text" name="zip"
+                                type="text"
+                                name="zip"
                                 classes="form__control"
                                 direction="column"
-                                onChange={(e) => {
-                                    setFormData({
-                                        ...formData,
-                                        zip: e.target.value,
-                                    });
-                                }}
-                                value={formData.zip} />
+                                onChange={handleInputChange}
+                                value={initialValues.zip} />
                         </FlexItem>
                     </FlexBox>
                 </FlexItem>
@@ -189,7 +149,7 @@ const UserInfo = ({ handleFormSteps, formData, setFormData }) => {
 
             <FlexBox classes="d-flex__justify-center mt-50 mb-25">
                 <FlexItem>
-                    <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" onPress={handleFormSteps} />
+                    <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" onPress={handleNextStep} />
                 </FlexItem>
             </FlexBox>
         </>

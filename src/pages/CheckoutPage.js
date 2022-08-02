@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "../components/Container/Container";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
 import Title from "../components/Headings/Title/Title";
 import SecondaryTitle from '../components/Headings/SecondaryTitle/SecondaryTitle';
-import Lead from "../components/Lead/Lead";
 import ExpressSignIn from "../components/ExpressSignIn/ExpressSignIn";
 import PaymentInfo from "../components/Checkout/PaymentInfo";
 import UserInfo from "../components/Checkout/UserInfo";
 import ShippingInfo from "../components/Checkout/ShippingInfo";
 import ShowCheckoutData from "../components/Checkout/ShowCheckoutData";
-import { setToLocalStorage, getFromLocalStorage } from '../common/common';
 import Form from "../components/Form/Form";
-import CartList from "../components/Checkout/CartList";
+import { setToLocalStorage } from '../common/common';
+
 
 const CheckoutPage = () => {
     const [page, setPage] = useState(0);
-    const [formData, setFormData] = useState([{
+
+    const [initialValues, setInitialValues] = useState({
         email: '',
         phone: '',
         country: '',
@@ -27,17 +27,35 @@ const CheckoutPage = () => {
         city: '',
         state: '',
         zip: '',
-    }]);
+    });
+
+    const [formValues, setFormValues] = useState([]);
+
+
+    function handleNextStep() {
+        setFormValues((prevFormValues) => [...prevFormValues, initialValues]);
+        console.log("## formvalues", formValues);
+        setToLocalStorage('user', formValues)
+        setPage(page + 1);
+    }
+
+    function handleInputChange(e) {
+        setInitialValues({ ...initialValues, [e.target.name]: e.target.value })
+    }
+
+    useEffect(() => {
+        setToLocalStorage('user', formValues)
+    }, [formValues])
+
 
     function handleFormSteps() {
         setPage(page + 1);
-        setToLocalStorage('checkoutInformation', formData);
     }
 
     const MultiStepForm = () => {
         switch (page) {
             case 0:
-                return <UserInfo handleFormSteps={handleFormSteps} formData={formData} setFormData={setFormData} />;
+                return <UserInfo initialValues={initialValues} formValues={formValues} handleFormSteps={handleFormSteps} handleNextStep={handleNextStep} handleInputChange={handleInputChange} />;
             case 1:
                 return <ShippingInfo handleFormSteps={handleFormSteps} />;
             case 2:
@@ -54,12 +72,10 @@ const CheckoutPage = () => {
 
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <SecondaryTitle title="guest checkout" />
-                    <ShowCheckoutData formData={formData} page={page} />
-
+                    <ShowCheckoutData page={page} formValues={formValues} />
                     <Form>
                         <MultiStepForm />
                     </Form>
-
                 </Wrapper>
 
                 <Wrapper phone="12" tablet="12" desktop="4">

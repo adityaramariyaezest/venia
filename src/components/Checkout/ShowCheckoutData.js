@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector } from "react-redux";
 
 import Form from "../Form/Form";
@@ -10,6 +10,7 @@ import TextContent from "../TextContent/TextContent";
 import Media from '../Media/Media';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import { getFromLocalStorage } from '../../common/common';
 
 const ShippingMethod = ({ page }) => {
     console.log('page', page);
@@ -89,15 +90,20 @@ const CartListItem = ({ page }) => {
     }
 }
 
+const ShowCheckoutData = ({ page, formValues }) => {
+    console.log('@@ formValues from show', formValues)
+    const [userInformation, setUserInformation] = useState(formValues);
+    console.log('@@ userinformation', userInformation);
 
-const ShowCheckoutData = ({ formData, page }) => {
-    const [checkoutInformation, setCheckoutInformation] = useState([formData])
+    useEffect(() => {
+        setUserInformation(formValues);
+    }, [formValues])
 
     return (
         <Form>
             <FlexBox classes="d-flex--column mb-50 mt-16" >
                 {page > 0 &&
-                    checkoutInformation && checkoutInformation.map(({ email, phone, firstName, lastName, country, city, state, zip, streetAddress1, streetAddress2 }) => {
+                    userInformation && userInformation.map(({ email, phone, firstName, lastName, country, city, state, zip, streetAddress1 }) => {
                         return (
                             <>
                                 <FlexItem>
@@ -109,9 +115,9 @@ const ShowCheckoutData = ({ formData, page }) => {
                                             </FlexItem>
                                             <FlexItem>
                                                 <TextContent content={`${firstName} ${lastName}`} />
-                                                <TextContent content={`${streetAddress1}`} />
+                                                <TextContent content={streetAddress1} />
                                                 <TextContent content={`${city} ${state} ${zip}`} />
-                                                <TextContent content={`${country}`} />
+                                                <TextContent content={country} />
                                             </FlexItem>
                                         </FlexBox>
                                     </Table>
