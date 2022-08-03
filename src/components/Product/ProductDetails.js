@@ -1,8 +1,6 @@
 import { useDispatch } from "react-redux";
 import Button from '../Button/Button';
 import Quantity from '../Quantity/Quantity';
-import ProducutColors from './ProductColors';
-import ProducutSize from './ProductSize';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import Share from '../Share/Share';
 import FlexBox from '../Layout/Flexbox';
@@ -36,8 +34,6 @@ const ProductDetails = ({ title, price, description, ratings, productID }) => {
                 <p className={product.product__price}>${price}</p>
                 <Ratings ratings={ratings} />
                 <p className={product.product__description}>{description}</p>
-                <ProducutColors />
-                <ProducutSize />
                 <Quantity isLabel id={productID} getQuantity={getQuantity} />
                 <Button type="solid" variant="primary" text="add to cart" isBlock onPress={e => handleEvent(e, productID)} />
                 <Share classes={product.product__share}>

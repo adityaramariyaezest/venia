@@ -61,7 +61,7 @@ const ProductDetailsPage = () => {
                         />
                     </Wrapper>
 
-                    <Wrapper phone="10" tablet="6" desktop="12">
+                    <Wrapper phone="12" tablet="12" desktop="12">
                         <ProductExtraDetails
                             title={title}
                             description={description}

@@ -1,8 +1,10 @@
+$spacer: var(--spacer-regular);
+$semibold: var(--font-weight-semibold);
+
 .lead {
-  font-weight: var(--font-weight-semibold);
+  font-weight: $semibold;
   font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: calc(#{$spacer} * 2);
   text-transform: capitalize;
 
   @media (max-width: 768px) {
