@@ -65,7 +65,7 @@ const OrderSuccessful = () => {
                     </FlexBox>
 
                     <FlexBox classes="d-flex--minus-margin">
-                        <FlexItem>
+                        <FlexItem size="12">
                             <CartList />
                         </FlexItem>
                     </FlexBox>

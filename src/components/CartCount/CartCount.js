@@ -8,7 +8,7 @@ export const CartCount = ({ icon, iconColor, linkTo }) => {
     const cartItems = useSelector(state => state.cartItems);
     return (
         <div className={c.cart}>
-            <Link to={linkTo}><CartIcon mode={iconColor} />
+            <Link to={linkTo} aria-label="cart__icon"><CartIcon mode={iconColor} />
                 {cartItems.length > 0 ?
                     <div className={c['cart-count']}>{cartItems.length}</div> : null}
             </Link>

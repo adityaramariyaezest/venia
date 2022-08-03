@@ -1,8 +1,16 @@
 $header-height: var(--header-height);
 $header-height-mobile: var(--header-height-mobile);
 
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main {
   padding-top: $header-height;
+  flex: 1;
 
   @media (max-width: 768px) {
     padding-top: $header-height-mobile;

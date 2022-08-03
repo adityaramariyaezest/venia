@@ -70,6 +70,23 @@
     &:disabled {
       background-color: #b5b7bc;
     }
+
+    &--paypal {
+      background-color: red !important;
+    }
+  }
+
+  &-paypal {
+    background-color: #fec539;
+    border-radius: 100px;
+
+    svg {
+      width: 100px;
+    }
+
+    &:hover {
+      background-color: #f9ba1c !important;
+    }
   }
 
   &-outline {

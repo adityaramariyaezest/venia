@@ -3,6 +3,7 @@ $border: var(--color-border);
 $border-radius: var(--border-radius);
 $color: var(--color-body);
 $white: var(--color-white);
+$semibold: var(--font-weight-semibold);
 
 .bill {
   padding: calc(#{$spacer}* 2) 0;
@@ -15,6 +16,8 @@ $white: var(--color-white);
   }
 
   &__title {
+    font-size: 20px;
+    font-weight: $semibold;
     letter-spacing: 0px;
     color: $color;
     margin-bottom: calc(#{$spacer} * 3);

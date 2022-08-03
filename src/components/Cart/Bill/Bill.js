@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Button from "../../Button/Button";
 import BillCategory from "../BillCategory/BillCategory";
 import ButtonGroup from "../../ButtonGroup/ButtonGroup";
-import { LockIcon } from "../../Icons/Icons";
+import { LockIcon, PaypalIcon } from "../../Icons/Icons";
 
 import bill from './bill.module.scss';
 
@@ -31,7 +31,7 @@ const Bill = ({ isButton }) => {
 
     return (
         <div className={bill.bill}>
-            <h4 className={bill.bill__title}>Pricing Summary</h4>
+            <p className={bill.bill__title}>Pricing Summary</p>
             <BillCategory category="subtotal" amount={subtotal.toFixed(2)} />
             <BillCategory category="coupon" amount={`${coupon} %`} />
             <BillCategory category="gift card" amount={`${giftCard}`} />
@@ -41,7 +41,8 @@ const Bill = ({ isButton }) => {
             {!isButton ?
                 <ButtonGroup classes="d-flex">
                     <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" onPress={navigateToCheckoutPage} />
-                    <Button text="paypal" type="solid" variant="primary" isBlock="true" />
+                    <Button type="solid" variant="primary" isBlock="true" icon={PaypalIcon} isIcon image="paypal" />
+
                 </ButtonGroup>
                 : null}
         </div>
