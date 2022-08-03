@@ -9,6 +9,7 @@ $gray-darkest: var(--color-gray-d10);
   padding-top: calc(#{$spacer} * 9);
   padding-bottom: calc(#{$spacer} * 6);
   margin-top: calc(#{$spacer} * -4);
+  width: 100%;
 
   @media (min-width: 768px) {
     padding: 87px 108px 115px 108px;

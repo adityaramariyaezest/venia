@@ -41,18 +41,19 @@ const Header = () => {
         <header className={header.header}>
             <Container>
                 <div className="aem-Grid aem-Grid--12">
-                    <Wrapper phone="8" tablet="4" desktop="4">
+                    <Wrapper phone="8" tablet="2" desktop="4">
                         <FlexBox classes="d-flex d-flex--align-center">
                             <Hamburger />
                             <Logo name="logo-dark.PNG" />
                         </FlexBox>
                     </Wrapper>
 
-                    <Wrapper phone="4" tablet="4" desktop="4">
+                    <Wrapper phone="4" tablet="8" desktop="4">
+
                         <Nav classes={header.menu} mainMenu='main-menu' direction="row" center="align-center" gap="32" links={menu} label="mainmenulabel" labelContent="main menu" />
                     </Wrapper>
 
-                    <Wrapper phone="4" tablet="4" desktop="4">
+                    <Wrapper phone="4" tablet="2" desktop="4">
                         <FlexBox classes="d-flex d-flex--justify-end d-flex--no-gap">
                             {/* <FlexItem>
                                 <Search />

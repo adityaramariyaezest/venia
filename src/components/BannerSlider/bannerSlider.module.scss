@@ -17,7 +17,7 @@ $font-medium: var(--font-size-medium);
   background-color: $border-color;
   height: calc(#{$spacer} * 77.5);
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
     height: calc(#{$spacer} * 81.25);
     margin-bottom: calc(#{$spacer} * 5.65);
@@ -30,8 +30,9 @@ $font-medium: var(--font-size-medium);
     height: 100%;
     align-self: stretch;
     align-items: stretch;
+    width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       order: 2;
       min-height: unset;
       flex: 0 0 50%;
@@ -55,15 +56,19 @@ $font-medium: var(--font-size-medium);
       calc(#{$spacer} * 2);
     text-align: center;
 
-    @media (min-width: 768px) {
-      max-width: calc(#{$spacer} * 82.5);
+    @media (min-width: 1024px) {
       position: unset;
       text-align: left;
-      padding-left: calc(#{$spacer} * 18.75);
-      padding-right: calc(#{$spacer} * 6.25);
+      max-width: 50%;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 1440px) {
+      padding-left: calc(#{$spacer} * 18.75);
+      padding-right: calc(#{$spacer} * 6.25);
+      max-width: calc(#{$spacer} * 82.5);
+    }
+
+    @media (max-width: 1024px) {
       padding-bottom: calc(#{$spacer} * 18.75);
 
       * {
@@ -85,10 +90,6 @@ $font-medium: var(--font-size-medium);
 
     button {
       margin-top: calc(#{$spacer} * 3);
-
-      @media (min-width: 768px) {
-        margin-left: 0;
-      }
     }
   }
 }

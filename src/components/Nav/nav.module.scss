@@ -1,5 +1,5 @@
 $white: var(--color-white);
-
+$header-height-mobile: var(--header-height-mobile);
 .visuallyHidden {
   display: none;
 }
@@ -12,7 +12,7 @@ $white: var(--color-white);
       position: fixed;
       width: 100vw;
       height: calc(100vh - 80px);
-      top: 80px;
+      top: $header-height-mobile;
       left: 0;
       bottom: 0;
       z-index: 10;
@@ -37,6 +37,14 @@ $white: var(--color-white);
           }
         }
       }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &-main-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
