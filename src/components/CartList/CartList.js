@@ -16,9 +16,9 @@ const CartList = () => {
                     return (
                         <FlexItem size="6" classes="mt-16">
                             <Media img={item.image} imgDesc={item.name} imgHeight="150" title={item.name}>
-                                <TextContent content="Size: Medium" />
-                                <TextContent content="Color: Storm" />
-                                <TextContent content={`Quantity: ${item.qty}`} />
+                                <TextContent size="base" content="Size: Medium" />
+                                <TextContent size="base" content="Color: Storm" />
+                                <TextContent size="base" content={`Quantity: ${item.qty}`} />
                             </Media>
                         </FlexItem>
                     )

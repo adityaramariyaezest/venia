@@ -1,0 +1,21 @@
+$cyan: var(--color-blue-c1);
+$white: var(--color-white);
+
+.offerBox {
+  max-width: 440px;
+  height: 351px;
+  background-color: $cyan;
+
+  padding: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    color: $white;
+  }
+}

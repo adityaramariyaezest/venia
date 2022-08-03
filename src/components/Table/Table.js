@@ -1,9 +1,9 @@
+import cn from 'classnames';
 import { EditIcon2 } from '../Icons/Icons';
 import LinkWithIcon from '../Links/LinkWithIcon'
 import Description from '../Description/Description';
 import FlexBox from '../Layout/Flexbox';
 import FlexItem from '../Layout/FlexItem/FLexItem';
-import FancyBorder from '../FancyBorder/FancyBorder';
 
 import th from './table.module.scss';
 
@@ -23,9 +23,10 @@ export const TableHeader = ({ heading, controls }) => {
 }
 
 
-export const TableBody = ({ children }) => {
+export const TableBody = ({ children, size }) => {
+    console.log('$$ size', size);
     return (
-        <div className={th.table__body}>
+        <div className={cn(th['table__body'], size ? { [th[`table__body--${size}`]]: size } : '')}>
             {children}
         </div>
     );
@@ -33,11 +34,11 @@ export const TableBody = ({ children }) => {
 
 
 
-export const Table = ({ heading, controls, children }) => {
+export const Table = ({ heading, controls, size, children }) => {
     return (
         <>
             <TableHeader heading={heading} controls={controls} />
-            {children ? <TableBody children={children} /> : null}
+            {children ? <TableBody children={children} size={size ? size : ''} /> : null}
         </>
     );
 }

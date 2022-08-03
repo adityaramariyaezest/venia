@@ -1,8 +1,14 @@
 $mute: var(--color-gray-d1);
 $font-base: var(--font-size-base);
+$color: var(--color-body);
 
 .text-content {
   font-size: $font-base;
   line-height: 1.6;
   color: $mute;
+
+  &--base {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
