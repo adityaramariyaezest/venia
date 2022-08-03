@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
 import Form from "../Form/Form";
 import FlexBox from "../Layout/Flexbox";
@@ -63,6 +64,10 @@ const PaymentInformation = ({ page }) => {
 
 const CartListItem = ({ page }) => {
     const cartItems = useSelector(state => state.cartItems);
+
+    const navigate = useNavigate();
+    const navigateToOrderSuccessful = () => navigate('/order-successful');
+
     if (page == 3) {
         return (
             <FlexItem>
@@ -84,7 +89,7 @@ const CartListItem = ({ page }) => {
 
                 <FlexBox classes="d-flex__justify-center mt-50 mb-24">
                     <FlexItem>
-                        <Button text="place order" type="solid" variant="primary" />
+                        <Button text="place order" type="solid" variant="primary" onPress={navigateToOrderSuccessful} />
                     </FlexItem>
                 </FlexBox>
 

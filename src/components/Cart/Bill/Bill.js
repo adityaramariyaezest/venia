@@ -1,3 +1,5 @@
+
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import Button from "../../Button/Button";
 import BillCategory from "../BillCategory/BillCategory";
@@ -8,6 +10,9 @@ import bill from './bill.module.scss';
 
 const Bill = ({ isButton }) => {
     const cartItems = useSelector(state => state.cartItems);
+
+    const navigate = useNavigate();
+    const navigateToCheckoutPage = () => navigate('/checkout');
 
     let coupon = 5;
     let giftCard = 0;
@@ -35,7 +40,7 @@ const Bill = ({ isButton }) => {
             <BillCategory category="estimated total" amount={estimatedTotal.toFixed(2)} />
             {!isButton ?
                 <ButtonGroup classes="d-flex">
-                    <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" />
+                    <Button text="checkout" type="solid" variant="primary" isBlock="true" icon={LockIcon} isIcon svgIconMode="light" imageDescription="checkout-button-icon" onPress={navigateToCheckoutPage} />
                     <Button text="paypal" type="solid" variant="primary" isBlock="true" />
                 </ButtonGroup>
                 : null}
