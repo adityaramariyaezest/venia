@@ -10,8 +10,8 @@ import Lead from "../Lead/Lead";
 import Description from "../Description/Description";
 import Select from "../Select/Select";
 
-const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues }) => {
-    console.log('@@ formValues from UserInfo', formValues)
+const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo }) => {
+    console.log('@@ formValues from UserInfo', UserInfo)
 
     return (
         <>
@@ -149,7 +149,7 @@ const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues
 
             <FlexBox classes="d-flex__justify-center d-flex--minus-margin mt-50 mb-25">
                 <FlexItem>
-                    <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" onPress={handleNextStep} />
+                    <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" onPress={handleNextButton} />
                 </FlexItem>
             </FlexBox>
         </>
