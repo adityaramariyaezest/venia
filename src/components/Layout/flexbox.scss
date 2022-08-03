@@ -31,6 +31,10 @@ $spacer: var(--spacer-regular);
 
   &--column {
     flex-direction: column;
+
+    &.d-flex--minus-margin {
+      gap: calc(#{$spacer} * 2);
+    }
   }
 
   &--minus-margin {
