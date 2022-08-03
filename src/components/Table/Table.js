@@ -24,14 +24,12 @@ export const TableHeader = ({ heading, controls }) => {
 
 
 export const TableBody = ({ children, size }) => {
-    console.log('$$ size', size);
     return (
         <div className={cn(th['table__body'], size ? { [th[`table__body--${size}`]]: size } : '')}>
             {children}
         </div>
     );
 }
-
 
 
 export const Table = ({ heading, controls, size, children }) => {

@@ -1,16 +1,12 @@
 
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import Form from "../Form/Form";
 import FlexBox from "../Layout/Flexbox";
 import FlexItem from "../Layout/FlexItem/FLexItem";
 import { Table } from "../Table/Table";
 import TextContent from "../TextContent/TextContent";
-import Media from '../Media/Media';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
-import { getFromLocalStorage } from '../../common/common';
 import FancyBorder from '../FancyBorder/FancyBorder';
 import CartList from '../CartList/CartList';
 
@@ -29,7 +25,6 @@ const ShippingMethod = ({ page, shipping }) => {
                             </FlexBox>
                         </Table>
                     </FancyBorder>
-
                 </FlexItem>
             }</>
     )
@@ -37,7 +32,6 @@ const ShippingMethod = ({ page, shipping }) => {
 
 
 const PaymentInformation = ({ page, payment }) => {
-    console.log('page', page);
     if (page > 2) {
         return (
             <FlexItem>
@@ -89,12 +83,6 @@ const CartListItem = ({ page }) => {
 const ShowCheckoutData = ({ page, userInfo, shippingMethodformValues, shipping, payment }) => {
 
     const { email, phone, firstName, lastName, streetAddress1, city, state, zip, country } = userInfo;
-    // console.log('$$ formValues', formValues)
-    // const [userInformation, setUserInformation] = useState(formValues);
-
-    // useEffect(() => {
-    //     setUserInformation(formValues);
-    // }, [formValues])
 
     return (
         <Form>

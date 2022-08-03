@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Container from "../components/Container/Container";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";

@@ -3,7 +3,6 @@ import cn from 'classnames';
 import nav from './nav.module.scss';
 
 const Nav = ({ links, label, labelContent, direction, gap, center, underlined, mainMenu, classes }) => {
-    console.log('$$$ breadcrumb', classes)
     const GenerateList = ({ lists }) => {
         return lists && lists.map((listItem, index) => {
             return (

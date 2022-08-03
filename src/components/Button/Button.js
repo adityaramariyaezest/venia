@@ -1,9 +1,7 @@
 import cn from 'classnames';
 import button from './button.module.scss';
 
-
 const Button = ({ text, type, isIcon, icon, onPress, svgIconMode, variant, isBlock, disabled, image }) => {
-    console.log('$$ image', image);
     const Icon = icon;
 
     return (

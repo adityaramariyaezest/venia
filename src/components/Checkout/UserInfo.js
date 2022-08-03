@@ -11,7 +11,6 @@ import Description from "../Description/Description";
 import Select from "../Select/Select";
 
 const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo }) => {
-    console.log('@@ formValues from UserInfo', UserInfo)
 
     return (
         <>

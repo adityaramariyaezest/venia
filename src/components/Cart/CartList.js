@@ -3,7 +3,6 @@ import Cart from "./Cart";
 import cart from './cart.module.scss';
 
 const CartList = ({ cartItems }) => {
-    console.log(cartItems)
     return (
         <>
             <div className={cart.cartlist}>
