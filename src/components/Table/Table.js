@@ -35,10 +35,10 @@ export const TableBody = ({ children }) => {
 
 export const Table = ({ heading, controls, children }) => {
     return (
-        <FancyBorder>
+        <>
             <TableHeader heading={heading} controls={controls} />
             {children ? <TableBody children={children} /> : null}
-        </FancyBorder>
+        </>
     );
 }
 
