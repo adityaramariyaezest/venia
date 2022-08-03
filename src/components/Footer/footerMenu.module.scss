@@ -1,8 +1,18 @@
+$regular: var(--spacer-regular);
+$bold: var(--font-weight-bold);
+
 .menu {
   &__heading {
-    margin-bottom: 15px;
-    font-weight: bold;
+    margin-bottom: calc(#{$regular} * 2);
+    font-weight: $bold;
     font-size: 20px;
+
+    + nav {
+      @media (max-width: 768px) {
+        padding-top: 0;
+        margin-bottom: calc(#{$regular} * 2);
+      }
+    }
   }
 }
 

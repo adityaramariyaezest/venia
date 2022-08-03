@@ -1,8 +1,21 @@
+$spacer: var(--spacer-regular);
+$white: var(--color-white);
+$gray-darkest: var(--color-gray-d10);
+
 .content {
-  background-color: black;
-  flex: 0 0 554px;
-  padding: 87px 108px 115px 108px;
-  color: #fff;
+  background-color: $gray-darkest;
+  color: $white;
+  padding: $spacer;
+  padding-top: calc(#{$spacer} * 9);
+  padding-bottom: calc(#{$spacer} * 6);
+  margin-top: calc(#{$spacer} * -4);
+  width: 100%;
+
+  @media (min-width: 768px) {
+    padding: 87px 108px 115px 108px;
+    flex: 0 0 554px;
+    margin: 0;
+  }
 
   &:after {
     display: none;
@@ -10,6 +23,10 @@
 }
 
 .image {
-  height: 400px;
-  overflow: hidden;
+  margin: 0 calc(#{$spacer} * -2);
+  @media (min-width: 768px) {
+    height: calc(#{$spacer} * 50);
+    overflow: hidden;
+    margin: 0;
+  }
 }

@@ -3,12 +3,19 @@
   left: -51px;
   width: 102px;
   height: 70px;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   bottom: 40px;
-  border-bottom: 8px solid #1363df;
+  border-bottom: 8px solid var(--color-primary-m1);
+
+  @media (max-width: 768px) {
+    left: 0;
+    margin: auto;
+    top: -235px;
+    left: 32px;
+  }
 
   svg {
     transform: scale(1.5);

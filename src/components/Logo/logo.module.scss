@@ -11,6 +11,10 @@
 
   @media (max-width: 768px) {
     margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: auto;
   }
 
   img {
@@ -21,5 +25,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    height: 100%;
+    transform: scale(1.4);
   }
 }

@@ -1,7 +1,11 @@
+$spacer: var(--spacer-regular);
+$color: var(--color-body);
+
 .slider {
   display: flex;
   flex-wrap: nowrap;
   gap: 17px;
+  padding-top: calc(#{$spacer} * 2);
 
   margin-bottom: 40px;
 

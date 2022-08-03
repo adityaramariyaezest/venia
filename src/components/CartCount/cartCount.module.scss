@@ -1,8 +1,14 @@
 $color: var(--color-body);
 $font-small: var(--font-size-small);
+$spacer: var(--spacer-regular);
 
 .cart {
   position: relative;
+
+  @media (min-width: 768px) {
+    margin-top: calc(#{$spacer} * 2);
+  }
+
   &-count {
     font-size: $font-small;
     background: $color;

@@ -1,9 +1,15 @@
-// hamburger
+$spacer: var(--spacer-regular);
+$font-normal: var(--font-weight-regular);
+$gray: var(--color-gray-d3);
+$border-color: var(--color-gray-l1);
+$font-base: var(--font-size-base);
+$white: var(--color-white);
 
+// hamburger
 .menu__button__container {
   height: 100%;
-  width: 20px;
-  height: 20px;
+  width: calc(#{$spacer} * 2.5);
+  height: calc(#{$spacer} * 2.5);
   display: flex;
   cursor: pointer;
   flex-direction: column;
@@ -25,7 +31,7 @@
 .menu__button::before,
 .menu__button::after {
   display: block;
-  background-color: black;
+  background-color: $white;
   position: absolute;
   height: 2px;
   width: 20px;

@@ -18,7 +18,7 @@ const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues
             <Lead text="Contact information" classes="mb-8" />
             <Description classes="mb-16" content="We’ll use these details to keep you informed on your delivery." />
 
-            <FlexBox classes="d-flex--no-gap">
+            <FlexBox classes="d-flex--minus-margin">
                 <FlexItem size="6">
                     <Input
                         id="email"
@@ -48,13 +48,13 @@ const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues
 
             <legend><Lead text="1. shipping information" /></legend>
 
-            <FlexBox classes="d-flex--no-gap">
+            <FlexBox classes="d-flex--minus-margin">
                 <FlexItem size="6">
                     <Select labelText="country" id="country" placeholder="United States" direction="column" />
                 </FlexItem>
             </FlexBox>
 
-            <FlexBox classes="d-flex--no-gap">
+            <FlexBox classes="d-flex--minus-margin">
                 <FlexItem size="6">
                     <Input
                         id="first_name"
@@ -118,7 +118,7 @@ const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues
                 </FlexItem>
 
                 <FlexItem size="6">
-                    <FlexBox classes="d-flex--no-gap">
+                    <FlexBox classes="d-flex--minus-margin ">
                         <FlexItem size="9">
                             <Input
                                 id="state"
@@ -147,7 +147,7 @@ const UserInfo = ({ initialValues, handleNextStep, handleInputChange, formValues
                 </FlexItem>
             </FlexBox>
 
-            <FlexBox classes="d-flex__justify-center mt-50 mb-25">
+            <FlexBox classes="d-flex__justify-center d-flex--minus-margin mt-50 mb-25">
                 <FlexItem>
                     <Button text="continue to shipping method" type="outline" variant="primary" isBlock="true" onPress={handleNextStep} />
                 </FlexItem>

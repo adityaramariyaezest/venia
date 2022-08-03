@@ -1,3 +1,11 @@
+$spacer: var(--spacer-regular);
+$color: var(--color-body);
+$border-color: var(--color-border);
+$font-medium: var(--font-size-medium);
+$font-regular: var(--font-weight-regular);
+$font-semibold: var(--font-weight-semibold);
+$font-bold: var(--font-weight-bold);
+
 aside {
   @media (min-width: 768px) {
     width: 305px;
@@ -8,8 +16,9 @@ aside {
     margin-bottom: 30px;
   }
 
-  .breadcrumb {
-    margin-bottom: 35px;
+  nav {
+    margin-bottom: 35px !important;
+    margin-top: 0 !important;
   }
 
   .form-group {
@@ -18,18 +27,18 @@ aside {
 
   article {
     display: none;
-    border-bottom: 2px solid #d1d3d6;
+    border-bottom: 2px solid $border-color;
 
     @media (min-width: 768px) {
       display: block;
     }
 
     > p {
-      margin-top: 15px;
-      margin-bottom: 17px;
+      margin-top: calc(#{$spacer} * 2);
+      margin-bottom: calc(#{$spacer} * 2);
       text-transform: capitalize;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: $font-medium;
+      font-weight: $font-bold;
     }
   }
 }
@@ -37,9 +46,8 @@ aside {
 .sidebar {
   &-title {
     font-size: 20px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    font-weight: 400;
-    border-bottom: 2px solid #d1d3d6;
+    padding-bottom: calc(#{$spacer} * 2);
+    font-weight: $font-regular;
+    border-bottom: 2px solid $border-color;
   }
 }

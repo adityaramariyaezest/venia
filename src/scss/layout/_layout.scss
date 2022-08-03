@@ -1,0 +1,10 @@
+$header-height: var(--header-height);
+$header-height-mobile: var(--header-height-mobile);
+
+main {
+  padding-top: $header-height;
+
+  @media (max-width: 768px) {
+    padding-top: $header-height-mobile;
+  }
+}

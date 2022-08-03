@@ -1,9 +1,52 @@
+$white: var(--color-white);
+$header-height-mobile: var(--header-height-mobile);
 .visuallyHidden {
   display: none;
 }
 
 .menu {
   padding-top: 10px;
+
+  @media (max-width: 768px) {
+    &-main-menu {
+      position: fixed;
+      width: 100vw;
+      height: calc(100vh - 80px);
+      top: $header-height-mobile;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      background-color: $white;
+      padding: 0;
+      display: none;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        li {
+          width: 100%;
+
+          > a {
+            display: block;
+            width: 100%;
+            color: black;
+            padding: 16px;
+            border-bottom: 2px solid #e5e5e7;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &-main-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 
   &__list {
     display: flex;
