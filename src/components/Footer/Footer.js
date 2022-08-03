@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import Logo from "../Logo/Logo";
 import SocialLinks from "../SocialIcons/SocialLinks";
 import Wrapper from "../Wrapper/Wrapper";
@@ -73,9 +74,15 @@ const extraLinks = [
 ];
 
 const Footer = () => {
+  const location = useLocation();
+
+  const isCheckoutPage = location.pathname === "/checkout"
+
+
+  console.log("$$$ useLocation", location)
   return (
     <footer className={footer.footer}>
-      <div className={footer.footer__top}>
+      {!isCheckoutPage && <div className={footer.footer__top}>
         <Container>
           <div className="aem-Grid aem-Grid--12">
             <Wrapper phone="12" tablet="6" desktop="3">
@@ -120,7 +127,7 @@ const Footer = () => {
             </Wrapper>
           </div>
         </Container>
-      </div>
+      </div>}
 
       <div className={footer.footer__bottom}>
         <Container>
