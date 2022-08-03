@@ -1,6 +1,7 @@
 $spacer: var(--spacer-regular);
 $font-medium: var(--font-size-medium);
 $semibold: var(--font-weight-semibold);
+$color: var(--color-body);
 
 .media {
   display: flex;
@@ -37,11 +38,13 @@ $semibold: var(--font-weight-semibold);
 
     > p {
       margin: 0;
+      color: $color;
 
       &:nth-child(1) {
         margin-bottom: $spacer;
         font-weight: $semibold;
         font-size: $font-medium;
+        text-align: left;
       }
     }
   }

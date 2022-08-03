@@ -16,6 +16,10 @@
     display: none;
   }
 
+  > div {
+    margin-bottom: 0;
+  }
+
   input {
     width: 114px;
     height: 40px;
