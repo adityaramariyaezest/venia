@@ -31,7 +31,7 @@ const Bill = ({ isButton }) => {
 
     return (
         <div className={bill.bill}>
-            <h4 className={bill.bill__title}>Pricing Summary</h4>
+            <p className={bill.bill__title}>Pricing Summary</p>
             <BillCategory category="subtotal" amount={subtotal.toFixed(2)} />
             <BillCategory category="coupon" amount={`${coupon} %`} />
             <BillCategory category="gift card" amount={`${giftCard}`} />
