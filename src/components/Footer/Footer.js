@@ -75,11 +75,8 @@ const extraLinks = [
 
 const Footer = () => {
   const location = useLocation();
-
   const isCheckoutPage = location.pathname === "/checkout"
 
-
-  console.log("$$$ useLocation", location)
   return (
     <footer className={footer.footer}>
       {!isCheckoutPage && <div className={footer.footer__top}>

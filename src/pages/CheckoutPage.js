@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Container from "../components/Container/Container";
 import Bill from "../components/Cart/Bill/Bill";
 import Wrapper from "../components/Wrapper/Wrapper";
@@ -16,7 +16,7 @@ import { setToLocalStorage } from '../common/common';
 const CheckoutPage = () => {
     const [page, setPage] = useState(0);
 
-    const [initialValues, setInitialValues] = useState({
+    const [userInitialValues, setUserInitialValues] = useState({
         email: '',
         phone: '',
         country: '',
@@ -28,68 +28,82 @@ const CheckoutPage = () => {
         state: '',
         zip: '',
     });
-    const [shippingMethodIntialValues, setShippingMethodIntialValues] = useState({
-        mode: '',
-        estimatedTime: '',
-        fare: ''
+
+    const [paymentInitialValues, setPaymentInitialValues] = useState({
+        name: '',
+        card: '',
+        expiration: '',
+        cvv: '',
     });
-    const [formValues, setFormValues] = useState([]);
-    const [shippingMethodformValues, setShippingMethodformValues] = useState([]);
-    const [shippingMethod, setShippingMethod] = useState('');
+
+    const [userInfo, setUserInfo] = useState([]);
+    const [shipping, setShipping] = useState('');
+    const [paymentInfo, setPaymentInfo] = useState('');
 
 
-    function handleNextStep() {
-        setFormValues((prevFormValues) => [...prevFormValues, initialValues]);
-        setToLocalStorage('user', formValues)
+    // functions used in userInfo form: step 1
+    function handlerUserInfoNextButton() {
+        setUserInfo(userInitialValues);
         setPage(page + 1);
+        setToLocalStorage('user', userInitialValues);
     }
 
-    function handleShippingMethodNextButton() {
-        setShippingMethodformValues((prevShippingValues) => [...prevShippingValues, shippingMethodIntialValues]);
-        setToLocalStorage('shippingMethod', shippingMethodformValues)
+    function handleUserInfoInput(e) {
+        setUserInitialValues({ ...userInitialValues, [e.target.name]: e.target.value })
+    }
+
+    // functions used in shippingInfo form: step 2
+    function handleShippingNextButton() {
+        setShipping(shipping);
         setPage(page + 1);
+        setToLocalStorage('shipping', shipping);
     }
 
-    function handleInputChange(e) {
-        setInitialValues({ ...initialValues, [e.target.name]: e.target.value })
+    function handleShippingInput(e) {
+        setShipping(e.currentTarget.value)
+        setToLocalStorage('shipping', shipping);
     }
 
-    function handleShippingMethodControls(e) {
-        setShippingMethodIntialValues({ ...shippingMethodIntialValues, [e.target.id]: e.target.value })
-    }
 
-    useEffect(() => {
-        setToLocalStorage('user', formValues);
-        setToLocalStorage('shippingMethod', shippingMethodformValues)
-
-    }, [formValues, shippingMethodformValues])
-
-
-    function handleFormSteps() {
+    // functions used in PaymentInfo form: step 3
+    function handlePaymentNextButton() {
+        setPaymentInfo(paymentInfo);
         setPage(page + 1);
+        setToLocalStorage('payment', paymentInfo);
     }
+
+    function handlePaymentRadioInput(e) {
+        setPaymentInfo(e.currentTarget.value)
+        setToLocalStorage('payment', paymentInfo);
+    }
+
+    function handlePaymentInput(e) {
+        setPaymentInitialValues({ ...paymentInitialValues, [e.target.name]: e.target.value })
+    }
+
 
     const MultiStepForm = () => {
         switch (page) {
             case 0:
                 return <UserInfo
-                    initialValues={initialValues}
-                    formValues={formValues}
-                    handleFormSteps={handleFormSteps}
-                    handleNextStep={handleNextStep}
-                    handleInputChange={handleInputChange} />;
+                    initialValues={userInitialValues}
+                    userInfo={userInfo}
+                    handleNextButton={handlerUserInfoNextButton}
+                    handleInputChange={handleUserInfoInput} />;
             case 1:
                 return <ShippingInfo
-                    shippingMethod={shippingMethod}
-                    setShippingMethod={setShippingMethod}
-                    shippingMethodIntialValues={shippingMethodIntialValues}
-                    shippingMethodformValues={shippingMethodformValues}
-                    handleFormSteps={handleFormSteps}
-                    handleShippingMethodNextButton={handleShippingMethodNextButton}
-                    handleShippingMethodControls={handleShippingMethodControls}
+                    shipping={shipping}
+                    handleNextButton={handleShippingNextButton}
+                    handleInputChange={handleShippingInput}
                 />;
             case 2:
-                return <PaymentInfo handleFormSteps={handleFormSteps} />;
+                return <PaymentInfo
+                    initialValues={paymentInitialValues}
+                    paymentInfo={paymentInfo}
+                    handleNextButton={handlePaymentNextButton}
+                    handleInputChange={handlePaymentInput}
+                    handlePaymentRadioInput={handlePaymentRadioInput}
+                />;
             default:
                 return ''
         }
@@ -102,7 +116,7 @@ const CheckoutPage = () => {
 
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <SecondaryTitle title="guest checkout" />
-                    <ShowCheckoutData page={page} formValues={formValues} shippingMethodformValues={shippingMethodformValues} />
+                    <ShowCheckoutData page={page} userInfo={userInfo} shipping={shipping} payment={paymentInfo} />
                     <Form>
                         <MultiStepForm />
                     </Form>

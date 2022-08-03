@@ -10,13 +10,18 @@ import Description from "../components/Description/Description";
 import SocialLinks from '../components/SocialIcons/SocialLinks';
 import OfferBox from "../components/OfferBox/OfferBox";
 import Lead from "../components/Lead/Lead";
+import { getFromLocalStorage } from "../common/common";
 
 const OrderSuccessful = () => {
+    const user = getFromLocalStorage('user');
+    const shipping = getFromLocalStorage('shipping');
+    const payment = getFromLocalStorage('payment');
+    const { email, phone, firstName, lastName, streetAddress1, city, state, zip, country } = user;
+
     return (
         <Container>
             <div className="aem-Grid aem-Grid--12">
                 <Title title="Order Successful!" isSpecial />
-
                 <Wrapper phone="12" tablet="12" desktop="8" classes="pr-32">
                     <FlexBox>
                         <FlexItem size="12">
@@ -27,28 +32,29 @@ const OrderSuccessful = () => {
                     <FlexBox classes="d-flex d-flex--minus-margin mb-50 mt-16" >
                         <FlexItem size="6">
                             <Table heading="shipping information" controls="false" size="small">
+
                                 <FlexBox classes="d-flex--column">
                                     <FlexItem>
-                                        <TextContent size="base" content="q_farhan@gmail.com " />
-                                        <TextContent size="base" content="+1 (555) 229-3367" />
+                                        <TextContent size="base" content={email} />
+                                        <TextContent size="base" content={phone} />
                                     </FlexItem>
                                     <FlexItem>
-                                        <TextContent size="base" content="Qadim Farhan" />
-                                        <TextContent size="base" content="1098 Wapello Street" />
-                                        <TextContent size="base" content="Altadena, California 91001" />
-                                        <TextContent size="base" content="United States" />
+                                        <TextContent size="base" content={`${firstName} ${lastName}`} />
+                                        <TextContent size="base" content={streetAddress1} />
+                                        <TextContent size="base" content={`${city} ${state} ${zip}`} />
+                                        <TextContent size="base" content={country} />
                                     </FlexItem>
                                 </FlexBox>
+
                             </Table>
                         </FlexItem>
 
                         <FlexItem size="6">
                             <div className="mb-16">
-                                <Table heading="payment information" controls="false" size="small">
+                                <Table heading="shipping information" controls="false" size="small">
                                     <FlexBox>
                                         <FlexItem>
-                                            <TextContent size="base" content="Credit Card" />
-                                            <TextContent size="base" content=" Visa ending in 4567" />
+                                            <TextContent size="base" content={shipping} />
                                         </FlexItem>
                                     </FlexBox>
                                 </Table>
@@ -56,7 +62,7 @@ const OrderSuccessful = () => {
                             <Table heading="payment information" controls="false" size="small">
                                 <FlexBox>
                                     <FlexItem>
-                                        <TextContent size="base" content="Credit Card" />
+                                        <TextContent size="base" content={payment} />
                                         <TextContent size="base" content=" Visa ending in 4567" />
                                     </FlexItem>
                                 </FlexBox>

@@ -34,9 +34,6 @@ root.render(
             <Route path="/order-successful" element={<OrderSuccessful />} />
           </Routes>
         </Layout>
-
-
-
       </HashRouter>
     </Provider>
   </React.StrictMode>
