@@ -1,0 +1,7 @@
+$font-semibold: var(--font-weight-semibold);
+
+.sorting {
+  &__title {
+    font-weight: $font-semibold;
+  }
+}

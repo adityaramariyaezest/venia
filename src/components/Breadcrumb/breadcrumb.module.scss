@@ -1,0 +1,39 @@
+$spacer: var(--spacer-regular);
+$color: var(--color-body);
+
+.breadcrumb {
+  margin-bottom: calc(#{$spacer} * 2);
+  margin-top: calc(#{$spacer} * 2);
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: $spacer;
+
+    &__item {
+      > a {
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $color;
+        padding-left: $spacer;
+      }
+
+      &:before {
+        content: "/";
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+
+        > a {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
