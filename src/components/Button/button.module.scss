@@ -134,5 +134,10 @@
     &--primary {
       color: #1363df;
     }
+
+    &--small {
+      padding: 0;
+      text-transform: capitalize;
+    }
   }
 }
