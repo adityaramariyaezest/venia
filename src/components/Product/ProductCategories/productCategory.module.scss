@@ -16,6 +16,11 @@ $font-secondary: var(--font-familty-secondary);
       height: 260px;
       object-fit: cover;
       object-position: top;
+      max-width: 90%;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
     }
   }
 
