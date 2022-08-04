@@ -53,7 +53,7 @@ const Home = () => {
         );
     }
 
-    const handleClick = () => setShowFilters(!showFilters);
+    const toggleFilters = () => setShowFilters(!showFilters);
 
     const hideFilters = () => setShowFilters(!showFilters);
 
@@ -70,11 +70,24 @@ const Home = () => {
                         <Sidebar>
                             <Breadcrumb />
                             <FlexBox classes="d-flex__justify-center d-flex--align-center visible-mobile">
-                                <Button size="small" text="Filter Results" type="link" variant="default" icon={SlidersIcon} isIcon onPress={handleClick} />
-                                <Button size="small" text="Sort Products" type="link" variant="default" icon={SlidersIcon} isIcon />
+                                <Button
+                                    size="small"
+                                    text="Filter Results"
+                                    type="link"
+                                    variant="default"
+                                    icon={SlidersIcon}
+                                    isIcon
+                                    onPress={toggleFilters} />
+                                <Button
+                                    size="small"
+                                    text="Sort Products"
+                                    type="link"
+                                    variant="default"
+                                    icon={SlidersIcon}
+                                    isIcon />
                             </FlexBox>
                             <Filters
-                                hideFilters={hideFilters}
+                                toggleFilters={toggleFilters}
                                 filterByTitle="categories"
                                 onFilter={handleCategoryFilter}
                                 checkedProducts={checkedProducts}

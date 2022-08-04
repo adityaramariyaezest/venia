@@ -8,7 +8,7 @@ import { setToLocalStorage } from '../../common/common';
 import './filters.scss';
 import FlexBox from '../Layout/Flexbox';
 
-const Filters = ({ filterByTitle, onFilter, checkedProducts, showFilters, hideFilters, totalProducts }) => {
+const Filters = ({ filterByTitle, onFilter, checkedProducts, showFilters, toggleFilters, totalProducts }) => {
     const [categories, setCategories] = useState([]);
     setToLocalStorage('categories', categories);
 
@@ -31,7 +31,7 @@ const Filters = ({ filterByTitle, onFilter, checkedProducts, showFilters, hideFi
                     isIcon
                     svgIconMode="dark"
                     imageDescription="checkout-button-icon"
-                    onPress={hideFilters} />
+                    onPress={toggleFilters} />
             </FlexBox>
 
             <article>
@@ -50,7 +50,7 @@ const Filters = ({ filterByTitle, onFilter, checkedProducts, showFilters, hideFi
                     variant="primary"
                     svgIconMode="dark"
                     imageDescription="checkout-button-icon"
-                    onPress={hideFilters}
+                    onPress={toggleFilters}
                 />
             </article>
         </div>
