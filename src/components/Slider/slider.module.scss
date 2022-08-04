@@ -6,6 +6,7 @@ $color: var(--color-body);
   flex-wrap: nowrap;
   gap: 17px;
   padding-top: calc(#{$spacer} * 2);
+  position: relative;
 
   margin-bottom: 40px;
 
@@ -50,6 +51,36 @@ $color: var(--color-body);
         height: 100%;
         object-fit: contain;
       }
+    }
+  }
+
+  &_dots {
+    display: none;
+    flex-wrap: nowrap;
+    gap: $spacer;
+    position: absolute;
+    bottom: calc(#{$spacer} * 3);
+    z-index: 5;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    &_item {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #dfe1e2;
+
+      &--active {
+        background-color: red;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
     }
   }
 }
