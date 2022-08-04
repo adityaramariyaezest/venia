@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import cn from 'classnames';
 import Logo from "../Logo/Logo";
 import Nav from "../Nav/Nav";
 import FlexBox from "../Layout/Flexbox";
@@ -37,20 +39,35 @@ const menu = [
 ]
 
 const Header = () => {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const toggleMobileMenu = () => setShowMobileMenu(!showMobileMenu);
+
+    console.log("showMobileMenu", showMobileMenu)
+
+
     return (
-        <header className={header.header}>
+        <header
+            className={cn(header.header,
+                showMobileMenu ? { [header[`header--${showMobileMenu}`]]: showMobileMenu } : '')}>
             <Container>
                 <div className="aem-Grid aem-Grid--12">
                     <Wrapper phone="8" tablet="2" desktop="4">
                         <FlexBox classes="d-flex d-flex--align-center">
-                            <Hamburger />
+                            <Hamburger toggleMobileMenu={toggleMobileMenu} />
                             <Logo name="logo-dark.PNG" />
                         </FlexBox>
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="8" desktop="4">
-
-                        <Nav classes={header.menu} mainMenu='main-menu' direction="row" center="align-center" gap="32" links={menu} label="mainmenulabel" labelContent="main menu" />
+                        <Nav
+                            classes={header.menu}
+                            mainMenu='main-menu'
+                            direction="row"
+                            center="align-center"
+                            gap="32" links={menu}
+                            label="mainmenulabel"
+                            labelContent="main menu" />
                     </Wrapper>
 
                     <Wrapper phone="4" tablet="2" desktop="4">

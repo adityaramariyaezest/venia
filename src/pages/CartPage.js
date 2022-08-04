@@ -8,8 +8,9 @@ import Container from "../components/Container/Container";
 import Title from "../components/Headings/Title/Title";
 import Lead from '../components/Lead/Lead';
 import Button from "../components/Button/Button";
-import { ShoppingCartIcon } from "../components/Icons/Icons";
+import { FrownIcon } from "../components/Icons/Icons";
 
+import FLexBox from '../components/Layout/Flexbox'
 const accordion = [
     {
         id: "accordion__101",
@@ -55,9 +56,11 @@ const CartPage = () => {
     const HappyShopping = () => {
         return (
             <div className="aem-Grid aem-Grid--12">
-                <ShoppingCartIcon />
-                <Lead text="There is nothing in your bag. Let's add some items." />
-                <Button text="shop now" type="outline" variant="primary" onPress={navigateToProductsList} />
+                <FLexBox classes="d-flex--align-center d-flex__justify-center d-flex--minus-margin d-flex--column">
+                    <FrownIcon />
+                    <Lead text="There is nothing in your bag. Let's add some items." />
+                    <Button text="shop now" type="outline" variant="primary" onPress={navigateToProductsList} />
+                </FLexBox>
             </div>
         )
     }

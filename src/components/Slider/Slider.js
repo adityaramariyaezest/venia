@@ -1,4 +1,18 @@
+import cn from 'classnames';
 import slider from './slider.module.scss';
+
+export const SliderDots = () => {
+    return (
+        <ul className={slider.slider_dots}>
+            <li className={cn(slider.slider_dots_item)}></li>
+            <li className={cn(slider.slider_dots_item)}></li>
+            <li className={cn(slider.slider_dots_item)}></li>
+            <li className={cn(slider.slider_dots_item)}></li>
+            <li className={cn(slider.slider_dots_item)}></li>
+        </ul>
+    );
+}
+
 
 const Slider = ({ image }) => {
     return (
@@ -42,6 +56,7 @@ const Slider = ({ image }) => {
                     <img className={slider.slider__img} src={image} />
                 </div>
             </div>
+            <SliderDots />
         </div>
     );
 }

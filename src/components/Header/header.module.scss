@@ -39,4 +39,10 @@ $header-height-mobile: var(--header-height-mobile);
       display: none;
     }
   }
+
+  &--true {
+    nav {
+      left: 0;
+    }
+  }
 }

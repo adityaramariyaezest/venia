@@ -293,9 +293,6 @@ export const LoaderIcon = ({ mode }) => {
 }
 
 
-
-
-
 export const SlidersIcon = ({ mode }) => {
     return (
         <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
@@ -370,6 +367,32 @@ export const PaypalIcon = ({ mode }) => {
 	l1.454-9.225L9.614,7.699z"/>
         </svg>
 
+    )
+}
+
+
+
+export const CloseIcon = ({ mode }) => {
+    return (
+        <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828" viewBox="0 0 14.828 14.828">
+            <g id="x" transform="translate(-4.586 -4.586)">
+                <line id="Line_624" data-name="Line 624" x1="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <line id="Line_625" data-name="Line 625" x2="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </g>
+        </svg>
+    )
+}
+
+export const FrownIcon = ({ mode }) => {
+    return (
+        <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+            <g id="frown" transform="translate(-1 -1)">
+                <circle id="Ellipse_117" data-name="Ellipse 117" cx="10" cy="10" r="10" transform="translate(2 2)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <path id="Path_37995" data-name="Path 37995" d="M16,16a5.4,5.4,0,0,0-4-2,5.4,5.4,0,0,0-4,2" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <line id="Line_457" data-name="Line 457" x2="0.01" transform="translate(9 9)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <line id="Line_458" data-name="Line 458" x2="0.01" transform="translate(15 9)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </g>
+        </svg>
     )
 }
 

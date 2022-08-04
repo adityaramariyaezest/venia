@@ -55,8 +55,6 @@ const Home = () => {
 
     const toggleFilters = () => setShowFilters(!showFilters);
 
-    const hideFilters = () => setShowFilters(!showFilters);
-
     return (
         <>
             <div className="aem-Grid aem-Grid--12">
