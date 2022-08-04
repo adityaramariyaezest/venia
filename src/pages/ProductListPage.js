@@ -7,12 +7,29 @@ import ProductList from "../components/Product/ProductList";
 import Sorting from "../components/Sorting/Sorting";
 import Banner from "../components/Banner/Banner";
 import Container from '../components/Container/Container';
+import { SlidersIcon } from '../components/Icons/Icons';
+import Button from '../components/Button/Button';
+import FlexBox from '../components/Layout/Flexbox';
+
+const sortOptions = [
+    {
+        label: "Sort by Low to High",
+        value: 1,
+    },
+    {
+        label: "Sort by High to Low",
+        value: 2,
+    }
+];
 
 const Home = () => {
     const [order, setOrder] = useState(0);
     const [products, setProducts] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [checkedProducts, setCheckedProducts] = useState([]);
+
+    const [showFilters, setShowFilters] = useState(false);
+
 
     const getFilteredProducts = () => products.filter(product => checkedProducts.includes(product.category));
 
@@ -36,6 +53,10 @@ const Home = () => {
         );
     }
 
+    const toggleFilters = () => setShowFilters(!showFilters);
+
+    const hideFilters = () => setShowFilters(!showFilters);
+
     return (
         <>
             <div className="aem-Grid aem-Grid--12">
@@ -48,12 +69,35 @@ const Home = () => {
                     <Wrapper phone="12" tablet="3" desktop="3">
                         <Sidebar>
                             <Breadcrumb />
-                            <p className='sidebar-title'>Filters</p>
-                            <Filters filterByTitle="categories" onFilter={handleCategoryFilter} checkedProducts={checkedProducts} />
+                            <FlexBox classes="d-flex__justify-center d-flex--align-center visible-mobile">
+                                <Button
+                                    size="small"
+                                    text="Filter Results"
+                                    type="link"
+                                    variant="default"
+                                    icon={SlidersIcon}
+                                    isIcon
+                                    onPress={toggleFilters} />
+                                <Button
+                                    size="small"
+                                    text="Sort Products"
+                                    type="link"
+                                    variant="default"
+                                    icon={SlidersIcon}
+                                    isIcon />
+                            </FlexBox>
+                            <Filters
+                                toggleFilters={toggleFilters}
+                                filterByTitle="categories"
+                                onFilter={handleCategoryFilter}
+                                checkedProducts={checkedProducts}
+                                showFilters={showFilters}
+                                totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length}
+                            />
                         </Sidebar>
                     </Wrapper>
                     <Wrapper phone="12" tablet="9" desktop="9">
-                        <Sorting id="sort" sortByPrice={sortByPrice} totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length} />
+                        <Sorting id="sort" sortByPrice={sortByPrice} totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length} options={sortOptions} />
                         <ProductList order={order} products={filteredProducts.length > 0 ? filteredProducts : products} />
                     </Wrapper>
                 </div>

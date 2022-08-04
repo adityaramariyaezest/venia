@@ -12,12 +12,6 @@ const ProductList = ({ order, products }) => {
     if (products.length > 0 && order === 1) products.sort((a, b) => (a.price > b.price ? 1 : -1));
     else if (products.length > 0 && order === 2) products.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
 
-    // const currentProductList = useMemo(() => {
-    //     const firstPageIndex = (currentPage - 1) * PageSize;
-    //     const lastPageIndex = firstPageIndex + PageSize;
-    //     return products.slice(firstPageIndex, lastPageIndex);
-    // }, [currentPage, products.length > 0, order]);
-
     const currentProductList = useMemo(() => {
         const firstPageIndex = (currentPage - 1) * PageSize;
         const lastPageIndex = firstPageIndex + PageSize;
