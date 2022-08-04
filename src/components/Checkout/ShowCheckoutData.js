@@ -85,8 +85,8 @@ const ShowCheckoutData = ({ page, userInfo, shippingMethodformValues, shipping, 
     const { email, phone, firstName, lastName, streetAddress1, city, state, zip, country } = userInfo;
 
     return (
-        <Form>
-            <FlexBox classes="d-flex--column d-flex--minus-margin mb-50 mt-16" >
+        <>
+            <FlexBox classes={page > 0 ? `d-flex--column d-flex--minus-margin mb-50 mt-16` : ''} >
                 {page > 0 &&
                     <>
                         <FlexItem>
@@ -114,7 +114,7 @@ const ShowCheckoutData = ({ page, userInfo, shippingMethodformValues, shipping, 
                     </>
                 }
             </FlexBox>
-        </Form>
+        </>
     );
 }
 
