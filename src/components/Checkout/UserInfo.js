@@ -10,7 +10,29 @@ import Lead from "../Lead/Lead";
 import Description from "../Description/Description";
 import Select from "../Select/Select";
 
-const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo }) => {
+const countryList = [
+    {
+        label: "India",
+        value: 1,
+    },
+    {
+        label: "United States",
+        value: 2,
+    }
+];
+
+const stateList = [
+    {
+        label: "Madhya Pradesh",
+        value: 1,
+    },
+    {
+        label: "Maharashtra",
+        value: 2,
+    }
+];
+
+const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo, handleSelectChange }) => {
 
     return (
         <>
@@ -49,7 +71,15 @@ const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo
 
             <FlexBox classes="d-flex--minus-margin">
                 <FlexItem size="6">
-                    <Select labelText="country" id="country" placeholder="United States" direction="column" />
+                    <Select
+                        labelText="country"
+                        id="country"
+                        placeholder="United States"
+                        direction="column"
+                        options={countryList}
+                        onChange={handleSelectChange}
+                        value={initialValues.country}
+                    />
                 </FlexItem>
             </FlexBox>
 
@@ -64,7 +94,6 @@ const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo
                         direction="column"
                         onChange={handleInputChange}
                         value={initialValues.firstName}
-
                     />
                 </FlexItem>
 
@@ -119,7 +148,17 @@ const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo
                 <FlexItem size="6">
                     <FlexBox classes="d-flex--minus-margin ">
                         <FlexItem size="9">
-                            <Input
+                            <Select
+                                labelText="country"
+                                id="country"
+                                placeholder="United States"
+                                direction="column"
+                                options={stateList}
+                                onChange={handleSelectChange}
+                                value={initialValues.state}
+                            />
+
+                            {/* <Input
                                 id="state"
                                 labelText="state"
                                 type="text"
@@ -128,7 +167,7 @@ const UserInfo = ({ initialValues, handleNextButton, handleInputChange, UserInfo
                                 direction="column"
 
                                 onChange={handleInputChange}
-                                value={initialValues.state} />
+                                value={initialValues.state} /> */}
                         </FlexItem>
 
                         <FlexItem size="3">

@@ -20,7 +20,11 @@ const Filters = ({ filterByTitle, onFilter, checkedProducts }) => {
     return (
         <article>
             <p>{filterByTitle}</p>
-            {categories && categories.map((category, index) => <Checkbox key={index} id={`category__${index}`} filterCheckbox={category} direction="row-reverse" onFilter={onFilter} />)}
+            {categories && categories.map((category, index) => <Checkbox
+                key={index} id={`category__${index}`}
+                filterCheckbox={category}
+                direction="row-reverse"
+                onFilter={onFilter} />)}
         </article>
     );
 }

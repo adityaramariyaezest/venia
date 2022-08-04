@@ -52,6 +52,13 @@ const CheckoutPage = () => {
         setUserInitialValues({ ...userInitialValues, [e.target.name]: e.target.value })
     }
 
+
+    const handleUserInfoState = e => {
+        console.log('e', e)
+        setUserInitialValues(parseInt(e.target.value))
+    };
+
+
     // functions used in shippingInfo form: step 2
     function handleShippingNextButton() {
         setShipping(shipping);
@@ -89,7 +96,9 @@ const CheckoutPage = () => {
                     initialValues={userInitialValues}
                     userInfo={userInfo}
                     handleNextButton={handlerUserInfoNextButton}
-                    handleInputChange={handleUserInfoInput} />;
+                    handleInputChange={handleUserInfoInput}
+                    handleSelectChange={handleUserInfoState}
+                />;
             case 1:
                 return <ShippingInfo
                     shipping={shipping}

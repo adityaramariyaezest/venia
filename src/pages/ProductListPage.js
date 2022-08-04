@@ -8,6 +8,18 @@ import Sorting from "../components/Sorting/Sorting";
 import Banner from "../components/Banner/Banner";
 import Container from '../components/Container/Container';
 
+
+const sortOptions = [
+    {
+        label: "Sort by Low to High",
+        value: 1,
+    },
+    {
+        label: "Sort by High to Low",
+        value: 2,
+    }
+];
+
 const Home = () => {
     const [order, setOrder] = useState(0);
     const [products, setProducts] = useState([]);
@@ -53,7 +65,7 @@ const Home = () => {
                         </Sidebar>
                     </Wrapper>
                     <Wrapper phone="12" tablet="9" desktop="9">
-                        <Sorting id="sort" sortByPrice={sortByPrice} totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length} />
+                        <Sorting id="sort" sortByPrice={sortByPrice} totalProducts={filteredProducts.length > 0 ? filteredProducts.length : products.length} options={sortOptions} />
                         <ProductList order={order} products={filteredProducts.length > 0 ? filteredProducts : products} />
                     </Wrapper>
                 </div>
