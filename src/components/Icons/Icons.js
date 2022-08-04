@@ -293,9 +293,6 @@ export const LoaderIcon = ({ mode }) => {
 }
 
 
-
-
-
 export const SlidersIcon = ({ mode }) => {
     return (
         <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
@@ -370,6 +367,19 @@ export const PaypalIcon = ({ mode }) => {
 	l1.454-9.225L9.614,7.699z"/>
         </svg>
 
+    )
+}
+
+
+
+export const CloseIcon = ({ mode }) => {
+    return (
+        <svg className={mode === 'light' ? icons.svg__light : icons.svg__dark} xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828" viewBox="0 0 14.828 14.828">
+            <g id="x" transform="translate(-4.586 -4.586)">
+                <line id="Line_624" data-name="Line 624" x1="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <line id="Line_625" data-name="Line 625" x2="12" y2="12" transform="translate(6 6)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </g>
+        </svg>
     )
 }
 

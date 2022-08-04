@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Checkbox from "../Checkbox/Checkbox";
 import Button from '../Button/Button';
-import { LockIcon } from '../Icons/Icons';
-
+import { CloseIcon } from '../Icons/Icons';
 import { setToLocalStorage } from '../../common/common';
 import './filters.scss';
 import FlexBox from '../Layout/Flexbox';
@@ -27,7 +26,7 @@ const Filters = ({ filterByTitle, onFilter, checkedProducts, showFilters, toggle
                 <Button text=""
                     type="link"
                     variant="default"
-                    icon={LockIcon}
+                    icon={CloseIcon}
                     isIcon
                     svgIconMode="dark"
                     imageDescription="checkout-button-icon"
