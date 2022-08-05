@@ -12,6 +12,7 @@ import Layout from './components/Layout/Layout';
 import OrderSuccessful from './pages/orderSuccessful';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
+import PageNotFound from './components/404/PageNotFound';
 
 import './fonts/muli/Muli-Regular.ttf'
 import './scss/_index.scss';
@@ -20,12 +21,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
 root.render(
-
   <React.StrictMode>
     <Provider store={store}>
       <HashRouter>
         <Layout>
           <Routes>
+            <Route path='*' element={<PageNotFound />} />
             <Route path="/" element={<HomePage />} exact />
             <Route path="/product-details" element={<ProductDetailsPage />} />
             <Route path="/cart" element={<CartPage />} />
