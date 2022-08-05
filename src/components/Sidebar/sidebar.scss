@@ -8,7 +8,7 @@ $font-bold: var(--font-weight-bold);
 $box-shadow: #00000026;
 
 aside {
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 305px;
     padding-right: 45px;
   }

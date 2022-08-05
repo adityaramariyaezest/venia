@@ -1,11 +1,21 @@
 // import Image from '../Image/Image';
+import { useDispatch } from "react-redux";
+import { deleteFromCart } from '../../actions/cartActions';
+
 import CartQuantity from '../CartQuantity/CartQuantity';
 import { Link } from "react-router-dom";
 import { EditIcon2, HeartIcon, TrashIcon } from '../Icons/Icons';
 
 import cart from './cart.module.scss';
+import Button from "../Button/Button";
 
 const Cart = ({ cartItem }) => {
+    const dispatch = useDispatch();
+    const handleEvent = (e, productId) => {
+        e.preventDefault();
+        dispatch(deleteFromCart(productId));
+    };
+
     return (
         <>
             <div className={cart.cartlist__product}>
@@ -28,7 +38,7 @@ const Cart = ({ cartItem }) => {
                         <Link to="/cart"><EditIcon2 /> Edit</Link>
                     </li>
                     <li>
-                        <Link to="/cart"><TrashIcon /> Remove</Link>
+                        <Link to="/cart" onClick={e => handleEvent(e, cartItem.product)}><TrashIcon /> Remove</Link>
                     </li>
                     <li>
                         <Link to="/cart"><HeartIcon /> Save for later</Link>

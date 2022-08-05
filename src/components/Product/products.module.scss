@@ -44,7 +44,7 @@
     line-height: 20px;
     margin-top: 8px;
     font-weight: bold;
-    max-height: 40px;
+    height: 40px;
     overflow: hidden;
 
     @media (min-width: 1024px) {
@@ -52,7 +52,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-height: unset;
+      height: unset;
     }
   }
 

@@ -10,6 +10,7 @@ import Container from '../components/Container/Container';
 const ProductDetailsPage = () => {
     const location = useLocation()
     const { productID } = location.state;
+    console.log("@@ location", location)
 
     let starsTotal = 5;
     const [product, setProduct] = useState([]);
