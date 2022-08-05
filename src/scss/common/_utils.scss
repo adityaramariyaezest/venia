@@ -26,3 +26,17 @@
     text-align: center;
   }
 }
+
+.active {
+  @media (min-width: 768px) {
+    position: relative;
+    &:after {
+      content: "";
+      height: 7px;
+      background-color: #dff6ff;
+      width: 100%;
+      position: absolute;
+      bottom: -28px;
+    }
+  }
+}

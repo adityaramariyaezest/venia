@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 import cn from 'classnames';
 import nav from './nav.module.scss';
 
@@ -7,7 +7,7 @@ const Nav = ({ links, label, labelContent, direction, gap, center, underlined, m
         return lists && lists.map((listItem, index) => {
             return (
                 <li key={index} className={nav.menu__item}>
-                    <Link to={listItem.to}>{listItem.link}</Link>
+                    <NavLink activeClassName="active" to={listItem.to}>{listItem.link}</NavLink>
                 </li>
             )
         })

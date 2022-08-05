@@ -14,9 +14,14 @@ import header from './header.module.scss';
 
 const menu = [
     {
+        id: 'Home__101',
+        link: 'home',
+        to: '/'
+    },
+    {
         id: 'women__101',
         link: 'women',
-        to: '/women'
+        to: '/products'
     },
 
     {
@@ -40,11 +45,7 @@ const menu = [
 
 const Header = () => {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-
     const toggleMobileMenu = () => setShowMobileMenu(!showMobileMenu);
-
-    console.log("showMobileMenu", showMobileMenu)
-
 
     return (
         <header
