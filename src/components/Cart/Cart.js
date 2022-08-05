@@ -38,7 +38,7 @@ const Cart = ({ cartItem }) => {
                         <Link to="/cart"><EditIcon2 /> Edit</Link>
                     </li>
                     <li>
-                        <Link to="/cart" onClick={e => handleEvent(e, cartItem.product)}><TrashIcon /> Remove {cartItem.product}</Link>
+                        <Link to="/cart" onClick={e => handleEvent(e, cartItem.product)}><TrashIcon /> Remove</Link>
                     </li>
                     <li>
                         <Link to="/cart"><HeartIcon /> Save for later</Link>
